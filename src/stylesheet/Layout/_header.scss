@@ -1,0 +1,177 @@
+@use "../Abstract/" as *;
+
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    margin-top: 30px;
+
+    @include tablet {
+        flex-direction: row;
+        margin-top: -10px;
+    }
+
+    @include desktop {
+        flex-direction: row;
+        margin-top: -10px;
+    }
+
+    .header__icon--logo {
+        @include tablet {
+            @include set-size-and-set-margin($width: 142px, $height: 40px, $margin-top: 40px);
+        }
+
+        @include desktop {
+            @include set-size-and-set-margin($width: 142px, $height: 40px, $margin-top: 40px);
+        }
+
+        cursor: pointer;
+    }
+
+    .header__icon--menu {
+        @include tablet {
+            @include set-size-and-set-margin($width: 48px, $height: 48px, $margin-top: 37px);
+        }
+
+        @include desktop {
+            @include set-size-and-set-margin($width: 48px, $height: 48px, $margin-top: 37px);
+        }
+
+        cursor: pointer;
+    }
+
+    .header__center {
+        display: none;
+
+        @include tablet {
+            display: none;
+        }
+
+        @include desktop {
+            display: block;
+
+            ul {
+                margin-top: 56px;
+                list-style: none;
+                display: flex;
+                gap: 50px;
+
+                li:first-child {
+                    a {
+                        color: rgba(34, 40, 49, 1);
+                    }
+                }
+
+                a {
+                    @include tag_a ($color: gray, $text-decoration: none);
+                    @include font ($font-family: $primary-font , $font-weight: bold);
+
+                    &:hover {
+                        color: rgba(34, 40, 49, 1);
+                    }
+                }
+            }
+        }
+    }
+
+    .header__right {
+        display: none;
+
+        @include tablet {
+
+            display: block;
+
+            button {
+                margin-top: 40px;
+                @include button ($width: 115px, $height: 49px, $border-radius: 30px, $border: transparent, );
+            }
+
+            .header__right--btnleft {
+                background-color: white;
+                @include transition($transition: 0.4s, $transition-timing-function: ease-in-out);
+
+                a {
+                    transition: 0s;
+                    line-height: 16.8px;
+                    @include tag_a ($color: black, $text-decoration: none);
+                    @include font ($font-size: 14px, $font-weight: 700);
+
+                }
+            }
+
+            .header__right--btnRight {
+                background-color: rgba(93, 80, 198, 1);
+                @include transition($transition: 0.4s, $transition-timing-function: ease-in-out);
+
+                a {
+                    transition: 0s;
+                    line-height: 16.8px;
+                    @include tag_a ($color: rgba(238, 238, 238, 1), $text-decoration: none);
+                    @include font ($font-size: 14px, $font-weight: 700);
+                }
+
+                &:hover {
+                    box-shadow: 0 2px 3px 1px rgb(90, 25, 241);
+                }
+            }
+        }
+
+        @include desktop {
+            display: block;
+
+            button {
+                margin-top: 40px;
+                width: 115px;
+                height: 49px;
+                border-radius: 30px;
+                border: transparent;
+            }
+
+            .header__right--btnleft {
+                background-color: white;
+                cursor: pointer;
+                transition: 0.4s;
+                transition-timing-function: ease-in-out;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    transition: 0s;
+                    line-height: 16.8px;
+
+
+                    font: {
+                        weight: 700;
+                        size: 14px;
+
+                    }
+                }
+            }
+
+            .header__right--btnRight {
+                background-color: rgba(93, 80, 198, 1);
+                cursor: pointer;
+                transition: 0.4s;
+                transition-timing-function: ease-in-out;
+
+                a {
+                    color: rgba(238, 238, 238, 1);
+                    text-decoration: none;
+                    transition: 0s;
+                    line-height: 16.8px;
+
+                    font: {
+                        weight: 700;
+                        size: 14px;
+
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 2px 3px 1px rgb(90, 25, 241);
+                }
+            }
+        }
+    }
+}
