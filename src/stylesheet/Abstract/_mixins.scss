@@ -29,6 +29,36 @@
     cursor: pointer;
 }
 
+@mixin set-size-and-set-margin ($width: false, $height: false, $margin-top: false, $margin-left: false, $margin-right: false, $margin-bottom: false, $margin: false) {
+    @if $width != false {
+        width: $width;
+    }
+
+    @if $height != false  {
+        height: $height;
+    }
+
+    @if $margin-top != false  {
+        margin-top: $margin-top;
+    }
+    
+    @if $margin-left != false  {
+        margin-left: $margin-left;
+    }
+
+    @if $margin-right != false  {
+        margin-right: $margin-right;
+    }
+
+    @if $margin-bottom != false  {
+        margin-bottom: $margin-bottom;
+    }
+
+    @if $margin != false  {
+        margin: $margin;
+    }
+}
+
 @mixin transition($transition : false, $transition-timing-function: false) {
     @if $transition !=false {
         transition: $transition;
