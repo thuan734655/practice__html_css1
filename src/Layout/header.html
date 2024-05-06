@@ -1,27 +1,127 @@
 <header class="header">
-    <img class="header__icon--menu" src="../assets/icon/menu.svg" alt="menu">
-    <img class="header__icon--logo" src="../assets/icon/Logo_frame1.svg" alt="logo">
-    <div class="header__center">
-        <ul>
-            <include src="./components/navList.html" locals='{
-                    "list":[
-                    {"link":"#","content":"Home"},
-                    {"link":"#","content":"Discover"},
-                    {"link":"#","content":"Special Deals"},
-                    {"link":"#","content":"Contact"}
-                    ]
+
+    <!-- start header top  -->
+    <div class="header__top">
+        <!-- start icon logo and icon menu  -->
+        <img class="header__top__icon--menu" src="../assets/icon/menu.svg" alt="menu">
+        <img class="header__top__icon--logo" src="../assets/icon/Logo_frame1.svg" alt="logo">
+        <!-- start icon logo and icon menu  -->
+
+        <!-- start header__top__center  -->
+        <div class="header__top__center">
+            <ul>
+                <include src="./components/navList.html" locals='{
+                     "list":[
+                     {"link":"#","content":"Home"},
+                     {"link":"#","content":"Discover"},
+                     {"link":"#","content":"Special Deals"},
+                     {"link":"#","content":"Contact"}
+                     ]
+                 }'>
+                </include>
+            </ul>
+
+        </div>
+        <!-- end header__top__center  -->
+
+        <!-- start header__top__right  -->
+        <div class="header__top__right">
+            <include src="./components/button.html" locals='{
+             "list":[
+             {"classBtn":"top__right--btnleft","classLink":"top__right--btnleft--link","link":"#","content":"Log In"},
+             {"classBtn":"top__right--btnRight","classLink":"top__right--btnRight--link","link":"#","content":"Sign Up"}
+             ]
+         }'>
+            </include>
+        </div>
+        <!-- end header__top__right  -->
+    </div>
+    <!-- end header top  -->
+
+
+    <!-- start header-bottom  -->
+    <div class="header-bottom">
+        <!-- start header-bottom__left  -->
+        <div class="header-bottom__left">
+            <include src="./components/buttonIcon.html" locals='{
+                "list": [ 
+                {"class":"btn__top","linkimg" : "../assets/icon/bag_frame1.svg","alts": "icon bag","classImg":"btn__top--icon","classLink":"btn__top--link","link":"#","content":"Explore the world!"}
+                ]
                 }'>
             </include>
-        </ul>
+            <p>Travel top destination of the world</p>
+            <p>We always make our customer happy by providing as many choices as possible</p>
+
+            <!-- start bottom__left__btn  -->
+            <div class="bottom__left__btn">
+                <include src="./components/button.html" locals='{
+                    "list":[
+                    {"classBtn":"bottom__left__btn--left","classLink":"bottom__left__btn--left--link","link":"#","content":"Get Started"}
+                    ]
+                }'>
+                </include>
+                <include src="./components/buttonIcon.html" locals='{
+                    "list": [ 
+                    {"class":"bottom__left__btn--right","linkimg" : "../assets/icon/play_frame1.svg","alts": "icon play","classImg":"bottom__btn-right--icon","classLink":"bottom__left__btn-right--link","link":"#","content":"Watch Demo"}
+                    ]
+                    }'>
+                </include>
+            </div>
+            <!-- end bottom__left__btn  -->
+
+        </div>
+        <!-- end header-bottom__left  -->
+
+        <!-- start header-bottom__right -->
+        <div class="header-bottom__right">
+
+            <!-- start header-bottom__right--layer -->
+            <div class="header-bottom__right--layer">
+                <figure>
+                    <img class="header-bottom__right--pic1" src="../assets/img/layer_pane1.png" alt="layer">
+                </figure>
+            </div>
+            <!-- end header-bottom__right--layer -->
+
+            <!-- start header-bottom__right--pic -->
+            <div class="header-bottom__right--pic">
+                
+                <figure class="header-bottom__right--pic2">
+                    <img class="pic2--img" src="../assets/img/pic1_pane1.jpg" alt="pic1">
+                </figure>
+
+                <figure class="header-bottom__right--pic3">
+                    <img class="pic3--img" src="../assets/icon/icon_arrow_pic1.png" alt="icon arrow">
+                </figure>
+
+                <figure class="header-bottom__right--pic4">
+                    <img class="pic4--img" src="../assets/img/pic2_pane1.jpg" alt="pic2">
+                </figure>
+
+
+                <include src="./components/buttonIcon.html" locals='{
+                    "list": [ 
+                    {"class":"btn__right","linkimg" : "../assets/icon/location_frame1.svg","alts": "icon location","classImg":"btn__right--icon","classLink":"btn__right--link","link":"#","content":"Watch Demo"}
+                    ]
+                }'>
+
+                </include>
+
+                <figure class="header-bottom__right--pic5">
+                    <img class="pic5--img" src="../assets/img/pic3_pane1.jpg" alt="pic3">
+                </figure>
+
+                <figure class="header-bottom__right--pic6">
+                    <img class="pic6--img" src="../assets/icon/icon_add.png" alt="icon add">
+                </figure>
+
+            </div>
+            <!-- end header-bottom__right--pic -->
+
+        </div>
+        <!-- end header-bottom__right -->
 
     </div>
-    <div class="header__right">
-        <include src="./components/button.html" locals='{
-            "list":[
-            {"classBtn":"header__right--btnleft","classLink":"header__right--btnleft--link","link":"#","content":"Log In"},
-            {"classBtn":"header__right--btnRight","classLink":"header__right--btnRight--link","link":"#","content":"Sign Up"}
-            ]
-        }'>
-        </include>
-    </div>
+    <!-- end header__bottom  -->
+
 </header>
