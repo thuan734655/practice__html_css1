@@ -30,31 +30,31 @@
 }
 
 @mixin set-size-and-set-margin ($width: false, $height: false, $margin-top: false, $margin-left: false, $margin-right: false, $margin-bottom: false, $margin: false) {
-    @if $width != false {
+    @if $width !=false {
         width: $width;
     }
 
-    @if $height != false  {
+    @if $height !=false {
         height: $height;
     }
 
-    @if $margin-top != false  {
+    @if $margin-top !=false {
         margin-top: $margin-top;
     }
-    
-    @if $margin-left != false  {
+
+    @if $margin-left !=false {
         margin-left: $margin-left;
     }
 
-    @if $margin-right != false  {
+    @if $margin-right !=false {
         margin-right: $margin-right;
     }
 
-    @if $margin-bottom != false  {
+    @if $margin-bottom !=false {
         margin-bottom: $margin-bottom;
     }
 
-    @if $margin != false  {
+    @if $margin !=false {
         margin: $margin;
     }
 }
@@ -80,7 +80,7 @@
 }
 
 
-@mixin grid($grid-tplt-row: false, $grid-tplt-column: false, $justify-content: false, $align-items: false, $grid-gap: false) {
+@mixin grid($grid-tplt-row: false, $grid-tplt-column: false, $justify-content: false, $align-items: false, $grid-gap: false, $column-gap: false) {
     display: grid;
 
     @if $grid-tplt-row !=false {
@@ -101,6 +101,10 @@
 
     @if $grid-gap !=false {
         grid-gap: $grid-gap;
+    }
+
+    @if $column-gap !=falase {
+        column-gap: $column-gap;
     }
 }
 
@@ -162,6 +166,7 @@
     background-position: center;
     background-size: cover;
 }
+
 
 //reponsive
 

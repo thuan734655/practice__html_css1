@@ -1,8 +1,8 @@
 //header
-var header__button__left = document.querySelector(".header__right--btnleft");
-var header__button__right = document.querySelector(".header__right--btnRight");
-var header__right__btnleft__link = document.querySelector(".header__right--btnleft--link");
-var header__right__btnRight__link = document.querySelector(".header__right--btnRight--link");
+var header__button__left = document.querySelector(".top__right--btnleft");
+var header__button__right = document.querySelector(".top__right--btnRight");
+var header__right__btnleft__link = document.querySelector(".top__right--btnleft--link");
+var header__right__btnRight__link = document.querySelector(".top__right--btnRight--link");
 
 
 header__button__left.addEventListener('mouseenter', function(event) {

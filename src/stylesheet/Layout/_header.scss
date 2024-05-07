@@ -2,7 +2,10 @@
 @use "../Base/" as *;
 
 .header {
+
+    margin: 0 auto;
     margin-top: 30px;
+  
 
     // start header__top
     .header__top {
@@ -164,12 +167,86 @@
     //  start header__bottom 
     .header-bottom {
         display: flex;
+        position: relative;
+        width: 80%;
+        height: auto;
+        top: 64px;
+        margin: 0 auto;
 
         .header-bottom__left {
-            @include flex ($display: flex, $direction: column);
+            @include flex ($display: flex, $direction: column,$gap:43px);
+
+            .btn__top {
+                width: 224px;
+                height: 56px;
+                border-radius: 100px;
+                border: transparent;
+                background-color: rgba(255, 255, 255, 1);
+                @include flex ($display: flex, $direction:row-reverse,$align: center, $justify: center,$gap: 16px );
+
+                &--icon {
+                    width: 20px;
+                    height: 20px;
+                }
+                &--link {
+                    @include font ($font-family: $primary-font, $font-size : pxToRem(14), $font-weight: 700, $line-height: 16.8px, $color: #F85E9F);
+                    text-decoration: none;
+                }
+            }
+            .left__text--first-text {
+                width: 412px;
+                height: 249px;
+                @include font ($font-family: $primary-font, $font-size : pxToRem(69), $font-weight: 700, $line-height: 82.8px, $color: rgba(0, 0, 0, 1));
+                span {
+                    color: rgba(248, 94, 159, 1);
+                }
+            }
+
+            .left__text--second-text {
+                width: 412px;
+                height: 87px;
+                @include font ($font-family: $second-font, $font-size : pxToRem(18), $font-weight: 400, $line-height: 28.8px, $color: rgba(25, 24, 37, 0.5));
+            }
+
+            .bottom__left__btn {
+                @include flex ($display: flex);
+
+                &--left {
+                    width: 141px;
+                    height: 49px;
+                    background-color: rgba(93, 80, 198, 1);
+                    border-radius: 100px;
+                    border: transparent;
+
+                    a {
+                        @include font ($font-family: $primary-font, $font-size : pxToRem(14), $font-weight: 700, $line-height: 16.8px, $color:rgba(238, 238, 238, 1));
+                        text-decoration: none;
+                    }
+                    
+                }
+                &--right {
+                    width: 181px;
+                    height: 56px;
+                    background-color:rgba(255, 255, 255, 1) ;
+                    border-radius: 100px;
+                    border: 1px solid rgba(238, 238, 238, 1);
+                    @include flex($justify: center, $align: center);
+                 
+
+                    a {
+                        @include font ($font-family: $primary-font, $font-size : pxToRem(14), $font-weight: 700, $line-height: 16.8px, $color:rgba(34, 40, 49, 1));
+                        text-decoration: none;
+                        
+                    }
+                    
+                }
+            }
         }
 
         .header-bottom__right {
+            position: relative;
+            left: 30px;
+
             &--layer {
                 img {
                     @include set-size-and-set-margin($width: 772px, $height: 287.38px);
@@ -177,13 +254,20 @@
             }
 
             .header-bottom__right--pic {
-                @include grid ($grid-tplt-row: 0.3fr 0.5fr 30px 0.5fr 0.5fr, $grid-tplt-column: 0.4fr 0.4fr);
+                position: absolute;
+                top: 78px;
+                left: 120px;
+
+                @include grid ($grid-tplt-row: 0.3fr 0.5fr 30px 0.5fr 0.3fr, $grid-tplt-column: 0.4fr 0.4fr, $column-gap : 32px);
+
 
                 .header-bottom__right--pic2 {
                     grid-column: 1/2;
                     grid-row: 1/3;
+                    border-radius: 30px;
 
                     .pic2--img {
+                        border-radius: 32px;
                         @include set-size-and-set-margin($width: 272px, $height: 300px);
                     }
                 }
@@ -192,10 +276,12 @@
                     grid-column: 1/2;
                     grid-row: 2/3;
                     position: relative;
+                    bottom: -150px;
+                    left: -32px;
+                }
 
-                    .pic3--img {
-                        @include set-size-and-set-margin($width: 64px, $height: 64px);
-                    }
+                .pic3--img {
+                    @include set-size-and-set-margin($width: 64px, $height: 64px);
                 }
 
                 .header-bottom__right--pic4 {
@@ -204,6 +290,7 @@
                     position: relative;
 
                     .pic4--img {
+                        border-radius: 32px;
                         @include set-size-and-set-margin($width: 272px, $height: 400px);
                     }
                 }
@@ -211,8 +298,21 @@
                 .btn__right {
                     grid-column: 2/3;
                     grid-row: 4/5;
-                    z-index: 1;
-                    @include set-size-and-set-margin($width: 24px, $height: 24px);
+                    z-index: 2;
+                    border-radius: 27px;
+                    border: transparent;
+                    background-color: #FFFFFF;
+                    position: relative;
+                    right: -196px;
+                    top: 90px;
+                    @include flex($justify: center, $align: center);
+                    @include set-size-and-set-margin($width: 166px, $height: 56px);
+
+                    a {
+                        @include font ($font-family: $primary-font, $font-size : pxToRem(14), $font-weight: 700, $line-height: 16.8px, $color: rgba(57, 62, 70, 1));
+                        text-decoration: none;
+                    }
+
                 }
 
                 .header-bottom__right--pic5 {
@@ -220,6 +320,7 @@
                     grid-row: 4/6;
 
                     .pic5--img {
+                        border-radius: 32px;
                         @include set-size-and-set-margin($width: 272px, $height: 300px);
                     }
                 }
@@ -228,6 +329,9 @@
                     grid-column: 2/3;
                     grid-row: 5/6;
                     z-index: 1;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 75px;
 
                     .pic6--img {
                         @include set-size-and-set-margin($width: 64px, $height: 64px);
