@@ -29,33 +29,13 @@
     cursor: pointer;
 }
 
-@mixin set-size-and-set-margin ($width: false, $height: false, $margin-top: false, $margin-left: false, $margin-right: false, $margin-bottom: false, $margin: false) {
+@mixin set-size($width: false, $height: false) {
     @if $width !=false {
         width: $width;
     }
 
     @if $height !=false {
         height: $height;
-    }
-
-    @if $margin-top !=false {
-        margin-top: $margin-top;
-    }
-
-    @if $margin-left !=false {
-        margin-left: $margin-left;
-    }
-
-    @if $margin-right !=false {
-        margin-right: $margin-right;
-    }
-
-    @if $margin-bottom !=false {
-        margin-bottom: $margin-bottom;
-    }
-
-    @if $margin !=false {
-        margin: $margin;
     }
 }
 
@@ -167,11 +147,56 @@
     background-size: cover;
 }
 
+@mixin margin($margin : false, $margin-top: false, $margin-left: false, $margin-right: false, $margin-bottom: false) {
+    @if $margin !=false {
+        margin: $margin;
+    }
+
+    @if $margin-top !=false {
+        margin-top: $margin-top;
+    }
+
+
+    @if $margin-bottom !=false {
+        margin-bottom: $margin-bottom;
+    }
+
+
+    @if $margin-left !=false {
+        margin-left: $margin-left;
+    }
+
+
+    @if $margin-right !=false {
+        margin-right: $margin-right;
+    }
+}
+
+@mixin position ($position : false, $top : false, $bottom : false, $right : false, $left : false) {
+
+    @if $position != false  {
+        position: $position;
+    } 
+
+    @if $top != false {
+        top : $top;
+    }
+    @if $bottom != false {
+        bottom : $bottom;
+    }
+    @if $right != false {
+        right : $right;
+    }
+    @if $left != false {
+        left : $left;
+    }
+}
+
 
 //reponsive
 
 @mixin tablet {
-    @media (min-width:$mobile-medium-max) {
+    @media screen and (min-width:$mobile-medium-max) {
         @content;
     }
 }
