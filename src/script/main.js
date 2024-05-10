@@ -24,3 +24,36 @@ header__button__left.addEventListener('mouseenter', function(event) {
    header__button__left.style.boxShadow = 'none';
 
   });
+
+
+// @media screen and (max-width:431) 
+var header_bottom_left_first_text = document.querySelector(".left__text--first-text");
+const mediaQueryMobile = window.matchMedia('(max-width: 431px)');
+function handleScreenChangeMobile(mediaQuery) {
+    if (mediaQuery.matches) {
+        header_bottom_left_first_text.innerHTML = 'Travel <span>top <br> destination</span> of the <br> world';
+    }
+    else {
+        header_bottom_left_first_text.innerHTML = 'Travel <span>top destination</span> of the world';
+    }
+}
+
+// goi ham handleScreenChange khi screen changed size
+handleScreenChangeMobile(mediaQueryMobile);
+mediaQueryMobile.addListener(handleScreenChangeMobile);
+
+
+// @media screen and (max-width:1025) 
+const mediaQueryTablet = window.matchMedia('(max-width: 1025px)');
+function handleScreenChangeTablet(mediaQuery) {
+    if (mediaQueryTablet.matches) {
+        header_bottom_left_first_text.innerHTML = 'Travel <span>top destination <br></span> of the world';
+    }
+    else {
+        header_bottom_left_first_text.innerHTML = 'Travel <span>top destination</span> of the world';
+    }
+}
+
+// goi ham handleScreenChange khi screen changed size
+handleScreenChangeTablet(mediaQueryTablet);
+mediaQueryTablet.addListener(handleScreenChangeTablet);
