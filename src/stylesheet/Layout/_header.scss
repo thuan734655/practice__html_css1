@@ -806,11 +806,13 @@
         );
 
         .header-bottom__right--pic2 {
-          border-radius: px-to-vw-tablet(32);
           @include set_size(
             $width: px-to-vw-tablet(272),
             $height: px-to-vw-tablet(300)
           );
+          img {
+            border-radius: px-to-vw-tablet(32);
+          }
         }
 
         .header-bottom__right--pic3 {
@@ -827,6 +829,9 @@
             $width: px-to-vw-tablet(272),
             $height: px-to-vw-tablet(400)
           );
+          img {
+            border-radius: px-to-vw-tablet(32);
+          }
         }
 
         .btn__right {
@@ -854,11 +859,13 @@
         }
 
         .header-bottom__right--pic5 {
-          border-radius: px-to-vw-tablet(32);
           @include set_size(
             $width: px-to-vw-tablet(272),
             $height: px-to-vw-tablet(300)
           );
+          img {
+            border-radius: px-to-vw-tablet(32);
+          }
         }
 
         .header-bottom__right--pic6 {
@@ -893,7 +900,7 @@
         .header-bottom__right--pic {
           position: absolute;
           top: px-to-vw-desktop(111);
-          left: px-to-vw-desktop(95);
+          left: px-to-vw-desktop(93);
 
           @include grid(
             $grid-tplt-row: 0.3fr 0.5fr px-to-vw-desktop(32) 0.5fr 0.3fr,
@@ -901,11 +908,13 @@
           );
 
           .header-bottom__right--pic2 {
-            border-radius: px-to-vw-desktop(32);
             @include set_size(
               $width: px-to-vw-desktop(272),
               $height: px-to-vw-desktop(300)
             );
+            img {
+              border-radius: px-to-vw-desktop(32);
+            }
           }
 
           .header-bottom__right--pic3 {
@@ -930,6 +939,9 @@
               $width: px-to-vw-desktop(272),
               $height: px-to-vw-desktop(400)
             );
+            img {
+              border-radius: px-to-vw-desktop(32);
+            }
           }
 
           .btn__right {
@@ -957,11 +969,14 @@
           }
 
           .header-bottom__right--pic5 {
-            border-radius: px-to-vw-desktop(32);
+           
             @include set_size(
               $width: px-to-vw-desktop(272),
               $height: px-to-vw-desktop(300)
             );
+             img {
+              border-radius: px-to-vw-desktop(32);
+            }
           }
 
           .header-bottom__right--pic6 {
