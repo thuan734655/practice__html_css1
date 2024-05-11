@@ -34,7 +34,7 @@ function handleScreenChangeMobile(mediaQuery) {
         header_bottom_left_first_text.innerHTML = 'Travel <span>top <br> destination</span> of the <br> world';
     }
     else {
-        header_bottom_left_first_text.innerHTML = 'Travel <span>top destination</span> of the world';
+header_bottom_left_first_text.innerHTML = 'Travel <span>top destination <br></span> of the world';
     }
 }
 
@@ -45,7 +45,7 @@ mediaQueryMobile.addListener(handleScreenChangeMobile);
 
 // @media screen and (max-width:1025) 
 const mediaQueryTablet = window.matchMedia('(max-width: 1025px)');
-function handleScreenChangeTablet(mediaQuery) {
+function handleScreenChangeTablet(mediaQueryTablet) {
     if (mediaQueryTablet.matches) {
         header_bottom_left_first_text.innerHTML = 'Travel <span>top destination <br></span> of the world';
     }

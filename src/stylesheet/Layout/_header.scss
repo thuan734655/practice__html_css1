@@ -7,13 +7,14 @@
 
   // start header__top
   .header__top {
-    padding: 32px 0;
+    padding: calc(px-to-vw-mobile(32) - 0.03px) 0;
     transform: translateX(-50%);
     @include position($position: relative, $left: 53%);
     @include set-size($width: px-to-vw-mobile(397.64));
     @include flex($justify: space-between, $direction: row-reverse);
 
     @include tablet {
+      padding: px-to-vw-tablet(32) 0;
       @include position($left: 50%);
       @include flex($direction: row);
       @include set-size(
@@ -22,6 +23,7 @@
       );
 
       @include desktop {
+        padding: px-to-vw-desktop(32) 0;
         @include position($left: 50%);
         @include flex($justify: space-between, $direction: row);
         @include set-size(
@@ -94,7 +96,7 @@
               $height: px-to-vw-desktop(17)
             );
             a {
-              color: rgba(34, 40, 49, 1);
+              color: $Nav-hover-text;
             }
           }
 
@@ -114,7 +116,7 @@
 
           a {
             text-wrap: nowrap;
-            @include tag_a($color: gray, $text-decoration: none);
+            @include tag_a($color: $second-color-text, $text-decoration: none);
             @include font(
               $font-family: $primary-font,
               $font-size: px-to-vw-desktop(14),
@@ -122,7 +124,7 @@
             );
 
             &:hover {
-              color: rgba(34, 40, 49, 1);
+              color: $Nav-hover-text;
             }
           }
         }
@@ -150,7 +152,7 @@
           a {
             transition: 0s;
             line-height: px-to-vw-tablet((16.8));
-            @include tag_a($color: rgba(34, 40, 49, 1), $text-decoration: none);
+            @include tag_a($color: $Nav-hover-text, $text-decoration: none);
             @include font($font-size: px-to-vw-tablet(14), $font-weight: 700);
           }
         }
@@ -160,13 +162,13 @@
             $width: px-to-vw-tablet(105),
             $height: px-to-vw-tablet(49)
           );
-          background-color: rgba(255, 255, 255, 1);
+          background-color: $second-color-button;
           a {
-            @include tag_a($color: rgba(34, 40, 49, 1));
+            @include tag_a($color: $Nav-hover-text);
           }
 
           &:hover {
-            box-shadow: 0 2px 3px 1px rgb(90, 25, 241);
+            box-shadow: 0 2px 3px 1px $color-button-hover;
           }
         }
 
@@ -175,13 +177,13 @@
             $width: px-to-vw-tablet(115),
             $height: px-to-vw-tablet(49)
           );
-          background-color: rgba(93, 80, 198, 1);
+          background-color: $first-color-button;
           a {
-            @include tag_a($color: rgba(238, 238, 238, 1));
+            @include tag_a($color: $second-color-button);
           }
 
           &:hover {
-            box-shadow: 0 2px 3px 1px rgb(90, 25, 241);
+            box-shadow: 0 2px 3px 1px $color-button-hover;
           }
         }
 
@@ -230,7 +232,7 @@
     @include margin($margin-top: px-to-vw-mobile(82));
 
     @include tablet {
-      @include margin($margin-top: 64px);
+      @include margin($margin-top: px-to-vw-tablet(64));
       @include set-size($width: px-to-vw-tablet(896), $height: auto);
 
       @include desktop {
@@ -256,7 +258,7 @@
         border-radius: px-to-vw-mobile(100);
         margin: 0 auto;
         border: transparent;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: $second-color-button;
         @include flex(
           $display: flex,
           $direction: row-reverse,
@@ -282,7 +284,7 @@
             $font-size: calc(px-to-vw-mobile(14) - 0.013px),
             $font-weight: 700,
             $line-height: px-to-vw-mobile(16.8),
-            $color: #f85e9f
+            $color: $third-color-text
           );
           text-decoration: none;
         }
@@ -290,7 +292,7 @@
 
       .left__text--first-text {
         span {
-          color: rgba(248, 94, 159, 1);
+          color: $third-color-text;
         }
 
         @include set-size(
@@ -302,7 +304,7 @@
           $font-size: calc(px-to-vw-mobile(40) - 0.0372px),
           $font-weight: 700,
           $line-height: px-to-vw-mobile(56),
-          $color: rgba(0, 0, 0, 1)
+          $color: $sixth-color-text
         );
         text-align: center;
       }
@@ -317,7 +319,7 @@
           $font-size: calc(px-to-vw-mobile(16) - 0.0149px),
           $font-weight: 400,
           $line-height: px-to-vw-mobile(28.8),
-          $color: rgba(25, 24, 37, 0.5)
+          $color: $second-color-text
         );
         text-align: center;
       }
@@ -337,8 +339,8 @@
           width: calc(px-to-vw-mobile(398) - 0.36px);
           padding: calc(px-to-vw-mobile(24) - 0.022px)
             calc(px-to-vw-mobile(32) - 0.03px);
-          background-color: rgba(93, 80, 198, 1);
-          border-radius: 6.944vw;
+          background-color: $first-color-button;
+          border-radius: px-to-vw-mobile(100);
           border: transparent;
 
           a {
@@ -347,7 +349,7 @@
               $font-size: px-to-vw-mobile(14),
               $font-weight: 700,
               $line-height: px-to-vw-mobile(16.8),
-              $color: rgba(238, 238, 238, 1)
+              $color: $seven-color-text
             );
             text-decoration: none;
           }
@@ -363,9 +365,9 @@
           object-fit: cover;
           padding: calc(px-to-vw-mobile(24) - 0.022px)
             calc(px-to-vw-mobile(32) - 0.03px);
-          background-color: rgba(255, 255, 255, 1);
-          border-radius: 6.944vw;
-          border: calc(px-to-vw-mobile(1) + 0.5px) solid rgba(238, 238, 238, 1);
+          background-color: $seven-color-text;
+          border-radius: px-to-vw-mobile(100);
+          border: calc(px-to-vw-mobile(1) + 0.5px) solid $seven-color-text;
           @include flex(
             $justify: center,
             $align: center,
@@ -382,7 +384,7 @@
               $font-size: calc(px-to-vw-mobile(14) - 0.013px),
               $font-weight: 700,
               $line-height: px-to-vw-mobile(16.8),
-              $color: rgba(34, 40, 49, 1)
+              $color: $Nav-hover-text
             );
             @include set_size($width: calc(px-to-vw-mobile(85) - 0.07px));
             object-fit: cover;
@@ -392,7 +394,7 @@
       }
       @include tablet {
         position: relative;
-        left: px-to-vw-tablet(-19);
+        left: px-to-vw-tablet(-22);
         @include set-size($width: px-to-vw-tablet(896));
         @include flex(
           $display: flex,
@@ -481,7 +483,7 @@
           &--right {
             top: 0;
             border-radius: px-to-vw-tablet(100);
-            border: px-to-vw-tablet(1) solid rgba(238, 238, 238, 1);
+            border: px-to-vw-tablet(1) solid $seven-color-text;
             padding: unset;
             @include set_size(
               $width: px-to-vw-tablet(181),
@@ -504,7 +506,11 @@
         }
 
         @include desktop {
-          @include position($position: relative, $left:0 , $top: px-to-vw-desktop(70));
+          @include position(
+            $position: relative,
+            $left: 0,
+            $top: px-to-vw-desktop(70)
+          );
           @include set-size($width: px-to-vw-desktop(412));
           @include flex(
             $display: flex,
@@ -596,7 +602,7 @@
             &--right {
               top: 0;
               border-radius: px-to-vw-desktop(100);
-              border: px-to-vw-desktop(1) solid rgba(238, 238, 238, 1);
+              border: px-to-vw-desktop(1) solid $seven-color-text;
               padding: unset;
               @include set_size(
                 $width: px-to-vw-desktop(181),
@@ -623,8 +629,12 @@
   }
 
   .header-bottom__right {
-    @include margin($margin-right: px-to-vw-mobile(25));
-    @include set-size($width: calc(px-to-vw-mobile(398) - 0.36px));
+    @include position($position: relative, $left: 47.5%);
+    transform: translateX(-50%);
+    @include set-size(
+      $width: calc(px-to-vw-mobile(398) - 0.36px),
+      $height: calc(px-to-vw-mobile(366) - 0.34px)
+    );
     @include flex(
       $display: flex,
       $direction: column,
@@ -633,39 +643,35 @@
     );
 
     .pic--img {
-      @include set-size(
-        $width: calc(px-to-vw-mobile(139.63) - 0.13px),
-        $height: px-to-vw-mobile(154)
-      );
+      @include set_size($width: 100%, $height: 100%);
       border-radius: px-to-vw-mobile(16.43);
       object-fit: cover;
     }
     .pic--icon {
-      @include set_size(
-        $width: px-to-vw-mobile(32.82),
-        $height: px-to-vw-mobile(32.82)
-      );
+      @include set_size($width: 100%, $height: 100%);
+      object-fit: cover;
     }
 
     &--layer {
+      @include set_size(
+        $width: px-to-vw-mobile(395.93),
+        $height: calc(px-to-vw-mobile(147.52) - 0.13px)
+      );
       .header-bottom__right--pic1 {
         position: relative;
         top: px-to-vw-mobile(10);
-        @include set_size(
-          $width: px-to-vw-mobile(395.93),
-          $height: calc(px-to-vw-mobile(147.52) - 0.13px)
-        );
+        @include set_size($width: 100%, $height: 100%);
         object-fit: cover;
       }
     }
 
     .header-bottom__right--pic {
       position: relative;
-      top: px-to-vw-mobile(-93);
+      top: px-to-vw-mobile(-97.5);
       left: px-to-vw-mobile(-15);
 
       @include grid(
-        $grid-tplt-row: 0.3fr 0.5fr 30px 0.5fr 0.3fr,
+        $grid-tplt-row: 0.3fr 0.5fr px-to-vw-mobile(16) 0.5fr 0.3fr,
         $grid-tplt-column: 0.4fr 0.4fr,
         $column-gap: px-to-vw-mobile(16)
       );
@@ -673,6 +679,10 @@
       .header-bottom__right--pic2 {
         grid-column: 1/2;
         grid-row: 1/3;
+        @include set-size(
+          $width: calc(px-to-vw-mobile(139.63) - 0.13px),
+          $height: px-to-vw-mobile(154)
+        );
       }
 
       .header-bottom__right--pic3 {
@@ -681,15 +691,20 @@
         position: relative;
         bottom: px-to-vw-mobile(-80);
         left: px-to-vw-mobile(-15);
+        @include set_size(
+          $width: px-to-vw-mobile(32.82),
+          $height: px-to-vw-mobile(32.82)
+        );
       }
 
       .header-bottom__right--pic4 {
         grid-column: 2/3;
         grid-row: 2/5;
         position: relative;
-        img {
-          @include set_size($height: px-to-vw-mobile(205.33));
-        }
+        @include set-size(
+          $width: calc(px-to-vw-mobile(139.63) - 0.13px),
+          $height: calc(px-to-vw-mobile(205) - 0.19px)
+        );
       }
 
       .btn__right {
@@ -698,13 +713,15 @@
         z-index: 2;
         border-radius: 27px;
         border: transparent;
-        background-color: #ffffff;
-        position: relative;
-        right: px-to-vw-mobile(-98);
-        top: px-to-vw-mobile(20);
+        background-color: $second-color-button;
+        @include position(
+          $position: relative,
+          $top: px-to-vw-mobile(35),
+          $right: px-to-vw-mobile(-98)
+        );
         @include flex($justify: center, $align: center);
         @include set_size(
-          $width:calc( px-to-vw-mobile(85.21) - 0.07px),
+          $width: calc(px-to-vw-mobile(85.21) - 0.07px),
           $height: calc(px-to-vw-mobile(28.75) - 0.02px)
         );
 
@@ -725,7 +742,7 @@
             $font-size: px-to-vw-tablet(14),
             $font-weight: 700,
             $line-height: px-to-vw-tablet(16.8),
-            $color: rgba(57, 62, 70, 1)
+            $color: $eighth-color-text
           );
         }
       }
@@ -733,6 +750,10 @@
       .header-bottom__right--pic5 {
         grid-column: 1/2;
         grid-row: 4/6;
+        @include set-size(
+          $width: calc(px-to-vw-mobile(139.63) - 0.13px),
+          $height: px-to-vw-mobile(154)
+        );
       }
 
       .header-bottom__right--pic6 {
@@ -742,6 +763,10 @@
         position: absolute;
         bottom: px-to-vw-tablet(-10);
         left: px-to-vw-tablet(75);
+        @include set_size(
+          $width: px-to-vw-mobile(32.82),
+          $height: px-to-vw-mobile(32.82)
+        );
       }
     }
     @include tablet {
@@ -760,33 +785,32 @@
       );
 
       &--layer {
+        @include set_size(
+          $width: px-to-vw-tablet(772),
+          $height: px-to-vw-tablet(287.36)
+        );
         img {
           position: relative;
           top: -0;
-
-          @include set_size(
-            $width: px-to-vw-tablet(772),
-            $height: px-to-vw-tablet(287.36)
-          );
         }
       }
 
       .header-bottom__right--pic {
-        top: px-to-vw-tablet(-191);
-        left: px-to-vw-tablet(30);
+        top: px-to-vw-tablet(-185);
+        left: px-to-vw-tablet(-15);
 
-        @include grid($column-gap: px-to-vw-desktop(32));
+        @include grid(
+          $grid-tplt-row: 0.3fr 0.5fr px-to-vw-tablet(32) 0.5fr 0.3fr,
+          $grid-tplt-column: 0.4fr 0.4fr,
+          $column-gap: px-to-vw-tablet(31)
+        );
 
         .header-bottom__right--pic2 {
           border-radius: px-to-vw-tablet(32);
-
-          .pic2--img {
-            border-radius: px-to-vw-tablet(32);
-            @include set_size(
-              $width: px-to-vw-tablet(272),
-              $height: px-to-vw-tablet(300)
-            );
-          }
+          @include set_size(
+            $width: px-to-vw-tablet(272),
+            $height: px-to-vw-tablet(300)
+          );
         }
 
         .header-bottom__right--pic3 {
@@ -799,18 +823,15 @@
         }
 
         .header-bottom__right--pic4 {
-          .pic4--img {
-            border-radius: px-to-vw-tablet(32);
-            @include set_size(
-              $width: px-to-vw-tablet(272),
-              $height: px-to-vw-tablet(400)
-            );
-          }
+          @include set_size(
+            $width: px-to-vw-tablet(272),
+            $height: px-to-vw-tablet(400)
+          );
         }
 
         .btn__right {
           right: px-to-vw-tablet(-196);
-          top: px-to-vw-tablet(90);
+          top: px-to-vw-tablet(70);
           @include flex($justify: center, $align: center);
           @include set_size(
             $width: px-to-vw-tablet(166),
@@ -833,25 +854,20 @@
         }
 
         .header-bottom__right--pic5 {
-          .pic5--img {
-            border-radius: px-to-vw-tablet(32);
-            @include set_size(
-              $width: px-to-vw-tablet(272),
-              $height: px-to-vw-tablet(300)
-            );
-          }
+          border-radius: px-to-vw-tablet(32);
+          @include set_size(
+            $width: px-to-vw-tablet(272),
+            $height: px-to-vw-tablet(300)
+          );
         }
 
         .header-bottom__right--pic6 {
           bottom: px-to-vw-tablet(-10);
           left: px-to-vw-tablet(75);
-
-          .pic6--img {
-            @include set_size(
-              $width: px-to-vw-tablet(64),
-              $height: px-to-vw-tablet(64)
-            );
-          }
+          @include set_size(
+            $width: px-to-vw-tablet(64),
+            $height: px-to-vw-tablet(64)
+          );
         }
       }
 
@@ -860,37 +876,36 @@
         transform: unset;
         gap: unset;
 
-        @include set-size($width: 53.611vw, $height: 49.514vw);
+        @include set_size(
+          $width: px-to-vw-desktop(772),
+          $height: px-to-vw-desktop(287)
+        );
         display: block;
         top: -30px;
 
         &--layer {
-          img {
-            @include set_size($width: 53.611vw, $height: 19.957vw);
-          }
+          @include set_size(
+            $width: px-to-vw-desktop(772),
+            $height: px-to-vw-desktop(287)
+          );
         }
 
         .header-bottom__right--pic {
           position: absolute;
           top: px-to-vw-desktop(111);
-          left: px-to-vw-desktop(85);
+          left: px-to-vw-desktop(95);
 
           @include grid(
-            $grid-tplt-row: 0.3fr 0.5fr 30px 0.5fr 0.3fr,
-            $grid-tplt-column: 0.4fr 0.4fr,
-            $column-gap: px-to-vw-desktop(32)
+            $grid-tplt-row: 0.3fr 0.5fr px-to-vw-desktop(32) 0.5fr 0.3fr,
+            $column-gap: px-to-vw-desktop(31)
           );
 
           .header-bottom__right--pic2 {
-            border-radius: px-to-vw-desktop(30);
-
-            .pic2--img {
-              border-radius: px-to-vw-desktop(32);
-              @include set_size(
-                $width: px-to-vw-desktop(272),
-                $height: px-to-vw-desktop(300)
-              );
-            }
+            border-radius: px-to-vw-desktop(32);
+            @include set_size(
+              $width: px-to-vw-desktop(272),
+              $height: px-to-vw-desktop(300)
+            );
           }
 
           .header-bottom__right--pic3 {
@@ -902,21 +917,24 @@
                 $height: px-to-vw-desktop(64)
               );
             }
-          }
-
-          .header-bottom__right--pic4 {
-            .pic4--img {
-              border-radius: px-to-vw-desktop(32);
+            .pic--icon {
               @include set_size(
-                $width: px-to-vw-desktop(272),
-                $height: px-to-vw-desktop(400)
+                $width: px-to-vw-desktop(64),
+                $height: px-to-vw-desktop(64)
               );
             }
           }
 
+          .header-bottom__right--pic4 {
+            @include set_size(
+              $width: px-to-vw-desktop(272),
+              $height: px-to-vw-desktop(400)
+            );
+          }
+
           .btn__right {
             right: px-to-vw-desktop(-196);
-            top: px-to-vw-desktop(90);
+            top: px-to-vw-desktop(70);
             @include flex($justify: center, $align: center);
             @include set_size(
               $width: px-to-vw-desktop(166),
@@ -932,36 +950,27 @@
 
             a {
               @include font(
-                $font-family: $primary-font,
                 $font-size: px-to-vw-desktop(14),
-                $font-weight: 700,
-                $line-height: px-to-vw-desktop(16.8),
-                $color: rgba(57, 62, 70, 1)
+                $line-height: px-to-vw-desktop(16.8)
               );
-              text-decoration: none;
             }
           }
 
           .header-bottom__right--pic5 {
-            .pic5--img {
-              border-radius: px-to-vw-desktop(32);
-              @include set_size(
-                $width: px-to-vw-desktop(272),
-                $height: px-to-vw-desktop(300)
-              );
-            }
+            border-radius: px-to-vw-desktop(32);
+            @include set_size(
+              $width: px-to-vw-desktop(272),
+              $height: px-to-vw-desktop(300)
+            );
           }
 
           .header-bottom__right--pic6 {
             bottom: px-to-vw-desktop(-10);
             left: px-to-vw-desktop(75);
-
-            .pic6--img {
-              @include set_size(
-                $width: px-to-vw-desktop(64),
-                $height: px-to-vw-desktop(64)
-              );
-            }
+            @include set_size(
+              $width: px-to-vw-desktop(64),
+              $height: px-to-vw-desktop(64)
+            );
           }
         }
       }
