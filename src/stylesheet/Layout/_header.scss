@@ -5,11 +5,33 @@
   margin: 0 auto;
   @include set-size($width: 82.2%, $height: auto);
 
+  .header-shadow {
+    display: none;
+    @include tablet {
+      display: block;
+      background-color: $color-boxshadow-header;
+      @include position(
+        $position: absolute,
+        $top: px-to-vw-tablet(-200),
+        $left: px-to-vw-tablet(-300)
+      );
+      z-index: 3;
+      @include set_size(
+        $width: px-to-vw-tablet(300),
+        $height: px-to-vw-tablet(300)
+      );
+      filter: blur(px-to-vw-tablet(300));
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
   // start header__top
   .header__top {
     padding: calc(px-to-vw-mobile(32) - 0.03px) 0;
     transform: translateX(-50%);
-    @include position($position: relative, $left: 53%);
+    @include position($position: relative, $left: 51%);
     @include set-size($width: px-to-vw-mobile(397.64));
     @include flex($justify: space-between, $direction: row-reverse);
 
@@ -251,14 +273,16 @@
       @include flex($display: flex, $direction: column);
 
       .btn__top {
-        @include set-size(
-          $width: px-to-vw-mobile(223.8),
-          $height: px-to-vw-mobile(55.95)
-        );
         border-radius: px-to-vw-mobile(100);
         margin: 0 auto;
         border: transparent;
         background-color: $second-color-button;
+        box-shadow: 0 px-to-vw-mobile(15) 40px $second-color-boxshadow-button;
+        @include set-size(
+          $width: px-to-vw-mobile(223.8),
+          $height: px-to-vw-mobile(55.95)
+        );
+
         @include flex(
           $display: flex,
           $direction: row-reverse,
@@ -336,13 +360,17 @@
         margin: 0 auto;
 
         &--left {
-          width: calc(px-to-vw-mobile(398) - 0.36px);
+          @include set_size(
+            $width: calc(px-to-vw-mobile(398) - 0.36px),
+            $height: calc(px-to-vw-mobile(65) - 0.049px)
+          );
           padding: calc(px-to-vw-mobile(24) - 0.022px)
             calc(px-to-vw-mobile(32) - 0.03px);
           background-color: $first-color-button;
+          box-shadow: 0 px-to-vw-mobile(13) px-to-vw-mobile(30)
+            $first-color-boxshadow-button;
           border-radius: px-to-vw-mobile(100);
           border: transparent;
-
           a {
             @include font(
               $font-family: $primary-font,
@@ -351,6 +379,7 @@
               $line-height: px-to-vw-mobile(16.8),
               $color: $seven-color-text
             );
+            @include flex($display: flex, $align: center, $justify: center);
             text-decoration: none;
           }
         }
@@ -408,6 +437,7 @@
             $height: px-to-vw-tablet(56)
           );
           border-radius: px-to-vw-tablet(100);
+          box-shadow: 0 px-to-vw-mobile(10) 70px $second-color-boxshadow-button;
           &--icon {
             @include set-size(
               $width: px-to-vw-tablet(24),
@@ -472,6 +502,8 @@
             );
             padding: unset;
             border-radius: px-to-vw-tablet(100);
+            box-shadow: 0 px-to-vw-tablet(13) px-to-vw-tablet(50)
+              $first-color-boxshadow-button;
             a {
               @include font(
                 $font-size: px-to-vw-tablet(14),
@@ -591,6 +623,8 @@
               );
               padding: unset;
               border-radius: px-to-vw-desktop(100);
+              box-shadow: 0 px-to-vw-desktop(13) px-to-vw-desktop(50)
+                $first-color-boxshadow-button;
               a {
                 @include font(
                   $font-size: px-to-vw-desktop(14),
@@ -650,6 +684,9 @@
     .pic--icon {
       @include set_size($width: 100%, $height: 100%);
       object-fit: cover;
+      filter: drop-shadow(
+        0 px-to-vw-mobile(6) px-to-vw-mobile(10) $color-dropShadow-icon
+      );
     }
 
     &--layer {
@@ -688,9 +725,11 @@
       .header-bottom__right--pic3 {
         grid-column: 1/2;
         grid-row: 2/3;
-        position: relative;
-        bottom: px-to-vw-mobile(-80);
-        left: px-to-vw-mobile(-15);
+        @include position(
+          $position: relative,
+          $bottom: px-to-vw-mobile(-80),
+          $left: px-to-vw-mobile(-15)
+        );
         @include set_size(
           $width: px-to-vw-mobile(32.82),
           $height: px-to-vw-mobile(32.82)
@@ -714,6 +753,7 @@
         border-radius: 27px;
         border: transparent;
         background-color: $second-color-button;
+        box-shadow: 0 35px 20px $second-color-boxshadow-button;
         @include position(
           $position: relative,
           $top: px-to-vw-mobile(35),
@@ -882,13 +922,12 @@
         left: unset;
         transform: unset;
         gap: unset;
-
+        display: block;
+        top: -30px;
         @include set_size(
           $width: px-to-vw-desktop(772),
           $height: px-to-vw-desktop(287)
         );
-        display: block;
-        top: -30px;
 
         &--layer {
           @include set_size(
@@ -969,12 +1008,11 @@
           }
 
           .header-bottom__right--pic5 {
-           
             @include set_size(
               $width: px-to-vw-desktop(272),
               $height: px-to-vw-desktop(300)
             );
-             img {
+            img {
               border-radius: px-to-vw-desktop(32);
             }
           }
@@ -988,6 +1026,69 @@
             );
           }
         }
+      }
+    }
+  }
+  .header-iconArraw {
+    display: none;
+    @include tablet {
+      display: block;
+      @include set_size(
+        $width: px-to-vw-tablet(65),
+        $height: calc(px-to-vw-tablet(169.95) - 0.05px)
+      );
+      @include position(
+        $position: relative,
+        $top: px-to-vw-tablet(-120),
+        $left: px-to-vw-tablet(-50)
+      );
+
+      @include desktop {
+        @include set_size(
+          $width: px-to-vw-desktop(65),
+          $height: calc(px-to-vw-desktop(169.95) - 0.05px)
+        );
+        @include position(
+          $position: relative,
+          $top: px-to-vw-tablet(60),
+          $left: px-to-vw-tablet(-50)
+        );
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .header-shadow-bottom {
+    display: none;
+    @include tablet {
+      display: block;
+      background-color: $color-boxshadow-header-bottom;
+      z-index: 3;
+      @include position(
+        $position: absolute,
+        $top: px-to-vw-tablet(1500),
+        $right: px-to-vw-tablet(0)
+      );
+      @include set_size(
+        $width: px-to-vw-tablet(200),
+        $height: px-to-vw-tablet(150)
+      );
+      filter: blur(px-to-vw-tablet(150));
+      @include desktop {
+        display: block;
+        @include position(
+          $top: px-to-vw-desktop(900),
+          $right: px-to-vw-desktop(0)
+        );
+        @include set_size(
+          $width: px-to-vw-desktop(200),
+          $height: px-to-vw-desktop(150)
+        );
+        filter: blur(px-to-vw-desktop(150));
       }
     }
   }
