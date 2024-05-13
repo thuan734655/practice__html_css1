@@ -1,0 +1,128 @@
+@use "../Abstract/" as *;
+@use "../Base/" as *;
+// start section web-name__content
+.web-name-content__list {
+  @include margin($margin: px-to-vw-mobile(90) 0 0 0);
+  @include set_size($width: px-to-vw-mobile(398));
+  @include flex($display: flex, $justify: center, $wrap: wrap);
+  column-gap: px-to-vw-mobile(30);
+  row-gap: px-to-vw-mobile(32);
+   @include position ($position :relative , $left: 50%);
+   transform: translateX(-50%); 
+  &--tripadvisor {
+    @include set_size(
+      $width: px-to-vw-mobile(132.29),
+      $height: px-to-vw-mobile(20)
+    );
+  }
+  &--expedia {
+    @include set_size(
+      $width: px-to-vw-mobile(70.66),
+      $height: px-to-vw-mobile(20)
+    );
+  }
+  &--booking {
+    @include set_size(
+      $width: px-to-vw-mobile(117.88),
+      $height: px-to-vw-mobile(20)
+    );
+  }
+  &--airbnb {
+    @include set_size(
+      $width: px-to-vw-mobile(64.08),
+      $height: px-to-vw-mobile(20)
+    );
+  }
+  &--gabitz {
+    @include set_size(
+      $width: px-to-vw-mobile(108.48),
+      $height: px-to-vw-mobile(20)
+    );
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include tablet {
+    @include set_size($width: px-to-vw-tablet(896));
+    @include margin($margin: px-to-vw-tablet(-40) 0 0 0);
+    align-items: center;    
+    row-gap: px-to-vw-tablet(32);
+    padding: 0 42px 0 42px;
+    &--tripadvisor {
+        @include set_size(
+          $width: px-to-vw-tablet(211.83),
+          $height: px-to-vw-tablet(32)
+        );
+      }
+      &--expedia {
+        @include set_size(
+          $width: px-to-vw-tablet(113.06),
+          $height: px-to-vw-tablet(32)
+        );
+      }
+      &--booking {
+        @include set_size(
+          $width: px-to-vw-tablet(188.6),
+          $height: px-to-vw-tablet(32)
+        );
+      }
+      &--airbnb {
+        @include set_size(
+          $width: px-to-vw-tablet(102.53),
+          $height: px-to-vw-tablet(32)
+        );
+      }
+      &--gabitz {
+        @include set_size(
+          $width: px-to-vw-tablet(173.57),
+          $height: px-to-vw-tablet(32)
+        );
+      }
+
+      @include desktop {
+        @include set_size($width: px-to-vw-desktop(1184));
+        align-items: center;    
+        row-gap: px-to-vw-desktop(32);
+        column-gap: unset;
+        padding: 0;
+        justify-content: space-between;
+        margin-top: px-to-vw-desktop(90);
+        &--tripadvisor {
+            @include set_size(
+              $width: px-to-vw-desktop(211.83),
+              $height: px-to-vw-desktop(32)
+            );
+          }
+          &--expedia {
+            @include set_size(
+              $width: px-to-vw-desktop(113.06),
+              $height: px-to-vw-desktop(32)
+            );
+          }
+          &--booking {
+            @include set_size(
+              $width: px-to-vw-desktop(188.6),
+              $height: px-to-vw-desktop(32)
+            );
+          }
+          &--airbnb {
+            @include set_size(
+              $width: px-to-vw-desktop(102.53),
+              $height: px-to-vw-desktop(32)
+            );
+          }
+          &--gabitz {
+            @include set_size(
+              $width: px-to-vw-desktop(173.57),
+              $height: px-to-vw-desktop(32)
+            );
+          }
+    
+      }
+
+  }
+
+}

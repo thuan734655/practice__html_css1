@@ -3,7 +3,6 @@
 
 .header {
   margin: 0 auto;
-  @include set-size($width: 82.2%, $height: auto);
 
   .header-shadow {
     display: none;
@@ -31,7 +30,7 @@
   .header__top {
     padding: calc(px-to-vw-mobile(32) - 0.03px) 0;
     transform: translateX(-50%);
-    @include position($position: relative, $left: 51%);
+    @include position($position: relative, $left: 50%);
     @include set-size($width: px-to-vw-mobile(397.64));
     @include flex($justify: space-between, $direction: row-reverse);
 
@@ -250,27 +249,25 @@
   .header-bottom {
     @include flex($direction: column-reverse, $gap: px-to-vw-mobile(32));
     @include position($position: relative);
-    @include set-size($width: px-to-vw-mobile(397.638), $height: auto);
+    @include set-size($width: 100%, $height: auto);
     @include margin($margin-top: px-to-vw-mobile(82));
 
     @include tablet {
       @include margin($margin-top: px-to-vw-tablet(64));
-      @include set-size($width: px-to-vw-tablet(896), $height: auto);
+      width: 100%;
 
       @include desktop {
         padding-top: px-to-vw-desktop(64);
         @include margin($margin-top: 0);
         gap: unset;
-        @include flex($direction: row);
+        @include flex($direction: row, $justify: center);
       }
     }
 
     .header-bottom__left {
-      position: relative;
-      left: px-to-vw-mobile(-19);
       row-gap: px-to-vw-mobile(24);
-      @include set-size($width: px-to-vw-mobile(397.64));
-      @include flex($display: flex, $direction: column);
+      @include set-size($width: 100%);
+      @include flex($display: flex, $direction: column,$justify: center);
 
       .btn__top {
         border-radius: px-to-vw-mobile(100);
@@ -318,11 +315,6 @@
         span {
           color: $third-color-text;
         }
-
-        @include set-size(
-          $width: calc(px-to-vw-mobile(398) - 0.36px),
-          $height: calc(px-to-vw-mobile(144) - 0.13px)
-        );
         @include font(
           $font-family: $primary-font,
           $font-size: calc(px-to-vw-mobile(40) - 0.0372px),
@@ -334,10 +326,6 @@
       }
 
       .left__text--second-text {
-        @include set-size(
-          $width: calc(px-to-vw-mobile(398) - 0.36px),
-          $height: calc(px-to-vw-mobile(52) - 0.04px)
-        );
         @include font(
           $font-family: $second-font,
           $font-size: calc(px-to-vw-mobile(16) - 0.0149px),
@@ -394,7 +382,7 @@
           object-fit: cover;
           padding: calc(px-to-vw-mobile(24) - 0.022px)
             calc(px-to-vw-mobile(32) - 0.03px);
-          background-color: $seven-color-text;
+          background-color: $second-color-button;
           border-radius: px-to-vw-mobile(100);
           border: calc(px-to-vw-mobile(1) + 0.5px) solid $seven-color-text;
           @include flex(
@@ -422,9 +410,7 @@
         }
       }
       @include tablet {
-        position: relative;
-        left: px-to-vw-tablet(-22);
-        @include set-size($width: px-to-vw-tablet(896));
+        @include set-size($width: 100%);
         @include flex(
           $display: flex,
           $direction: column,
@@ -460,10 +446,6 @@
         .left__text--first-text {
           top: 0;
 
-          @include set-size(
-            $width: px-to-vw-tablet(896),
-            $height: px-to-vw-tablet(134)
-          );
           @include font(
             $font-size: calc(px-to-vw-tablet(56)),
             $line-height: px-to-vw-tablet(67.2)
@@ -473,10 +455,6 @@
         .left__text--second-text {
           position: relative;
           top: 0;
-          @include set-size(
-            $width: calc(px-to-vw-tablet(896)),
-            $height: calc(px-to-vw-tablet(58))
-          );
           @include font(
             $font-size: px-to-vw-tablet(18),
             $line-height: px-to-vw-tablet(28.8)
@@ -663,7 +641,7 @@
   }
 
   .header-bottom__right {
-    @include position($position: relative, $left: 47.5%);
+    @include position($position: relative, $left: 50%);
     transform: translateX(-50%);
     @include set-size(
       $width: calc(px-to-vw-mobile(398) - 0.36px),
@@ -705,7 +683,7 @@
     .header-bottom__right--pic {
       position: relative;
       top: px-to-vw-mobile(-97.5);
-      left: px-to-vw-mobile(-15);
+      left: px-to-vw-mobile(-5);
 
       @include grid(
         $grid-tplt-row: 0.3fr 0.5fr px-to-vw-mobile(16) 0.5fr 0.3fr,
@@ -753,7 +731,7 @@
         border-radius: 27px;
         border: transparent;
         background-color: $second-color-button;
-        box-shadow: 0 35px 20px $second-color-boxshadow-button;
+        box-shadow: 0 px-to-vw-mobile(10) px-to-vw-mobile(20) $second-color-boxshadow-button;
         @include position(
           $position: relative,
           $top: px-to-vw-mobile(35),
@@ -810,7 +788,7 @@
       }
     }
     @include tablet {
-      left: 48.8%;
+      left: 50%;
       transform: translateX(-50%);
       position: relative;
       top: 64px;
@@ -924,6 +902,7 @@
         gap: unset;
         display: block;
         top: -30px;
+        justify-content: center;
         @include set_size(
           $width: px-to-vw-desktop(772),
           $height: px-to-vw-desktop(287)
@@ -1040,7 +1019,7 @@
       @include position(
         $position: relative,
         $top: px-to-vw-tablet(-120),
-        $left: px-to-vw-tablet(-50)
+        $left: px-to-vw-tablet(38)
       );
 
       @include desktop {
@@ -1051,7 +1030,7 @@
         @include position(
           $position: relative,
           $top: px-to-vw-tablet(60),
-          $left: px-to-vw-tablet(-50)
+          $left: px-to-vw-tablet(38)
         );
       }
     }
@@ -1074,7 +1053,7 @@
         $right: px-to-vw-tablet(0)
       );
       @include set_size(
-        $width: px-to-vw-tablet(200),
+        $width: px-to-vw-tablet(150),
         $height: px-to-vw-tablet(150)
       );
       filter: blur(px-to-vw-tablet(150));
@@ -1085,7 +1064,7 @@
           $right: px-to-vw-desktop(0)
         );
         @include set_size(
-          $width: px-to-vw-desktop(200),
+          $width: px-to-vw-desktop(150),
           $height: px-to-vw-desktop(150)
         );
         filter: blur(px-to-vw-desktop(150));
