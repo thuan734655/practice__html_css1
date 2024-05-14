@@ -1,0 +1,39 @@
+@use "../Abstract/" as *;
+@use "../Base/" as *;
+.title {
+  @include font(
+    $font-family: $primary-font,
+    $font-size: px-to-vw-mobile(16),
+    $font-weight: 700,
+    $line-height: 120%,
+    $color: $third-color-text
+  );
+  letter-spacing: 4.6px;
+  text-transform: uppercase;
+  text-align: center;
+  @include tablet{
+    font-size: px-to-vw-tablet(23);
+  }
+  @include desktop {
+    font-size: px-to-vw-desktop(23);
+    text-align: unset;
+  }
+}
+
+.desc {
+    @include font(
+        $font-family: $primary-font,
+        $font-size: px-to-vw-mobile(32),
+        $font-weight: 700,
+        $line-height: 120%,
+        $color:$primary-color-text
+      );
+      text-align: center;
+
+      @include tablet {
+        font-size: 40px;
+      }
+      @include desktop {
+        text-align: unset;
+      }
+}
