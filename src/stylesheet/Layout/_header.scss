@@ -250,15 +250,15 @@
     @include flex($direction: column-reverse, $gap: px-to-vw-mobile(32));
     @include position($position: relative);
     @include set-size($width: 100%, $height: auto);
-    @include margin($margin-top: px-to-vw-mobile(82));
+    margin-top: px-to-vw-mobile(82);
 
     @include tablet {
-      @include margin($margin-top: px-to-vw-tablet(64));
+      margin-top: px-to-vw-tablet(64);
       width: 100%;
 
       @include desktop {
         padding-top: px-to-vw-desktop(64);
-        @include margin($margin-top: 0);
+        margin-top: 0;
         gap: unset;
         @include flex($direction: row, $justify: center);
       }
@@ -341,7 +341,7 @@
           $width: px-to-vw-mobile(px-to-vw-tablet(896)),
           $height: px-to-vw-mobile(px-to-vw-tablet(443))
         );
-        @include margin($margin-top: px-to-vw-tablet(82));
+        margin-top: px-to-vw-tablet(82);
         position: relative;
         top: calc(px-to-vw-mobile(32) - 0.03px);
         @include flex($display: flex, $direction: column);
@@ -815,7 +815,7 @@
 
       .header-bottom__right--pic {
         top: px-to-vw-tablet(-185);
-        left: px-to-vw-tablet(-15);
+        left: px-to-vw-tablet(-5);
 
         @include grid(
           $grid-tplt-row: 0.3fr 0.5fr px-to-vw-tablet(32) 0.5fr 0.3fr,
