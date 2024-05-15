@@ -147,31 +147,6 @@
     background-size: cover;
 }
 
-@mixin margin($margin : false, $margin-top: false, $margin-left: false, $margin-right: false, $margin-bottom: false) {
-    @if $margin !=false {
-        margin: $margin;
-    }
-
-    @if $margin-top !=false {
-        margin-top: $margin-top;
-    }
-
-
-    @if $margin-bottom !=false {
-        margin-bottom: $margin-bottom;
-    }
-
-
-    @if $margin-left !=false {
-        margin-left: $margin-left;
-    }
-
-
-    @if $margin-right !=false {
-        margin-right: $margin-right;
-    }
-}
-
 @mixin position ($position : false, $top : false, $bottom : false, $right : false, $left : false) {
 
     @if $position != false  {
