@@ -3,47 +3,20 @@
   <section class="web-name">
     <!-- start section web-name-content__list -->
     <div class="web-name-content__list">
-      <figure class="web-name-content__list--tripadvisor">
-        <img  src="../assets/icon/tripadvisor_frame1.svg" alt="" />
-      </figure>
-
-      <figure class="web-name-content__list--expedia">
-        <img src="../assets/icon/expedia_frame1.svg" alt="" />
-      </figure>
-
-      <figure class="web-name-content__list--booking">
-        <img src="../assets/icon/booking_frame1.svg" alt="" />
-      </figure>
-
-      <figure class="web-name-content__list--airbnb">
-        <img src="../assets/icon/airbnb_frame1.svg" alt="" />
-      </figure>
-
-      <figure class="web-name-content__list--gabitz">
-        <img src="../assets/icon/gabitz_frame1.svg" alt="" />
-      </figure>
+      <include src="./components/boxImg.html" locals='{
+        "list": [
+         {"classNameFigure": "web-name-content__list--tripadvisor", "classNameImg": "", "srcImg": "../assets/icon/tripadvisor_frame1.svg", "alts": "tripadvisor"},
+         {"classNameFigure": "web-name-content__list--expedia", "classNameImg": "", "srcImg": "../assets/icon/expedia_frame1.svg", "alts": "expedia"},
+         {"classNameFigure": "web-name-content__list--booking", "classNameImg": "", "srcImg": "../assets/icon/booking_frame1.svg", "alts": "booking"},
+         {"classNameFigure": "web-name-content__list--airbnb", "classNameImg": "", "srcImg": "../assets/icon/airbnb_frame1.svg", "alts": "airbnb"},
+         {"classNameFigure": "web-name-content__list--gabitz", "classNameImg": "", "srcImg": "../assets/icon/gabitz_frame1.svg", "alts": "gabitz"}
+        ]
+      }'>
+        
+      </include>
     </div>
     <!-- start section web-name-content__list -->
   </section>
   <!-- end section webname -->
 
-  <!-- start section Services -->
-  <div class="section-services">
-    <div class="section-services__left">
-      <h5 class="title">Services</h5>
-      <p class="desc">Our top value categories for you</p>
-    </div>
-    <div class="section-services__right">
-      <include src="./components/services-card.html" locals='{
-        "list": [
-         {"classNameCard": "services-card", "linkImg": "../assets/icon/earth_frame1.svg", "alts": "earth","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." },
-         {"classNameCard": "services-card", "linkImg": "../assets/icon/booking_pane2_frame1.svg", "alts": "booking","title": "Easy Booking" , "desc": "Square, was moving across the sand in their direction." },
-         {"classNameCard": "services-card", "linkImg": "../assets/icon/haft-icon_frame1.svg", "alts": "haft-icon","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." }
-        ]
-      }'>
-        
-      </include>
-      <img src="../assets/icon/haft-icon_frame1.svg" alt="">
-    </div>
-  </div>
 </main>
