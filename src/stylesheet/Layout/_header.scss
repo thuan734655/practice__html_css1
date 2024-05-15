@@ -1,0 +1,1091 @@
+@use "../Abstract/" as *;
+@use "../Base/" as *;
+
+.header {
+  margin: 0 auto;
+
+  .header-shadow {
+    display: none;
+    @include tablet {
+      display: block;
+      background-color: $color-boxshadow-header;
+      @include position(
+        $position: absolute,
+        $top: px-to-vw-tablet(-200),
+        $left: px-to-vw-tablet(-300)
+      );
+      z-index: 3;
+      @include set_size(
+        $width: px-to-vw-tablet(300),
+        $height: px-to-vw-tablet(300)
+      );
+      filter: blur(px-to-vw-tablet(300));
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  // start header__top
+  .header__top {
+    padding: calc(px-to-vw-mobile(32) - 0.03px) 0;
+    transform: translateX(-50%);
+    @include position($position: relative, $left: 50%);
+    @include set-size($width: px-to-vw-mobile(397.64));
+    @include flex($justify: space-between, $direction: row-reverse);
+
+    @include tablet {
+      padding: px-to-vw-tablet(32) 0;
+      @include position($left: 50%);
+      @include flex($direction: row);
+      @include set-size(
+        $width: px-to-vw-tablet(896),
+        $height: px-to-vw-tablet(113)
+      );
+
+      @include desktop {
+        padding: px-to-vw-desktop(32) 0;
+        @include position($left: 50%);
+        @include flex($justify: space-between, $direction: row);
+        @include set-size(
+          $width: px-to-vw-desktop(1184),
+          $height: px-to-vw-desktop(113)
+        );
+      }
+    }
+
+    .header__top__icon--logo {
+      @include set_size($width: px-to-vw-mobile(141.87), $height: 35.7%);
+
+      @include tablet {
+        @include set_size(
+          $width: px-to-vw-tablet(142),
+          $height: px-to-vw-tablet(40)
+        );
+
+        @include desktop {
+          margin-top: px-to-vw-desktop(5);
+          @include set_size(
+            $width: px-to-vw-desktop(142),
+            $height: px-to-vw-desktop(40)
+          );
+        }
+        img {
+              @include set_size($width: 100%,$height:100%);
+              object-fit: cover;
+              @include tablet {
+                @include desktop {
+                }
+              }
+        }
+      }
+
+      cursor: pointer;
+    }
+
+    .header__top__icon--menu {
+      @include set_size($width: px-to-vw-mobile(47.96), $height: 42.85%);
+
+      @include tablet {
+        @include set_size(
+          $width: px-to-vw-tablet(48),
+          $height: px-to-vw-tablet(48)
+        );
+
+        @include desktop {
+          display: none;
+        }
+      }
+
+      img {
+        @include set_size($width: 100%,$height:100%);
+        object-fit: cover;
+        @include tablet {
+          @include desktop {
+          }
+        }
+      }
+
+      cursor: pointer;
+    }
+
+    .header__top__center {
+      display: none;
+      margin: auto;
+      @include position($position: relative, $top: -10px);
+
+      @include tablet {
+      }
+
+      @include desktop {
+        display: block;
+        margin: px-to-vw-desktop(27);
+        ul {
+          list-style: none;
+          @include flex($gap: 50px);
+          @include set-size(
+            $width: px-to-vw-desktop(428),
+            $height: px-to-vw-desktop(17)
+          );
+
+          li:first-child {
+            @include set-size(
+              $width: px-to-vw-desktop(39),
+              $height: px-to-vw-desktop(17)
+            );
+            a {
+              color: $Nav-hover-text;
+            }
+          }
+
+          li:nth-child(3) {
+            @include set-size(
+              $width: px-to-vw-desktop(87),
+              $height: px-to-vw-desktop(17)
+            );
+          }
+
+          li:nth-child(4) {
+            @include set-size(
+              $width: px-to-vw-desktop(53),
+              $height: px-to-vw-desktop(17)
+            );
+          }
+
+          a {
+            text-wrap: nowrap;
+            @include tag_a($color: $second-color-text, $text-decoration: none);
+            @include font(
+              $font-family: $primary-font,
+              $font-size: px-to-vw-desktop(14),
+              $font-weight: bold
+            );
+
+            &:hover {
+              color: $Nav-hover-text;
+            }
+          }
+        }
+      }
+    }
+
+    .header__top__right {
+      @include position($position: relative, $top: -9px);
+      display: none;
+
+      @include tablet {
+        display: flex;
+        margin-top: px-to-vw-tablet(10);
+        @include set-size(
+          $width: px-to-vw-tablet(220),
+          $height: px-to-vw-tablet(49)
+        );
+        button {
+          @include button($border-radius: px-to-vw-tablet(30), $border: 0);
+          @include transition(
+            $transition: 0.4s,
+            $transition-timing-function: ease-in-out
+          );
+
+          a {
+            transition: 0s;
+            line-height: px-to-vw-tablet((16.8));
+            @include tag_a($color: $Nav-hover-text, $text-decoration: none);
+            @include font($font-size: px-to-vw-tablet(14), $font-weight: 700);
+          }
+        }
+
+        .top__right--btnleft {
+          @include set-size(
+            $width: px-to-vw-tablet(105),
+            $height: px-to-vw-tablet(49)
+          );
+          background-color: $second-color-button;
+          a {
+            @include tag_a($color: $Nav-hover-text);
+          }
+
+          &:hover {
+            box-shadow: 0 2px 3px 1px $color-button-hover;
+          }
+        }
+
+        .top__right--btnRight {
+          @include set-size(
+            $width: px-to-vw-tablet(115),
+            $height: px-to-vw-tablet(49)
+          );
+          background-color: $first-color-button;
+          a {
+            @include tag_a($color: $second-color-button);
+          }
+
+          &:hover {
+            box-shadow: 0 2px 3px 1px $color-button-hover;
+          }
+        }
+
+        @include desktop {
+          @include set-size(
+            $width: px-to-vw-desktop(220),
+            $height: px-to-vw-desktop(49)
+          );
+
+          button {
+            a {
+              line-height: px-to-vw-desktop((16.8));
+              @include font(
+                $font-size: px-to-vw-desktop(14),
+                $font-weight: 700
+              );
+            }
+          }
+
+          @include position($position: relative, $top: px-to-vw-desktop(-14));
+          .top__right--btnleft {
+            @include set-size(
+              $width: px-to-vw-desktop(105),
+              $height: px-to-vw-desktop(49)
+            );
+          }
+
+          .top__right--btnRight {
+            @include set-size(
+              $width: px-to-vw-desktop(115),
+              $height: px-to-vw-desktop(49)
+            );
+          }
+        }
+      }
+    }
+  }
+
+  // end header__top
+
+  //  start header__bottom
+  .header-bottom {
+    @include flex($direction: column-reverse, $gap: px-to-vw-mobile(32));
+    @include position($position: relative);
+    @include set-size($width: 100%, $height: auto);
+    margin-top: px-to-vw-mobile(82);
+
+    @include tablet {
+      margin-top: px-to-vw-tablet(64);
+      width: 100%;
+
+      @include desktop {
+        padding-top: px-to-vw-desktop(64);
+        margin-top: 0;
+        gap: unset;
+        @include flex($direction: row, $justify: center);
+      }
+    }
+
+    .header-bottom__left {
+      row-gap: px-to-vw-mobile(24);
+      @include set-size($width: 100%);
+      @include flex($display: flex, $direction: column,$justify: center);
+
+      .btn__top {
+        border-radius: px-to-vw-mobile(100);
+        margin: 0 auto;
+        border: transparent;
+        background-color: $second-color-button;
+        box-shadow: 0 px-to-vw-mobile(15) 40px $second-color-boxshadow-button;
+        @include set-size(
+          $width: px-to-vw-mobile(223.8),
+          $height: px-to-vw-mobile(55.95)
+        );
+
+        @include flex(
+          $display: flex,
+          $direction: row-reverse,
+          $align: center,
+          $justify: center,
+          $gap: 1.111vw
+        );
+
+        &--icon {
+          @include set-size(
+            $width: px-to-vw-mobile(23.99),
+            $height: px-to-vw-mobile(23.99)
+          );
+        }
+
+        &--link {
+          @include set-size(
+            $width: calc(px-to-vw-mobile(120) - 0.1px),
+            $height: px-to-vw-mobile(16.99)
+          );
+          @include font(
+            $font-family: $primary-font,
+            $font-size: calc(px-to-vw-mobile(14) - 0.013px),
+            $font-weight: 700,
+            $line-height: px-to-vw-mobile(16.8),
+            $color: $third-color-text
+          );
+          text-decoration: none;
+        }
+      }
+
+      .left__text--first-text {
+        span {
+          color: $third-color-text;
+        }
+        @include font(
+          $font-family: $primary-font,
+          $font-size: calc(px-to-vw-mobile(40) - 0.0372px),
+          $font-weight: 700,
+          $line-height: px-to-vw-mobile(56),
+          $color: $sixth-color-text
+        );
+        text-align: center;
+      }
+
+      .left__text--second-text {
+        @include font(
+          $font-family: $second-font,
+          $font-size: calc(px-to-vw-mobile(16) - 0.0149px),
+          $font-weight: 400,
+          $line-height: px-to-vw-mobile(28.8),
+          $color: $second-color-text
+        );
+        text-align: center;
+      }
+
+      .bottom__left__btn {
+        @include set_size(
+          $width: px-to-vw-mobile(px-to-vw-tablet(896)),
+          $height: px-to-vw-mobile(px-to-vw-tablet(443))
+        );
+        margin-top: px-to-vw-tablet(82);
+        position: relative;
+        top: calc(px-to-vw-mobile(32) - 0.03px);
+        @include flex($display: flex, $direction: column);
+        margin: 0 auto;
+
+        &--left {
+          @include set_size(
+            $width: calc(px-to-vw-mobile(398) - 0.36px),
+            $height: calc(px-to-vw-mobile(65) - 0.049px)
+          );
+          padding: calc(px-to-vw-mobile(24) - 0.022px)
+            calc(px-to-vw-mobile(32) - 0.03px);
+          background-color: $first-color-button;
+          box-shadow: 0 px-to-vw-mobile(13) px-to-vw-mobile(30)
+            $first-color-boxshadow-button;
+          border-radius: px-to-vw-mobile(100);
+          border: transparent;
+          a {
+            @include font(
+              $font-family: $primary-font,
+              $font-size: px-to-vw-mobile(14),
+              $font-weight: 700,
+              $line-height: px-to-vw-mobile(16.8),
+              $color: $seven-color-text
+            );
+            @include flex($display: flex, $align: center, $justify: center);
+            text-decoration: none;
+          }
+        }
+
+        &--right {
+          position: relative;
+          top: calc(px-to-vw-mobile(24) - 0.022px);
+          @include set_size(
+            $width: calc(px-to-vw-mobile(398) - 0.36px),
+            $height: calc(px-to-vw-mobile(72) - 0.06px)
+          );
+          object-fit: cover;
+          padding: calc(px-to-vw-mobile(24) - 0.022px)
+            calc(px-to-vw-mobile(32) - 0.03px);
+          background-color: $second-color-button;
+          border-radius: px-to-vw-mobile(100);
+          border: calc(px-to-vw-mobile(1) + 0.5px) solid $seven-color-text;
+          @include flex(
+            $justify: center,
+            $align: center,
+            $gap: px-to-vw-desktop(8)
+          );
+
+          .bottom__btn-right--icon {
+            @include set_size($width: calc(px-to-vw-mobile(24) - 0.012px));
+          }
+
+          a {
+            @include font(
+              $font-family: $primary-font,
+              $font-size: calc(px-to-vw-mobile(14) - 0.013px),
+              $font-weight: 700,
+              $line-height: px-to-vw-mobile(16.8),
+              $color: $Nav-hover-text
+            );
+            @include set_size($width: calc(px-to-vw-mobile(85) - 0.07px));
+            object-fit: cover;
+            text-decoration: none;
+          }
+        }
+      }
+      @include tablet {
+        @include set-size($width: 100%);
+        @include flex(
+          $display: flex,
+          $direction: column,
+          $gap: px-to-vw-tablet(43)
+        );
+
+        .btn__top {
+          @include set-size(
+            $width: px-to-vw-tablet(224),
+            $height: px-to-vw-tablet(56)
+          );
+          border-radius: px-to-vw-tablet(100);
+          box-shadow: 0 px-to-vw-mobile(10) 70px $second-color-boxshadow-button;
+          &--icon {
+            @include set-size(
+              $width: px-to-vw-tablet(24),
+              $height: px-to-vw-tablet(24)
+            );
+          }
+
+          &--link {
+            @include set-size(
+              $width: px-to-vw-tablet(120),
+              $height: px-to-vw-tablet(17)
+            );
+            @include font(
+              $font-size: px-to-vw-tablet(14),
+              $line-height: px-to-vw-tablet(16.8)
+            );
+          }
+        }
+
+        .left__text--first-text {
+          top: 0;
+
+          @include font(
+            $font-size: calc(px-to-vw-tablet(56)),
+            $line-height: px-to-vw-tablet(67.2)
+          );
+        }
+
+        .left__text--second-text {
+          position: relative;
+          top: 0;
+          @include font(
+            $font-size: px-to-vw-tablet(18),
+            $line-height: px-to-vw-tablet(28.8)
+          );
+          text-align: center;
+        }
+
+        .bottom__left__btn {
+          top: 0;
+          @include flex(
+            $display: flex,
+            $direction: row,
+            $gap: px-to-vw-tablet(16)
+          );
+          @include set_size(
+            $width: px-to-vw-tablet(338),
+            $height: px-to-vw-tablet(56)
+          );
+          &--left {
+            @include set_size(
+              $width: px-to-vw-tablet(141),
+              $height: px-to-vw-tablet(49)
+            );
+            padding: unset;
+            border-radius: px-to-vw-tablet(100);
+            box-shadow: 0 px-to-vw-tablet(13) px-to-vw-tablet(50)
+              $first-color-boxshadow-button;
+            a {
+              @include font(
+                $font-size: px-to-vw-tablet(14),
+                $line-height: px-to-vw-tablet(16.8)
+              );
+            }
+          }
+
+          &--right {
+            top: 0;
+            border-radius: px-to-vw-tablet(100);
+            border: px-to-vw-tablet(1) solid $seven-color-text;
+            padding: unset;
+            @include set_size(
+              $width: px-to-vw-tablet(181),
+              $height: px-to-vw-tablet(56)
+            );
+            @include flex($gap: px-to-vw-desktop(8));
+
+            .bottom__btn-right--icon {
+              @include set_size($width: calc(px-to-vw-tablet(24)));
+            }
+
+            a {
+              @include font(
+                $font-size: px-to-vw-tablet(14),
+                $line-height: px-to-vw-tablet(16.8)
+              );
+              @include set_size($width: px-to-vw-tablet(85));
+            }
+          }
+        }
+
+        @include desktop {
+          @include position(
+            $position: relative,
+            $left: 0,
+            $top: px-to-vw-desktop(70)
+          );
+          @include set-size($width: px-to-vw-desktop(412));
+          @include flex(
+            $display: flex,
+            $direction: column,
+            $gap: px-to-vw-desktop(43)
+          );
+
+          .btn__top {
+            margin: unset;
+            @include set-size(
+              $width: px-to-vw-desktop(224),
+              $height: px-to-vw-desktop(56)
+            );
+            border-radius: px-to-vw-desktop(100);
+            &--icon {
+              @include set-size(
+                $width: px-to-vw-desktop(24),
+                $height: px-to-vw-desktop(24)
+              );
+            }
+
+            &--link {
+              @include set-size(
+                $width: px-to-vw-desktop(120),
+                $height: px-to-vw-desktop(17)
+              );
+              @include font(
+                $font-size: px-to-vw-desktop(14),
+                $line-height: px-to-vw-desktop(16.8)
+              );
+            }
+          }
+
+          .left__text--first-text {
+            top: 0;
+            text-align: unset;
+
+            @include set-size(
+              $width: px-to-vw-desktop(412),
+              $height: px-to-vw-desktop(249)
+            );
+            @include font(
+              $font-size: calc(px-to-vw-desktop(69)),
+              $line-height: px-to-vw-desktop(82.8)
+            );
+          }
+
+          .left__text--second-text {
+            top: 0;
+            margin: unset;
+            text-align: unset;
+            @include set-size(
+              $width: calc(px-to-vw-desktop(412)),
+              $height: calc(px-to-vw-desktop(87))
+            );
+            @include font(
+              $font-size: px-to-vw-desktop(18),
+              $line-height: px-to-vw-desktop(28.8)
+            );
+          }
+
+          .bottom__left__btn {
+            top: 0;
+            margin: unset;
+            @include flex(
+              $display: flex,
+              $direction: row,
+              $gap: px-to-vw-desktop(16)
+            );
+            @include set_size(
+              $width: px-to-vw-desktop(338),
+              $height: px-to-vw-desktop(56)
+            );
+            &--left {
+              @include set_size(
+                $width: px-to-vw-desktop(141),
+                $height: px-to-vw-desktop(49)
+              );
+              padding: unset;
+              border-radius: px-to-vw-desktop(100);
+              box-shadow: 0 px-to-vw-desktop(13) px-to-vw-desktop(50)
+                $first-color-boxshadow-button;
+              a {
+                @include font(
+                  $font-size: px-to-vw-desktop(14),
+                  $line-height: px-to-vw-desktop(16.8)
+                );
+              }
+            }
+
+            &--right {
+              top: 0;
+              border-radius: px-to-vw-desktop(100);
+              border: px-to-vw-desktop(1) solid $seven-color-text;
+              padding: unset;
+              @include set_size(
+                $width: px-to-vw-desktop(181),
+                $height: px-to-vw-desktop(56)
+              );
+              @include flex($gap: px-to-vw-desktop(8));
+
+              .bottom__btn-right--icon {
+                @include set_size($width: calc(px-to-vw-desktop(24)));
+              }
+
+              a {
+                @include font(
+                  $font-size: px-to-vw-desktop(14),
+                  $line-height: px-to-vw-desktop(16.8)
+                );
+                @include set_size($width: px-to-vw-desktop(85));
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header-bottom__right {
+    @include position($position: relative, $left: 50%);
+    transform: translateX(-50%);
+    @include set-size(
+      $width: calc(px-to-vw-mobile(398) - 0.36px),
+      $height: calc(px-to-vw-mobile(366) - 0.34px)
+    );
+    @include flex(
+      $display: flex,
+      $direction: column,
+      $align: center,
+      $justify: center
+    );
+
+    .pic--img {
+      @include set_size($width: 100%, $height: 100%);
+      border-radius: px-to-vw-mobile(16.43);
+      object-fit: cover;
+    }
+    .pic--icon {
+      @include set_size($width: 100%, $height: 100%);
+      object-fit: cover;
+      filter: drop-shadow(
+        0 px-to-vw-mobile(6) px-to-vw-mobile(10) $color-dropShadow-icon
+      );
+    }
+
+    &--layer {
+      @include set_size(
+        $width: px-to-vw-mobile(395.93),
+        $height: calc(px-to-vw-mobile(147.52) - 0.13px)
+      );
+      .header-bottom__right--pic1 {
+        position: relative;
+        top: px-to-vw-mobile(10);
+        @include set_size($width: 100%, $height: 100%);
+        object-fit: cover;
+      }
+    }
+
+    .header-bottom__right--pic {
+      position: relative;
+      top: px-to-vw-mobile(-97.5);
+      left: px-to-vw-mobile(-5);
+
+      @include grid(
+        $grid-tplt-row: 0.3fr 0.5fr px-to-vw-mobile(16) 0.5fr 0.3fr,
+        $grid-tplt-column: 0.4fr 0.4fr,
+        $column-gap: px-to-vw-mobile(16)
+      );
+
+      .header-bottom__right--pic2 {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        @include set-size(
+          $width: calc(px-to-vw-mobile(139.63) - 0.13px),
+          $height: px-to-vw-mobile(154)
+        );
+      }
+
+      .header-bottom__right--pic3 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        @include position(
+          $position: relative,
+          $bottom: px-to-vw-mobile(-80),
+          $left: px-to-vw-mobile(-15)
+        );
+        @include set_size(
+          $width: px-to-vw-mobile(32.82),
+          $height: px-to-vw-mobile(32.82)
+        );
+      }
+
+      .header-bottom__right--pic4 {
+        grid-column: 2/3;
+        grid-row: 2/5;
+        position: relative;
+        @include set-size(
+          $width: calc(px-to-vw-mobile(139.63) - 0.13px),
+          $height: calc(px-to-vw-mobile(205) - 0.19px)
+        );
+      }
+
+      .btn__right {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        z-index: 2;
+        border-radius: 27px;
+        border: transparent;
+        background-color: $second-color-button;
+        box-shadow: 0 px-to-vw-mobile(10) px-to-vw-mobile(20) $second-color-boxshadow-button;
+        @include position(
+          $position: relative,
+          $top: px-to-vw-mobile(35),
+          $right: px-to-vw-mobile(-98)
+        );
+        @include flex($justify: center, $align: center);
+        @include set_size(
+          $width: calc(px-to-vw-mobile(85.21) - 0.07px),
+          $height: calc(px-to-vw-mobile(28.75) - 0.02px)
+        );
+
+        &--icon {
+          @include set_size(
+            $width: px-to-vw-mobile(12.32),
+            $height: px-to-vw-mobile(12.32)
+          );
+          position: relative;
+          top: 50%;
+        }
+
+        a {
+          position: relative;
+          text-decoration: none;
+          @include font(
+            $font-family: $primary-font,
+            $font-size: px-to-vw-tablet(14),
+            $font-weight: 700,
+            $line-height: px-to-vw-tablet(16.8),
+            $color: $eighth-color-text
+          );
+        }
+      }
+
+      .header-bottom__right--pic5 {
+        grid-column: 1/2;
+        grid-row: 4/6;
+        @include set-size(
+          $width: calc(px-to-vw-mobile(139.63) - 0.13px),
+          $height: px-to-vw-mobile(154)
+        );
+      }
+
+      .header-bottom__right--pic6 {
+        grid-column: 2/3;
+        grid-row: 5/6;
+        z-index: 1;
+        position: absolute;
+        bottom: px-to-vw-tablet(-10);
+        left: px-to-vw-tablet(75);
+        @include set_size(
+          $width: px-to-vw-mobile(32.82),
+          $height: px-to-vw-mobile(32.82)
+        );
+      }
+    }
+    @include tablet {
+      left: 50%;
+      transform: translateX(-50%);
+      position: relative;
+      top: 64px;
+      .pic--img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @include set-size(
+        $width: px-to-vw-tablet(896),
+        $height: px-to-vw-tablet(713)
+      );
+
+      &--layer {
+        @include set_size(
+          $width: px-to-vw-tablet(772),
+          $height: px-to-vw-tablet(287.36)
+        );
+        img {
+          position: relative;
+          top: -0;
+        }
+      }
+
+      .header-bottom__right--pic {
+        top: px-to-vw-tablet(-185);
+        left: px-to-vw-tablet(-5);
+
+        @include grid(
+          $grid-tplt-row: 0.3fr 0.5fr px-to-vw-tablet(32) 0.5fr 0.3fr,
+          $grid-tplt-column: 0.4fr 0.4fr,
+          $column-gap: px-to-vw-tablet(31)
+        );
+
+        .header-bottom__right--pic2 {
+          @include set_size(
+            $width: px-to-vw-tablet(272),
+            $height: px-to-vw-tablet(300)
+          );
+          img {
+            border-radius: px-to-vw-tablet(32);
+          }
+        }
+
+        .header-bottom__right--pic3 {
+          bottom: px-to-vw-tablet(-150);
+          left: px-to-vw-tablet(-32);
+          @include set_size(
+            $width: px-to-vw-tablet(64),
+            $height: px-to-vw-tablet(64)
+          );
+        }
+
+        .header-bottom__right--pic4 {
+          @include set_size(
+            $width: px-to-vw-tablet(272),
+            $height: px-to-vw-tablet(400)
+          );
+          img {
+            border-radius: px-to-vw-tablet(32);
+          }
+        }
+
+        .btn__right {
+          right: px-to-vw-tablet(-196);
+          top: px-to-vw-tablet(70);
+          @include flex($justify: center, $align: center);
+          @include set_size(
+            $width: px-to-vw-tablet(166),
+            $height: px-to-vw-tablet(56)
+          );
+
+          &--icon {
+            @include set_size(
+              $width: px-to-vw-tablet(24),
+              $height: px-to-vw-tablet(24)
+            );
+          }
+
+          a {
+            @include font(
+              $font-size: px-to-vw-tablet(14),
+              $line-height: px-to-vw-tablet(16.8)
+            );
+          }
+        }
+
+        .header-bottom__right--pic5 {
+          @include set_size(
+            $width: px-to-vw-tablet(272),
+            $height: px-to-vw-tablet(300)
+          );
+          img {
+            border-radius: px-to-vw-tablet(32);
+          }
+        }
+
+        .header-bottom__right--pic6 {
+          bottom: px-to-vw-tablet(-10);
+          left: px-to-vw-tablet(75);
+          @include set_size(
+            $width: px-to-vw-tablet(64),
+            $height: px-to-vw-tablet(64)
+          );
+        }
+      }
+
+      @include desktop {
+        left: unset;
+        transform: unset;
+        gap: unset;
+        display: block;
+        top: -30px;
+        justify-content: center;
+        @include set_size(
+          $width: px-to-vw-desktop(772),
+          $height: px-to-vw-desktop(287)
+        );
+
+        &--layer {
+          @include set_size(
+            $width: px-to-vw-desktop(772),
+            $height: px-to-vw-desktop(287)
+          );
+        }
+
+        .header-bottom__right--pic {
+          position: absolute;
+          top: px-to-vw-desktop(111);
+          left: px-to-vw-desktop(93);
+
+          @include grid(
+            $grid-tplt-row: 0.3fr 0.5fr px-to-vw-desktop(32) 0.5fr 0.3fr,
+            $column-gap: px-to-vw-desktop(31)
+          );
+
+          .header-bottom__right--pic2 {
+            @include set_size(
+              $width: px-to-vw-desktop(272),
+              $height: px-to-vw-desktop(300)
+            );
+            img {
+              border-radius: px-to-vw-desktop(32);
+            }
+          }
+
+          .header-bottom__right--pic3 {
+            bottom: px-to-vw-desktop(-150);
+            left: px-to-vw-desktop(-32);
+            img {
+              @include set_size(
+                $width: px-to-vw-desktop(64),
+                $height: px-to-vw-desktop(64)
+              );
+            }
+            .pic--icon {
+              @include set_size(
+                $width: px-to-vw-desktop(64),
+                $height: px-to-vw-desktop(64)
+              );
+            }
+          }
+
+          .header-bottom__right--pic4 {
+            @include set_size(
+              $width: px-to-vw-desktop(272),
+              $height: px-to-vw-desktop(400)
+            );
+            img {
+              border-radius: px-to-vw-desktop(32);
+            }
+          }
+
+          .btn__right {
+            right: px-to-vw-desktop(-196);
+            top: px-to-vw-desktop(70);
+            @include flex($justify: center, $align: center);
+            @include set_size(
+              $width: px-to-vw-desktop(166),
+              $height: px-to-vw-desktop(56)
+            );
+
+            &--icon {
+              @include set_size(
+                $width: px-to-vw-desktop(24),
+                $height: px-to-vw-desktop(24)
+              );
+            }
+
+            a {
+              @include font(
+                $font-size: px-to-vw-desktop(14),
+                $line-height: px-to-vw-desktop(16.8)
+              );
+            }
+          }
+
+          .header-bottom__right--pic5 {
+            @include set_size(
+              $width: px-to-vw-desktop(272),
+              $height: px-to-vw-desktop(300)
+            );
+            img {
+              border-radius: px-to-vw-desktop(32);
+            }
+          }
+
+          .header-bottom__right--pic6 {
+            bottom: px-to-vw-desktop(-10);
+            left: px-to-vw-desktop(75);
+            @include set_size(
+              $width: px-to-vw-desktop(64),
+              $height: px-to-vw-desktop(64)
+            );
+          }
+        }
+      }
+    }
+  }
+  .header-iconArraw {
+    display: none;
+    @include tablet {
+      display: block;
+      @include set_size(
+        $width: px-to-vw-tablet(65),
+        $height: calc(px-to-vw-tablet(169.95) - 0.05px)
+      );
+      @include position(
+        $position: relative,
+        $top: px-to-vw-tablet(-120),
+        $left: px-to-vw-tablet(38)
+      );
+
+      @include desktop {
+        @include set_size(
+          $width: px-to-vw-desktop(65),
+          $height: calc(px-to-vw-desktop(169.95) - 0.05px)
+        );
+        @include position(
+          $position: relative,
+          $top: px-to-vw-tablet(60),
+          $left: px-to-vw-tablet(38)
+        );
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .header-shadow-bottom {
+    display: none;
+    @include tablet {
+      display: block;
+      background-color: $color-boxshadow-header-bottom;
+      z-index: 3;
+      @include position(
+        $position: absolute,
+        $top: px-to-vw-tablet(1500),
+        $right: px-to-vw-tablet(0)
+      );
+      @include set_size(
+        $width: px-to-vw-tablet(150),
+        $height: px-to-vw-tablet(150)
+      );
+      filter: blur(px-to-vw-tablet(150));
+      @include desktop {
+        display: block;
+        @include position(
+          $top: px-to-vw-desktop(900),
+          $right: px-to-vw-desktop(0)
+        );
+        @include set_size(
+          $width: px-to-vw-desktop(150),
+          $height: px-to-vw-desktop(150)
+        );
+        filter: blur(px-to-vw-desktop(150));
+      }
+    }
+  }
+}
