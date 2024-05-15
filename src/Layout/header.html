@@ -6,16 +6,16 @@
   <!-- start header top  -->
   <div class="header__top">
     <!-- start icon logo and icon menu  -->
-    <img
-      class="header__top__icon--menu"
-      src="../assets/icon/menu.svg"
-      alt="menu"
-    />
-    <img
-      class="header__top__icon--logo"
-      src="../assets/icon/Logo_frame1.svg"
-      alt="logo"
-    />
+    <include
+    src="./components/boxImg.html"
+    locals='{
+              "list": [
+               {"classNameFigure": "header__top__icon--menu", "classNameImg": "menu", "srcImg": "../assets/icon/menu.svg","alts":"menu"},
+               {"classNameFigure": "header__top__icon--logo", "classNameImg": "logo", "srcImg": "../assets/icon/Logo_frame1.svg","alts":"logo"}
+             ]
+          }'
+  >
+  </include>
     <!-- start icon logo and icon menu  -->
 
     <!-- start header__top__center  -->
