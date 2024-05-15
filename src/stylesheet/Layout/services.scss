@@ -93,24 +93,27 @@
     }
     @include desktop {
       margin: px-to-vw-desktop(128) 0 0 px-to-vw-desktop(205);
-      @include flex($direction: row, $align: center, $gap: px-to-vw-desktop(50));
+      @include flex(
+        $direction: row,
+        $align: center,
+        $gap: px-to-vw-desktop(50)
+      );
 
       &__left {
         @include set_size($width: px-to-vw-desktop(444));
-       padding: unset;
-       margin-left: -60px;
+        padding: unset;
+        margin-left: -60px;
 
-       p {
-        @include font ($font-size: px-to-vw-desktop(44));
-       }
-       
+        p {
+          @include font($font-size: px-to-vw-desktop(44));
+        }
       }
       &__right {
-        @include set_size($width: calc(100% -  px-to-vw-desktop(444)));
-         @include position ($position : relative, $left : px-to-vw-desktop(100)); 
+        @include set_size($width: calc(100% - px-to-vw-desktop(444)));
+        @include position($position: relative, $left: px-to-vw-desktop(100));
         .services-card {
-            min-width: px-to-vw-desktop(350);
-            max-width: unset;
+          min-width: px-to-vw-desktop(350);
+          max-width: unset;
         }
       }
     }
