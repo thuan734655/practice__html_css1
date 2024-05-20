@@ -18,9 +18,9 @@
     );
     .services-card {
       border: 1px solid $first-color-border-card;
-      border-radius: 32px;
+      border-radius: px-to-vw-mobile(32);
       background: #fff;
-      padding: 32px;
+      padding: px-to-vw-mobile(32);
       @include flex(
         $display: flex,
         $direction: column,
@@ -54,7 +54,7 @@
       }
       &__heading {
         img {
-          @include set_size($width: 100%, $height: 100%);
+          @include set_size($width: px-to-vw-mobile(64), $height: px-to-vw-mobile(64));
         }
       }
     }
@@ -68,7 +68,9 @@
         $gap: px-to-vw-tablet(16)
       );
       .services-card {
-        max-width: px-to-vw-tablet(224);
+        width: px-to-vw-tablet(288);
+        padding: px-to-vw-tablet(64);
+        border-radius: px-to-vw-tablet(32);
         &__title {
           @include font(
             $font-family: $primary-font,
@@ -88,6 +90,11 @@
             $color: $second-color-text
           );
           text-align: center;
+        }
+        &__heading {
+          img {
+            @include set_size($width: px-to-vw-tablet(64), $height: px-to-vw-tablet(64));
+          }
         }
       }
     }
@@ -114,6 +121,33 @@
         .services-card {
           min-width: px-to-vw-desktop(350);
           max-width: unset;
+          padding: px-to-vw-desktop(64);
+          border-radius: px-to-vw-desktop(32);
+          &__title {
+            @include font(
+              $font-family: $primary-font,
+              $font-size: px-to-vw-desktop(28),
+              $font-weight: 700,
+              $line-height: 120%,
+              $color: $primary-color-text
+            );
+            text-align: center;
+          }
+          &__desc {
+            @include font(
+              $font-family: $second-font,
+              $font-size: px-to-vw-desktop(18),
+              $font-weight: 400,
+              $line-height: 160%,
+              $color: $second-color-text
+            );
+            text-align: center;
+          }
+          &__heading {
+            img {
+              @include set_size($width: px-to-vw-desktop(64), $height: px-to-vw-desktop(64));
+            }
+          }
         }
       }
     }
