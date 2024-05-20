@@ -1,0 +1,349 @@
+@use "../Abstract/" as *;
+@use "../Base/" as *;
+
+.section-destination {
+  margin-top: px-to-vw-mobile(64);
+  @include flex($display: flex, $direction: column, $gap: px-to-vw-mobile(32));
+
+  &__left {
+    @include set-size($width: 100%);
+    &--top {
+      @include flex(
+        $display: flex,
+        $direction: column,
+        $align: center,
+        $justify: center,
+        $wrap: false,
+        $gap: px-to-vw-mobile(16)
+      );
+      .top--title {
+        letter-spacing: px-to-vw-mobile(3.2);
+        font-size: calc(px-to-vw-mobile(16) - 0.0149px);
+      }
+
+      .top--desc {
+        font-size: calc(px-to-vw-mobile(32) - 0.0298px);
+      }
+    }
+    &--bottom {
+      margin-top: px-to-vw-mobile(32);
+      padding: 0 px-to-vw-mobile(16);
+      @include flex($display: flex, $align: center, $justify: space-between);
+      .bottom--btn {
+        @include set-size($width: calc(px-to-vw-mobile(64) - 0.05px));
+
+        img {
+          @include set-size($width: 100%);
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &__right {
+      @include flex(
+      $display: flex,
+      $direction: column,
+      $align: center,
+      $justify: center,
+      $gap: px-to-vw-mobile(32)
+    );
+   .right-content {
+    @include set-size ($width: px-to-vw-mobile(398));
+    @include  position(
+      $position: relative,
+      $left: 50%
+    );
+    transform: translateX(-50%);
+    border-radius: px-to-vw-mobile(32);
+    background: #fff;
+    box-shadow: 0px 801px 224px 0px rgba(0, 0, 0, 0),
+      0px 513px 205px 0px rgba(0, 0, 0, 0.01),
+      0px 288px 173px 0px rgba(0, 0, 0, 0.03),
+      0px 128px 128px 0px rgba(0, 0, 0, 0.04),
+      0px 32px 71px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 0px rgba(0, 0, 0, 0.05);
+
+    &--text {
+      @include font(
+        $font-family: $primary-font,
+        $font-size: px-to-vw-mobile(23),
+        $font-weight: 700,
+        $line-height: 120%,
+        $color: $third-color-text
+      );
+    }
+      &--heading {
+        .heading--img {
+          @include set-size(
+            $width: px-to-vw-mobile(398),
+            $height: px-to-vw-mobile(314)
+          );
+          img {
+            @include set-size($width: 100%, $height: 100%);
+            object-fit: cover;
+            border-radius: px-to-vw-mobile(32) px-to-vw-mobile(32) 0 0;
+          }
+        }
+        .section-destination__right--heading figure:nth-child(3) {
+          $width: px-to-vw-mobile(407),
+        }
+      }
+      &--body {
+        @include set-size($width: 100%);
+        padding: px-to-vw-mobile(32)   px-to-vw-mobile(32) 0 px-to-vw-mobile(32); 
+      }
+      .body--desc {
+        margin-top: px-to-vw-mobile(8);
+        color: $sixth-color-text;
+      }
+
+      .body--country {
+        margin-top: px-to-vw-mobile(16);
+        @include font(
+          $font-family: $second-font,
+          $font-size: px-to-vw-mobile(18),
+          $font-weight: 400,
+          $line-height: 160%,
+          $color: $fifth-color-text
+        );
+      }
+    
+    &--footer {
+      @include set-size($width: 100%);
+      @include flex($display: flex, $align: center, $gap: px-to-vw-mobile(8));
+      padding: 0 px-to-vw-mobile(32) px-to-vw-mobile(32) px-to-vw-mobile(32);
+
+      .footer--evaluate {
+        color: $fourth-color-text;
+      }
+      .footer--iconStar {
+        @include set-size($width: px-to-vw-mobile(24));
+
+        img {
+          @include set-size($width: 100%, $height: 100%);
+          object-fit: cover;
+        }
+      }
+    }
+   }
+  }
+
+  @include tablet {
+    @include flex($display: flex, $direction: column, $gap: px-to-vw-tablet(67));
+    &__left {
+      @include set-size($width: 100%);
+      &--top {
+        @include flex(
+          $display: flex,
+          $direction: column,
+          $align: center,
+          $justify: center,
+          $wrap: false,
+          $gap: px-to-vw-tablet(16)
+        );
+        .top--title {
+          letter-spacing: px-to-vw-tablet(4.6);
+          font-size: px-to-vw-tablet(23);
+        }
+  
+        .top--desc {
+          font-size: px-to-vw-tablet(40) ;
+        }
+      }
+      &--bottom {
+        margin-top: px-to-vw-tablet(64);
+        padding: 0 px-to-vw-tablet(16);
+        @include flex($display: flex, $align: center, $justify: center, $gap: px-to-vw-tablet(32));
+        .bottom--btn {
+          @include set-size($width: px-to-vw-tablet(100));
+  
+          img {
+            @include set-size($width: 100%);
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    &__right {
+        @include flex(
+        $direction: row,
+        $gap: px-to-vw-tablet(31)
+      );
+     .right-content {
+      @include set-size ($width: px-to-vw-tablet(278));
+      @include  position(
+        $position: relative,
+        $left: 50%
+      );
+      transform: translateX(-50%);
+      border-radius: px-to-vw-tablet(32);
+      background: #fff;
+      box-shadow: 0px 801px 224px 0px rgba(0, 0, 0, 0),
+        0px 513px 205px 0px rgba(0, 0, 0, 0.01),
+        0px 288px 173px 0px rgba(0, 0, 0, 0.03),
+        0px 128px 128px 0px rgba(0, 0, 0, 0.04),
+        0px 32px 71px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 0px rgba(0, 0, 0, 0.05);
+  
+      &--text {
+        @include font(
+          $font-family: $primary-font,
+          $font-size: px-to-vw-tablet(23),
+          $font-weight: 700,
+          $line-height: 120%,
+          $color: $third-color-text
+        );
+      }
+        &--heading {
+          .heading--img {
+            @include set-size(
+              $width: px-to-vw-tablet(278),
+              $height: px-to-vw-tablet(314)
+            );
+            img {
+              border-radius: px-to-vw-tablet(32) px-to-vw-tablet(32) 0 0;
+            }
+          }
+          .section-destination__right--heading figure:nth-child(3) {
+            $width: px-to-vw-tablet(407),
+          }
+        }
+        &--body {
+          padding: px-to-vw-tablet(32)   px-to-vw-tablet(32) 0 px-to-vw-tablet(32); 
+        }
+        .body--desc {
+          margin-top: px-to-vw-tablet(8);
+        }
+  
+        .body--country {
+          margin-top: px-to-vw-tablet(16);
+          @include font(
+            $font-size: px-to-vw-tablet(18),
+          );
+        }
+      
+      &--footer {
+        @include flex($gap: px-to-vw-tablet(8));
+        padding: 0 px-to-vw-tablet(32) px-to-vw-tablet(32) px-to-vw-tablet(32);
+  
+        .footer--iconStar {
+          @include set-size($width: px-to-vw-tablet(24));
+        }
+      }
+     }
+    }
+}
+@include desktop {
+  @include flex($display: flex, $direction: column, $gap: px-to-vw-desktop(67));
+  @include set-size ($width: px-to-vw-desktop(1184));
+  @include position(
+    $position: relative,
+    $left: 50%
+  );
+  transform: translateX(-50%);
+  &__left {
+    @include set-size($width: 100%);
+    
+      @include flex(
+        $display: flex,
+        $align: center,
+        $justify: space-between
+      );
+    &--top {
+      @include flex(
+        $direction: column,
+        $align: unset,
+        $gap: px-to-vw-desktop(16)
+      );
+      
+      .top--title {
+        letter-spacing: px-to-vw-desktop(4.6);
+        font-size: px-to-vw-desktop(23);
+        
+      }
+
+      .top--desc {
+        font-size: px-to-vw-desktop(40) ;
+      }
+    }
+    &--bottom {
+      margin-top: px-to-vw-desktop(64);
+      padding: 0 px-to-vw-desktop(16);
+      @include flex($display: flex, $align: center, $justify: center, $gap: px-to-vw-desktop(32));
+      .bottom--btn {
+        @include set-size($width: px-to-vw-desktop(100));
+
+        img {
+          @include set-size($width: 100%);
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  &__right {
+      @include flex(
+      $direction: row,
+      $gap: px-to-vw-desktop(31)
+    );
+   .right-content {
+    @include set-size ($width: px-to-vw-desktop(373));
+    @include  position(
+      $position: relative,
+      $left: 50%
+    );
+    transform: translateX(-50%);
+    border-radius: px-to-vw-desktop(32);
+    background: #fff;
+    box-shadow: 0px 801px 224px 0px rgba(0, 0, 0, 0),
+      0px 513px 205px 0px rgba(0, 0, 0, 0.01),
+      0px 288px 173px 0px rgba(0, 0, 0, 0.03),
+      0px 128px 128px 0px rgba(0, 0, 0, 0.04),
+      0px 32px 71px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px 0px rgba(0, 0, 0, 0.05);
+
+    &--text {
+      @include font(
+        $font-family: $primary-font,
+        $font-size: px-to-vw-desktop(23),
+        $font-weight: 700,
+        $line-height: 120%,
+        $color: $third-color-text
+      );
+    }
+      &--heading {
+        .heading--img {
+          @include set-size(
+            $width: px-to-vw-desktop(373),
+            $height: px-to-vw-desktop(350)
+          );
+          img {
+            border-radius: px-to-vw-desktop(32) px-to-vw-desktop(32) 0 0;
+          }
+        
+        }
+      }
+      &--body {
+        padding: px-to-vw-desktop(32)   px-to-vw-desktop(32) 0 px-to-vw-desktop(32); 
+      }
+      .body--desc {
+        margin-top: px-to-vw-desktop(8);
+        width: px-to-vw-desktop(214);
+      }
+
+      .body--country {
+        margin-top: px-to-vw-desktop(16);
+        @include font(
+          $font-size: px-to-vw-desktop(18),
+        );
+      }
+    
+    &--footer {
+      @include flex($gap: px-to-vw-desktop(8));
+      padding: 0 px-to-vw-desktop(32) px-to-vw-desktop(32) px-to-vw-desktop(32);
+
+      .footer--iconStar {
+        @include set-size($width: px-to-vw-desktop(24));
+      }
+    }
+   }
+  }
+}
+
+}

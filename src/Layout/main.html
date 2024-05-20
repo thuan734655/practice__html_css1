@@ -1,0 +1,54 @@
+<main>
+  <!-- start section Services -->
+  <div class="section-services">
+    <div class="section-services__left">
+      <h5 class="title">Services</h5>
+      <p class="desc">Our top value categories for you</p>
+    </div>
+    <div class="section-services__right">
+      <include
+        src="./components/services-card.html"
+        locals='{
+        "list": [
+         {"classNameCard": "services-card", "linkImg": "../assets/icon/earth_frame1.svg", "alts": "earth","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." },
+         {"classNameCard": "services-card", "linkImg": "../assets/icon/booking_pane2_frame1.svg", "alts": "booking","title": "Easy Booking" , "desc": "Square, was moving across the sand in their direction." },
+         {"classNameCard": "services-card", "linkImg": "../assets/icon/cloudy.svg", "alts": "haft-icon","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." }
+        ]
+      }'
+      >
+      </include>
+    </div>
+  </div>
+  <!-- end section Services -->
+
+  <!-- start section destination  -->
+  <section class="section-destination">
+    <div class="section-destination__left">
+        <div class="section-destination__left--top">
+            <p class="top--title title">Top Destination</p>
+            <p class="top--desc desc">Explore top destination</p>
+        </div>
+        <div class="section-destination__left--bottom">
+            <include src="./components/boxImg.html" locals='{
+                "list": [
+                 {"classNameFigure": "bottom--btn bottom--btn-left", "srcImg": "../assets/icon/section-destination-btn-arrow-left.png", "alts": "btn left", "classNameImg": "btn-left"},
+                 {"classNameFigure": "bottom--btn bottom--btn-right", "srcImg": "../assets/icon/section-destination-btn-arrow-right.png", "alts": "btn right", "classNameImg": "btn-right"}
+                ]
+            }'>
+               <img src="../assets/icon/section-distination-btn-arrow-left.png" alt=""> 
+            </include>
+        </div>
+    </div>
+    <div class="section-destination__right">
+        <include src="./components/box-section-desetination.html" locals='{
+            "list": [
+             {"classNameImg":"img-beach heading--img", "srcImg": "../assets/img/section-destination-beach.png", "alts" : "beach", "contentPrice": "$550.16", "contentDesc": "Paradise Beach, Bantayan Island", "contentCountry": "Rome, Italy", "contentEvaluate":"4.8"},
+             {"classNameImg":"img-fish heading--img", "srcImg": "../assets/img/section-destination-fish .png", "alts" : "fish", "contentPrice": "$20.99", "contentDesc": "Ocean with full of Colors", "contentCountry": "Maldives", "contentEvaluate":"4.5"},
+             {"classNameImg":"img-mountain heading--img", "srcImg": "../assets/img/section-destination-mountain.png", "alts" : "mountain", "contentPrice": "$150.99", "contentDesc": "Mountain View, Above the cloud", "contentCountry": "United Arab Emeries", "contentEvaluate":"5.0"}
+            ]
+        }'>
+        </include>
+    </div>
+  </section>
+  <!-- start section destination  -->
+</main>

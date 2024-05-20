@@ -1,0 +1,22 @@
+<each loop="item in {{list}}">
+    <div class="section-destination__right">
+       <div class="right-content">
+        <div class="right-content--heading">
+          <figure class="heading--{{item.classNameImg}}">
+            <img  src="{{item.srcImg}}" alt="{{item.alts}}">
+          </figure>
+        </div>
+        <div class="right-content--body">
+             <p class="right-content--text body--price">{{item.contentPrice}}</p>
+             <p class="right-content--text body--desc">{{item.contentDesc}}</p>
+             <p class="body--country">{{item.contentCountry}}</p>
+        </div>
+        <div class="right-content--footer">
+            <p class="right-content--text footer--evaluate" >{{item.contentEvaluate}}</p>
+             <figure class="footer--iconStar">
+                <img src="../assets/icon/star_frame1.svg" alt="icon star">
+             </figure>
+        </div>
+       </div>
+    </div> 
+</each>
