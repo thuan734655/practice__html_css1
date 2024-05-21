@@ -1,0 +1,27 @@
+@use "../Abstract/" as *;
+@use "../Base/" as *;
+
+.section-travelPoint {
+    
+  &__content {
+     @include flex(
+        $display: flex,
+        $direction: column,
+        $justify: center,
+        $gap: px-to-vw-mobile(64)
+      );
+      margin-top: px-to-vw-mobile(64);
+    &--left {
+        .left--img {
+            @include set-size($width: px-to-vw-mobile(398));
+            @include position ($position: relative, $left: 50%);
+            transform:  translateX(-50%);
+            img {
+                @include set-size($width: 100%, $height: 100%);
+                object-fit: cover;
+            }
+        }
+
+    }
+  }
+}
