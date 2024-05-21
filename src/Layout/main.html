@@ -1,0 +1,63 @@
+<main>
+  <!-- start section keyFeatures -->
+  <section id="section-keyFeatures">
+    <!-- start section-keyFeatures__container -->
+    <div class="section-keyFeatures__container">
+        <!-- start section-keyFeatures__container--left -->
+      <div class="section-keyFeatures__container--left">
+         <!-- start left-content -->
+        <div class="left-content">
+             <!-- start left-content--heading -->
+          <div class="left-content--heading">
+            <p class="heading--content title">Key features</p>
+          </div>
+           <!-- end left-content--heading -->
+
+            <!-- start left-content--body-->
+          <div class="left-content--body">
+            <p class="body--title">We offer best services</p>
+            <p class="body--desc">
+              Contrary to popular belief, Lorem Ipsum is not simply random text.
+              It has roots in a piece of classical Latin literature from 45 BC.
+            </p>
+          </div>
+          <!-- end left-content--body-->
+
+          <!-- start left-content--footer-->
+          <div class="left-content--footer">
+            <include
+              src="./components/box-section-keyFeatures.html"
+              locals='{
+                        "list" : [
+                         {"classBox": "", "srcImg": "../assets/icon/section-keyFeatures-locationIcon.png", "alts": "location icon", "contentTextTop" : "We offer best services", "contentTextBottom" : "Lorem Ipsum is not simply random text"},
+                         {"classBox": "box2", "srcImg": "../assets/icon/section-keyFeatures-calendarIcon.png", "alts": "calendar icon", "contentTextTop" : "Schedule your trip", "contentTextBottom" : "It has roots in a piece of classical"},
+                         {"classBox": "", "srcImg": "../assets/icon/section-keyfeatures-pinkIcon.png", "alts": "pink icon", "contentTextTop" : "Get discounted coupons", "contentTextBottom" : "Lorem Ipsum is not simply random text"}
+                        ]
+                       }'
+            >
+            </include>
+          </div>
+           <!-- end left-content--footer-->
+        </div>
+         <!-- start left-content -->
+      </div>
+       <!-- end section-keyFeatures__container--left -->
+
+        <!-- start section-keyFeatures__container--right -->
+      <div class="section-keyFeatures__container--right">
+        <include
+        src="./components/boxImg.html"
+        locals='{
+              "list": [
+               {"classNameFigure": "right--img","classNameImg": "", "srcImg": "../assets/img/section-keyFeatures-img-right.png", "alts": "image right section keyfeatures"}
+              ]
+          }'
+      >
+      </include>    
+      </div>
+       <!-- end section-keyFeatures__container--right -->
+    </div>
+      <!-- end section-keyFeatures__container -->
+  </section>
+  <!-- end section keyFeatures -->
+</main>

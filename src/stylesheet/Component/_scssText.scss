@@ -1,0 +1,95 @@
+@use "../Abstract/" as *;
+
+.body--title {
+  @include font(
+    $font-family: $primary-font,
+    $font-size: calc(px-to-vw-mobile(32) - 0.0298px),
+    $font-weight: 700,
+    $line-height: 120%,
+    $color: $sixth-color-text
+  );
+  text-align: center;
+  margin-top: calc(px-to-vw-mobile(16) - 0.0149px);
+
+  @include tablet {
+    @include font($font-size: px-to-vw-tablet(40));
+    text-align: center;
+    margin-top: px-to-vw-tablet(16);
+
+    @include desktop {
+      @include font($font-size: px-to-vw-desktop(44));
+      @include set-size($width: px-to-vw-desktop(441));
+      text-align: unset;
+      margin-top: px-to-vw-desktop(16);
+    }
+  }
+}
+
+.body--desc {
+  @include font(
+    $font-family: $second-font,
+    $font-size: calc(px-to-vw-mobile(16) - 0.0149px),
+    $font-weight: 400,
+    $line-height: 160%,
+    $color: $second-color-text
+  );
+  @include set-size($width: px-to-vw-mobile(398));
+  text-align: center;
+  margin-top: calc(px-to-vw-mobile(32) - 0.0298px);
+  @include position($position: relative, $left: 50%);
+  transform: translateX(-50%);
+  @include tablet {
+    @include font($font-size: px-to-vw-tablet(18));
+    @include set-size($width: px-to-vw-tablet(832));
+    margin-top: px-to-vw-tablet(32);
+
+    @include desktop {
+      font-size: px-to-vw-desktop(18);
+      @include set-size($width: px-to-vw-desktop(441));
+      position: unset;
+      transform: unset;
+      text-align: unset;
+      margin-top: px-to-vw-desktop(32);
+    }
+  }
+}
+
+.title {
+  @include font(
+    $font-family: $primary-font,
+    $font-size: px-to-vw-mobile(16),
+    $font-weight: 700,
+    $line-height: 120%,
+    $color: $third-color-text
+  );
+  letter-spacing: px-to-vw-mobile(3.2);
+  text-transform: uppercase;
+  text-align: center;
+  @include tablet {
+    font-size: px-to-vw-tablet(23);
+    letter-spacing: px-to-vw-tablet(4.6);
+  }
+  @include desktop {
+    font-size: px-to-vw-desktop(23);
+    text-align: unset;
+    letter-spacing: px-to-vw-desktop(4.6);
+  }
+}
+
+.desc {
+  @include font(
+    $font-family: $primary-font,
+    $font-size: px-to-vw-mobile(32),
+    $font-weight: 700,
+    $line-height: 120%,
+    $color: $primary-color-text
+  );
+  text-align: center;
+
+  @include tablet {
+    font-size: 40px;
+  }
+  @include desktop {
+    text-align: unset;
+  }
+}
