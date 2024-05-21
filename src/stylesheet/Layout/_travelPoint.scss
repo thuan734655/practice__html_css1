@@ -201,8 +201,8 @@
           $gap: unset
         );
         @include set-size ($width:px-to-vw-desktop(1312));
-        @include position ($position: relative, $left: 50%);
-        transform:  translateX(-50%);
+        @include position ($position: relative, $left: 0);
+        
         margin-top: px-to-vw-desktop(128);
         &--left {
           .left--img {
