@@ -50,13 +50,13 @@
       @include position($position: relative, $left: 50%);
       transform: translateX(-50%);
       border-radius: px-to-vw-mobile(32);
-      background: #fff;
-      box-shadow: 0px 801px 224px 0px rgba(0, 0, 0, 0),
-        0px 513px 205px 0px rgba(0, 0, 0, 0.01),
-        0px 288px 173px 0px rgba(0, 0, 0, 0.03),
-        0px 128px 128px 0px rgba(0, 0, 0, 0.04),
-        0px 32px 71px 0px rgba(0, 0, 0, 0.05),
-        0px 0px 0px 0px rgba(0, 0, 0, 0.05);
+      background: $first-color-boxshadow-box;
+      box-shadow: 0px 801px 224px 0px $second-color-boxshadow-box,
+        0px 513px 205px 0px $third-color-boxshadow-box,
+        0px 288px 173px 0px $fourth-color-boxshadow-box,
+        0px 128px 128px 0px $sixth-color-boxshadow-box,
+        0px 32px 71px 0px $seventh-color-boxshadow-box,
+        0px 0px 0px 0px $third-color-boxshadow-box;
 
       &--text {
         @include font(
@@ -130,20 +130,10 @@
   }
 
   @include tablet {
-    @include flex(
-      $display: flex,
-      $direction: column,
-      $gap: px-to-vw-tablet(67)
-    );
+    @include flex($gap: px-to-vw-tablet(67));
     &__left {
       &--top {
-        @include flex(
-          $display: flex,
-          $direction: column,
-          $align: center,
-          $justify: center,
-          $gap: px-to-vw-tablet(16)
-        );
+        @include flex($gap: px-to-vw-tablet(16));
         .top--title {
           letter-spacing: px-to-vw-tablet(4.6);
           font-size: px-to-vw-tablet(23);
@@ -156,19 +146,9 @@
       &--bottom {
         margin-top: px-to-vw-tablet(64);
         padding: 0 px-to-vw-tablet(16);
-        @include flex(
-          $display: flex,
-          $align: center,
-          $justify: center,
-          $gap: px-to-vw-tablet(32)
-        );
+        @include flex($gap: px-to-vw-tablet(32));
         .bottom--btn {
           @include set-size($width: px-to-vw-tablet(100));
-
-          img {
-            @include set-size($width: 100%);
-            object-fit: cover;
-          }
         }
       }
     }
@@ -176,17 +156,7 @@
       @include flex($direction: row, $gap: px-to-vw-tablet(31));
       .right-content {
         @include set-size($width: px-to-vw-tablet(278));
-        @include position($position: relative, $left: 50%);
-        transform: translateX(-50%);
         border-radius: px-to-vw-tablet(32);
-        background: #fff;
-        box-shadow: 0px 801px 224px 0px rgba(0, 0, 0, 0),
-          0px 513px 205px 0px rgba(0, 0, 0, 0.01),
-          0px 288px 173px 0px rgba(0, 0, 0, 0.03),
-          0px 128px 128px 0px rgba(0, 0, 0, 0.04),
-          0px 32px 71px 0px rgba(0, 0, 0, 0.05),
-          0px 0px 0px 0px rgba(0, 0, 0, 0.05);
-
         &--text {
           @include font($font-size: px-to-vw-tablet(23));
         }
@@ -223,11 +193,7 @@
     }
   }
   @include desktop {
-    @include flex(
-      $display: flex,
-      $direction: column,
-      $gap: px-to-vw-desktop(67)
-    );
+    @include flex($gap: px-to-vw-desktop(67));
     @include set-size($width: px-to-vw-desktop(1184));
     @include position($position: relative, $left: 50%);
     transform: translateX(-50%);
@@ -236,11 +202,7 @@
 
       @include flex($display: flex, $align: center, $justify: space-between);
       &--top {
-        @include flex(
-          $direction: column,
-          $align: unset,
-          $gap: px-to-vw-desktop(16)
-        );
+        @include flex($align: unset, $gap: px-to-vw-desktop(16));
 
         .top--title {
           letter-spacing: px-to-vw-desktop(4.6);
@@ -254,12 +216,7 @@
       &--bottom {
         margin-top: px-to-vw-desktop(64);
         padding: 0 px-to-vw-desktop(16);
-        @include flex(
-          $display: flex,
-          $align: center,
-          $justify: center,
-          $gap: px-to-vw-desktop(32)
-        );
+        @include flex($gap: px-to-vw-desktop(32));
         .bottom--btn {
           @include set-size($width: px-to-vw-desktop(100));
 
@@ -274,16 +231,7 @@
       @include flex($direction: row, $gap: px-to-vw-desktop(31));
       .right-content {
         @include set-size($width: px-to-vw-desktop(373));
-        @include position($position: relative, $left: 50%);
-        transform: translateX(-50%);
         border-radius: px-to-vw-desktop(32);
-        background: #fff;
-        box-shadow: 0px 801px 224px 0px rgba(0, 0, 0, 0),
-          0px 513px 205px 0px rgba(0, 0, 0, 0.01),
-          0px 288px 173px 0px rgba(0, 0, 0, 0.03),
-          0px 128px 128px 0px rgba(0, 0, 0, 0.04),
-          0px 32px 71px 0px rgba(0, 0, 0, 0.05),
-          0px 0px 0px 0px rgba(0, 0, 0, 0.05);
 
         &--text {
           @include font($font-size: px-to-vw-desktop(23));
