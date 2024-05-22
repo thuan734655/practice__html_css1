@@ -56,7 +56,15 @@
 
     .header__top__icon--logo {
       @include set_size($width: px-to-vw-mobile(141.87), $height: 35.7%);
-
+      img {
+        @include set_size($width: 100%, $height: 100%);
+        object-fit: cover;
+        @include tablet {
+          @include desktop {
+          }
+        }
+      }
+        
       @include tablet {
         @include set_size(
           $width: px-to-vw-tablet(142),
@@ -69,14 +77,6 @@
             $width: px-to-vw-desktop(142),
             $height: px-to-vw-desktop(40)
           );
-        }
-        img {
-              @include set_size($width: 100%,$height:100%);
-              object-fit: cover;
-              @include tablet {
-                @include desktop {
-                }
-              }
         }
       }
 
@@ -98,7 +98,7 @@
       }
 
       img {
-        @include set_size($width: 100%,$height:100%);
+        @include set_size($width: 100%, $height: 100%);
         object-fit: cover;
         @include tablet {
           @include desktop {
@@ -284,7 +284,7 @@
     .header-bottom__left {
       row-gap: px-to-vw-mobile(24);
       @include set-size($width: 100%);
-      @include flex($display: flex, $direction: column,$justify: center);
+      @include flex($display: flex, $direction: column, $justify: center);
 
       .btn__top {
         border-radius: px-to-vw-mobile(100);
@@ -748,7 +748,8 @@
         border-radius: 27px;
         border: transparent;
         background-color: $second-color-button;
-        box-shadow: 0 px-to-vw-mobile(10) px-to-vw-mobile(20) $second-color-boxshadow-button;
+        box-shadow: 0 px-to-vw-mobile(10) px-to-vw-mobile(20)
+          $second-color-boxshadow-button;
         @include position(
           $position: relative,
           $top: px-to-vw-mobile(35),
