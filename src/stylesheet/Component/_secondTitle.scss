@@ -13,7 +13,6 @@
 
   @include tablet {
     @include font($font-size: px-to-vw-tablet(40));
-    text-align: center;
     margin-top: px-to-vw-tablet(16);
 
     @include desktop {
