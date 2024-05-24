@@ -1,0 +1,48 @@
+<main>
+      <!-- start section-newsletter__content--heading -->
+      <div class="section-newsletter__content--heading">
+        <p class="heading-content title">subscribe to our newsletter</p>
+      </div>
+      <!-- end section-newsletter__content--heading -->
+
+      <!-- start ection-newsletter__content--body-->
+      <div class="section-newsletter__content--body">
+        <p class="body-desc desc">
+          Prepare yourself & let’s explore the beauty of the world
+        </p>
+      </div>
+      <!-- end ection-newsletter__content--body-->
+
+      <!-- start section-newsletter__content--footer-->
+      <div class="section-newsletter__content--footer">
+        <div class="footer-content">
+          <div class="footer-content--boxEmail">
+            <p class="boxEmail--text">Your Email</p>
+            <include
+              src="./components/boxImg.html"
+              locals='{
+          "list" : [
+        {"classNameFigure": "boxEmail--icon","classNameImg": "icon", "srcImg" : "../assets/icon/section-newsletter-iconInput.png", "alts" : "icon" }
+          ]
+        }'
+            >
+            </include>
+          </div>
+
+          <include
+            src="./components/buttonWithTag_p.html"
+            locals='{
+          "list": [
+           {"classBtn": "footer-content--btn" , "classContent": "btn-content", "content": "subscribe"}
+          ]
+        }'
+          >
+          </include>
+        </div>
+      </div>
+      <!-- end section-newsletter__content--footer-->
+    </div>
+    <!-- end section-newsletter__content -->
+  </div>
+  <!-- end section newsleeter -->
+</main>
