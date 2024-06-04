@@ -169,4 +169,34 @@
     <!-- end section-services__contents -->
   </div>
   <!-- end section Services -->
+
+  <!-- start section destination  -->
+  <section class="section-destination">
+    <div class="section-destination__left">
+        <div class="section-destination__left--top">
+            <p class="top--title title">Top Destination</p>
+            <p class="top--desc desc">Explore top destination</p>
+        </div>
+        <div class="section-destination__left--bottom">
+            <include src="./components/boxImg.html" locals='{
+                "list": [
+                 {"classNameFigure": "bottom--btn bottom--btn-left", "srcImg": "../assets/icon/section-destination-btn-arrow-left.png", "alts": "btn left", "classNameImg": "btn-left"},
+                 {"classNameFigure": "bottom--btn bottom--btn-right", "srcImg": "../assets/icon/section-destination-btn-arrow-right.png", "alts": "btn right", "classNameImg": "btn-right"}
+                ]
+            }'>
+            </include>
+        </div>
+    </div>
+    <div class="section-destination__right">
+        <include src="./components/box-section-desetination.html" locals='{
+            "list": [
+             {"classNameImg":"img-beach heading--img", "srcImg": "../assets/img/section-destination-beach.png", "alts" : "beach", "contentPrice": "$550.16", "contentDesc": "Paradise Beach, Bantayan Island", "contentCountry": "Rome, Italy", "contentEvaluate":"4.8"},
+             {"classNameImg":"img-fish heading--img", "srcImg": "../assets/img/section-destination-fish .png", "alts" : "fish", "contentPrice": "$20.99", "contentDesc": "Ocean with full of Colors", "contentCountry": "Maldives", "contentEvaluate":"4.5"},
+             {"classNameImg":"img-mountain heading--img", "srcImg": "../assets/img/section-destination-mountain.png", "alts" : "mountain", "contentPrice": "$150.99", "contentDesc": "Mountain View, Above the cloud", "contentCountry": "United Arab Emeries", "contentEvaluate":"5.0"}
+            ]
+        }'>
+        </include>
+    </div>
+  </section>
+  <!-- end section destination  -->
 </main>
