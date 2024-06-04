@@ -51,7 +51,7 @@
         .body-title {
           @include font(
             $font-family: $primary-font,
-            $font-size: calc(px-to-vw-mobile(24) - $services-card-residual-24px),
+            $font-size: calc(px-to-vw-mobile(24) - $font-residual-24px),
             $font-weight: 700,
             $line-height: 120%,
             $color: $primary-color-text

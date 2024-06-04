@@ -1,7 +1,6 @@
 <each loop="item in {{list}}">
-  <div class="section-destination__right">
-    <div class="right-content">
-      <div class="right-content--heading">
+    <div class="bottom-content">
+      <div class="bottom-content--heading">
         <include src="./components/boxImg.html" locals='{
           "list": [
            {"classNameFigure": "heading--{{item.classNameImg}}","classNameImg": "", "srcImg": "{{item.srcImg}}", "alts": "{{item.alts}}" }
@@ -10,27 +9,25 @@
           
         </include>
       </div>
-      <div class="right-content--body">
+      <div class="bottom-content--body">
         <div class="body-top">
-          <p class="right-content--text body-top--price">
+          <p class="bottom-content--text body-top--price">
             {{item.contentPrice}}
           </p>
-          <p class="right-content--text body-top--desc">{{item.contentDesc}}</p>
+          <p class="bottom-content--text body-top--desc">{{item.contentDesc}}</p>
         </div>
         <p class="body--country">{{item.contentCountry}}</p>
       </div>
-      <div class="right-content--footer">
-        <p class="right-content--text footer--evaluate">
+      <div class="bottom-content--footer">
+        <p class="bottom-content--text footer--evaluate">
           {{item.contentEvaluate}}
         </p>
         <include src="./components/boxImg.html" locals='{
           "list": [
            {"classNameFigure": "footer--iconStar","classNameImg": "", "srcImg": "../assets/icon/star_frame1.svg", "alts": "icon star" }
           ]
-        }'>
-          
+        }'>      
         </include>
       </div>
     </div>
-  </div>
 </each>
