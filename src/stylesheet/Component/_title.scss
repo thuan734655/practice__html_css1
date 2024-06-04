@@ -3,27 +3,29 @@
 .title {
   @include font(
     $font-family: $primary-font,
-    $font-size: px-to-vw-mobile(16),
+    $font-size: calc(px-to-vw-mobile(16) - $residual-16px),
     $font-weight: 700,
     $line-height: 120%,
     $color: $third-color-text
   );
-  letter-spacing: 4.6px;
+  letter-spacing: px-to-vw-mobile(3.2);
   text-transform: uppercase;
   text-align: center;
   @include tablet {
     font-size: px-to-vw-tablet(23);
+    letter-spacing: px-to-vw-tablet(4.6);
   }
   @include desktop {
     font-size: px-to-vw-desktop(23);
     text-align: unset;
+    letter-spacing: px-to-vw-desktop(4.6);
   }
 }
 
 .desc {
   @include font(
     $font-family: $primary-font,
-    $font-size: px-to-vw-mobile(32),
+    $font-size: calc(px-to-vw-mobile(32) - $services-card-residual-32px),
     $font-weight: 700,
     $line-height: 120%,
     $color: $primary-color-text
@@ -31,9 +33,10 @@
   text-align: center;
 
   @include tablet {
-    font-size: 40px;
+    font-size: px-to-vw-tablet(40);
   }
   @include desktop {
+    font-size: px-to-vw-desktop(44);
     text-align: unset;
   }
 }

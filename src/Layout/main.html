@@ -1,87 +1,87 @@
 <main>
-<!-- start section-explore  -->
-<section class="section-explore">
-  <div class="section-explore__content">
-    <!-- start section-explore__content--left -->
-    <div class="section-explore__content--left">
-      <include
-        src="./components/buttonIcon.html"
-        locals='{
+  <!-- start section-explore  -->
+  <section class="section-explore">
+    <div class="section-explore__content">
+      <!-- start section-explore__content--left -->
+      <div class="section-explore__content--left">
+        <include
+          src="./components/buttonIcon.html"
+          locals='{
                  "list": [ 
                  {"class":"left-content--btn-top","linkimg" : "../assets/icon/bag_frame1.svg","alts": "icon bag","classImg":"btn-top--img","classText":"btn-top--text","content":"Explore the world!"}
                  ]
                  }'
-      >
-      </include>
+        >
+        </include>
 
-      <div class="left-content--text">
-        <h1 class="first-text">
-          Travel <span>top destination</span> of the world
-        </h1>
-        <p class="second-text">
-          We always make our customer happy by providing <br />
-          as many choices as possible
-        </p>
-      </div>
+        <div class="left-content--text">
+          <h1 class="first-text">
+            Travel <span>top destination</span> of the world
+          </h1>
+          <p class="second-text">
+            We always make our customer happy by providing <br />
+            as many choices as possible
+          </p>
+        </div>
 
-      <!-- start left-content--btnBottom  -->
-      <div class="left-content--btnBottom">
-        <include
-          src="./components/button.html"
-          locals='{
+        <!-- start left-content--btnBottom  -->
+        <div class="left-content--btnBottom">
+          <include
+            src="./components/button.html"
+            locals='{
                      "list":[
                      {"classBtn":"btnBottom--left","classText":"btnBottom-left-text","content":"Get Started"}
                      ]
                  }'
-        >
-        </include>
-        <include
-          src="./components/buttonIcon.html"
-          locals='{
-                     "list": [ 
-                     {"class":"btnBottom--right","linkimg" : "../assets/icon/play_frame1.svg","alts": "icon play","classImg":"btnBottom-right-img","classText":"btnBottom-right-text","content":"Watch Demo"}
-                     ]
-                     }'
-        >
-        </include>
-      </div>
-      <!-- end  left-content--btnBottom   -->
-    </div>
-    <!-- end section-explore__content--left  -->
-
-    <!-- start section-explore__content--right-->
-    <div class="section-explore__content--right">
-      <!-- start right-content -->
-      <div class="right-content">
-        <!-- start right-content--layer -->
-        <div class="right-content--layer">
-          <include
-            src="./components/boxImg.html"
-            locals='{
-                     "list": [
-                      {"classNameFigure": "layer-img", "classNameImg": "pic--img", "srcImg": "../assets/img/layer_pane1.png","alts":"layer"}
-                     ]
-                 }'
           >
           </include>
-        </div>
-        <!-- end right-content--layer-->
-
-        <!-- start right__content--pic -->
-        <div class="right-content--pic">
           <include
             src="./components/buttonIcon.html"
             locals='{
                      "list": [ 
+                     {"class":"btnBottom--right","linkimg" : "../assets/icon/play_frame1.svg","alts": "icon play","classImg":"btnBottom-right-img","classText":"btnBottom-right-text","content":"Watch Demo"}
+                     ]
+                     }'
+          >
+          </include>
+        </div>
+        <!-- end  left-content--btnBottom   -->
+      </div>
+      <!-- end section-explore__content--left  -->
+
+      <!-- start section-explore__content--right-->
+      <div class="section-explore__content--right">
+        <!-- start right-content -->
+        <div class="right-content">
+          <!-- start right-content--layer -->
+          <div class="right-content--layer">
+            <include
+              src="./components/boxImg.html"
+              locals='{
+                     "list": [
+                      {"classNameFigure": "layer-img", "classNameImg": "pic--img", "srcImg": "../assets/img/layer_pane1.png","alts":"layer"}
+                     ]
+                 }'
+            >
+            </include>
+          </div>
+          <!-- end right-content--layer-->
+
+          <!-- start right__content--pic -->
+          <div class="right-content--pic">
+            <include
+              src="./components/buttonIcon.html"
+              locals='{
+                     "list": [ 
                      {"class":"btn-right","linkimg" : "../assets/icon/location_frame1.svg","alts": "icon location","classImg":"btn-right--img","classText":"btn-right--text","content":"Top Places"}
                      ]
                  }'
-          >
-          </include>
+            >
+            </include>
 
-          <include
-            src="./components/boxImg.html"
-            locals='{
+            <include
+              src="./components/boxImg.html"
+              locals='{
                      "list": [
                       {"classNameFigure": "pic-sea", "classNameImg": "pic--img pic-sea--img", "srcImg": "../assets/img/pic1_pane1.jpg","alts":"pic sea"},
                       {"classNameFigure": "pic-arrow", "classNameImg": "pic-arrow--img pic--icon", "srcImg": "../assets/icon/icon_arrow_pic1.png","alts":"icon arrow"},
@@ -90,35 +90,40 @@
                       {"classNameFigure": "pic-add", "classNameImg": "pic--icon pic-add--img", "srcImg": "../assets/icon/icon_add.png","alts":"icon add"}
                      ]
                  }'
-          >
-          </include>
+            >
+            </include>
+          </div>
+          <!-- end right__content--pic -->
         </div>
-        <!-- end right__content--pic -->
+        <!-- end right-content -->
       </div>
-      <!-- end right-content -->
-    </div>
-    <!-- end section-explore__content--right-->
-    <!-- start section-explore__content--listIconArrow  -->
-    <include src="./components/boxImg.html" locals='{
+      <!-- end section-explore__content--right-->
+      <!-- start section-explore__content--listIconArrow  -->
+      <include
+        src="./components/boxImg.html"
+        locals='{
         "list": [
         {"classNameFigure": "section-explore__content--listIconArrow", "classNameImg": "","srcImg": "../assets/icon/list-arrow-up__frame1.svg", "alts": "list icon arrow up"}
         ]
-    }'>     
-    </include>
-  <!-- end section-explore__content--listIconArrow  -->
-  
-  <!-- start section-explore__content--shadow-bottom -->
-  <div class="section-explore__content--shadow-bottom"></div>
-  <!-- end section-explore__content--shadow-bottom -->
-  </div>
-</section>
-<!-- end section-explore -->
+    }'
+      >
+      </include>
+      <!-- end section-explore__content--listIconArrow  -->
+
+      <!-- start section-explore__content--shadow-bottom -->
+      <div class="section-explore__content--shadow-bottom"></div>
+      <!-- end section-explore__content--shadow-bottom -->
+    </div>
+  </section>
+  <!-- end section-explore -->
 
   <!-- start section-web-name -->
   <section class="web-name">
     <!-- start section-section-web-name__content -->
     <div class="section-web-name__content">
-      <include src="./components/boxImg.html" locals='{
+      <include
+        src="./components/boxImg.html"
+        locals='{
         "list": [
          {"classNameFigure": "section-web-name__content--tripadvisor web-name-img", "classNameImg": "", "srcImg": "../assets/icon/tripadvisor_frame1.svg", "alts": "tripadvisor"},
          {"classNameFigure": "section-web-name__content--expedia web-name-img", "classNameImg": "", "srcImg": "../assets/icon/expedia_frame1.svg", "alts": "expedia"},
@@ -126,7 +131,8 @@
          {"classNameFigure": "section-web-name__content--airbnb web-name-img", "classNameImg": "", "srcImg": "../assets/icon/airbnb_frame1.svg", "alts": "airbnb"},
          {"classNameFigure": "section-web-name__content--gabitz web-name-img", "classNameImg": "", "srcImg": "../assets/icon/gabitz_frame1.svg", "alts": "gabitz"}
         ]
-      }'>
+      }'
+      >
       </include>
     </div>
     <!-- end section-web-name__content -->
@@ -135,23 +141,32 @@
 
   <!-- start section Services -->
   <div class="section-services">
-    <div class="section-services__left">
-      <h5 class="title">Services</h5>
-      <p class="desc">Our top value categories for you</p>
-    </div>
-    <div class="section-services__right">
-      <include
-        src="./components/services-card.html"
-        locals='{
+    <!-- start section-services__contents -->
+    <div class="section-services__content">
+      <!-- start section-services__contents--left -->
+      <div class="section-services__content--left">
+        <h5 class="title">Services</h5>
+        <p class="desc">Our top value categories for you</p>
+      </div>
+      <!-- end section-services__contents--left -->
+
+      <!-- start section-services__contents--right -->
+      <div class="section-services__content--right">
+        <include
+          src="./components/services-card.html"
+          locals='{
         "list": [
-         {"classNameCard": "services-card", "linkImg": "../assets/icon/earth_frame1.svg", "alts": "earth","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." },
-         {"classNameCard": "services-card", "linkImg": "../assets/icon/booking_pane2_frame1.svg", "alts": "booking","title": "Easy Booking" , "desc": "Square, was moving across the sand in their direction." },
-         {"classNameCard": "services-card", "linkImg": "../assets/icon/cloudy.svg", "alts": "haft-icon","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." }
+         {"classNameCard": "services-card","classFigure": "heading-icon", "linkImg": "../assets/icon/earth_frame1.svg", "alts": "earth","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." },
+         {"classNameCard": "services-card","classFigure": "heading-icon", "linkImg": "../assets/icon/booking_pane2_frame1.svg", "alts": "booking","title": "Easy Booking" , "desc": "Square, was moving across the sand in their direction." },
+         {"classNameCard": "services-card","classFigure": "heading-icon", "linkImg": "../assets/icon/cloudy.svg", "alts": "haft-icon","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." }
         ]
       }'
-      >
-      </include>
+        >
+        </include>
+      </div>
+      <!-- end section-services__contents--right -->
     </div>
+    <!-- end section-services__contents -->
   </div>
   <!-- end section Services -->
 </main>
