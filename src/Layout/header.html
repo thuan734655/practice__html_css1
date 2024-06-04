@@ -3,23 +3,23 @@
   <div class="header-shadow"></div>
   <!-- start box shadow header  -->
 
-  <!-- start header top  -->
-  <div class="header__top">
+  <!-- start header__content -->
+  <div class="header__content">
     <!-- start icon logo and icon menu  -->
     <include
     src="./components/boxImg.html"
     locals='{
               "list": [
-               {"classNameFigure": "header__top__icon--menu", "classNameImg": "menu", "srcImg": "../assets/icon/menu.svg","alts":"menu"},
-               {"classNameFigure": "header__top__icon--logo", "classNameImg": "logo", "srcImg": "../assets/icon/Logo_frame1.svg","alts":"logo"}
+               {"classNameFigure": "header__content--icon-menu", "classNameImg": "menu", "srcImg": "../assets/icon/menu.svg","alts":"menu"},
+               {"classNameFigure": "header__content--icon-logo", "classNameImg": "logo", "srcImg": "../assets/icon/Logo_frame1.svg","alts":"logo"}
              ]
           }'
   >
   </include>
     <!-- start icon logo and icon menu  -->
 
-    <!-- start header__top__center  -->
-    <div class="header__top__center">
+    <!-- start header__content-center  -->
+    <div class="header__content--center">
       <ul>
         <include
           src="./components/navList.html"
@@ -35,127 +35,22 @@
         </include>
       </ul>
     </div>
-    <!-- end header__top__center  -->
+    <!-- end header__content--center  -->
 
-    <!-- start header__top__right  -->
-    <div class="header__top__right">
+    <!-- start header__content--right  -->
+    <div class="header__content--right">
       <include
         src="./components/button.html"
         locals='{
              "list":[
-             {"classBtn":"top__right--btnleft","classLink":"top__right--btnleft--link","link":"#","content":"Log In"},
-             {"classBtn":"top__right--btnRight","classLink":"top__right--btnRight--link","link":"#","content":"Sign Up"}
+             {"classBtn":"right-content--btnleft","classText":"btnleft--text","content":"Log In"},
+             {"classBtn":"right-content--btnRight","classText":"btnRight--text","content":"Sign Up"}
              ]
          }'
       >
       </include>
     </div>
-    <!-- end header__top__right  -->
+    <!-- end header__content--right  -->
   </div>
   <!-- end header top  -->
-
-  <!-- start header-bottom  -->
-  <div class="header-bottom">
-    <!-- start header-bottom__left  -->
-    <div class="header-bottom__left">
-      <include
-        src="./components/buttonIcon.html"
-        locals='{
-                "list": [ 
-                {"class":"btn__top","linkimg" : "../assets/icon/bag_frame1.svg","alts": "icon bag","classImg":"btn__top--icon","classLink":"btn__top--link","link":"#","content":"Explore the world!"}
-                ]
-                }'
-      >
-      </include>
-
-      <h1 class="left__text--first-text">
-        Travel <span>top destination</span> of the world
-      </h1>
-      <p class="left__text--second-text">
-        We always make our customer happy by providing <br />
-        as many choices as possible
-      </p>
-
-      <!-- start bottom__left__btn  -->
-      <div class="bottom__left__btn">
-        <include
-          src="./components/button.html"
-          locals='{
-                    "list":[
-                    {"classBtn":"bottom__left__btn--left","classLink":"bottom__left__btn--left--link","link":"#","content":"Get Started"}
-                    ]
-                }'
-        >
-        </include>
-        <include
-          src="./components/buttonIcon.html"
-          locals='{
-                    "list": [ 
-                    {"class":"bottom__left__btn--right","linkimg" : "../assets/icon/play_frame1.svg","alts": "icon play","classImg":"bottom__btn-right--icon","classLink":"bottom__left__btn-right--link","link":"#","content":"Watch Demo"}
-                    ]
-                    }'
-        >
-        </include>
-      </div>
-      <!-- end bottom__left__btn  -->
-    </div>
-    <!-- end header-bottom__left  -->
-
-    <!-- start header-bottom__right -->
-    <div class="header-bottom__right">
-      <!-- start header-bottom__right--layer -->
-      <div class="header-bottom__right--layer">
-        <include
-          src="./components/boxImg.html"
-          locals='{
-                    "list": [
-                     {"classNameFigure": "header-bottom__right--pic1", "classNameImg": "pic--img", "srcImg": "../assets/img/layer_pane1.png","alts":"layer"}
-                    ]
-                }'
-        >
-        </include>
-      </div>
-      <!-- end header-bottom__right--layer -->
-
-      <!-- start header-bottom__right--pic -->
-      <div class="header-bottom__right--pic">
-        <include
-          src="./components/buttonIcon.html"
-          locals='{
-                    "list": [ 
-                    {"class":"btn__right","linkimg" : "../assets/icon/location_frame1.svg","alts": "icon location","classImg":"btn__right--icon","classLink":"btn__right--link","link":"#","content":"Top Places"}
-                    ]
-                }'
-        >
-        </include>
-
-        <include
-          src="./components/boxImg.html"
-          locals='{
-                    "list": [
-                     {"classNameFigure": "header-bottom__right--pic2", "classNameImg": "pic--img pic2--img", "srcImg": "../assets/img/pic1_pane1.jpg","alts":"pic1"},
-                     {"classNameFigure": "header-bottom__right--pic3", "classNameImg": "pic3--img pic--icon", "srcImg": "../assets/icon/icon_arrow_pic1.png","alts":"icon arrow"},
-                     {"classNameFigure": "header-bottom__right--pic4", "classNameImg": "pic--img pic4--img", "srcImg": "../assets/img/pic2_pane1.jpg","alts":"pic2"},
-                     {"classNameFigure": "header-bottom__right--pic5", "classNameImg": "pic--img pic5--img", "srcImg": "../assets/img/pic3_pane1.jpg","alts":"pic3"},
-                     {"classNameFigure": "header-bottom__right--pic6", "classNameImg": "pic--icon pic6--img", "srcImg": "../assets/icon/icon_add.png","alts":"icon add"}
-                    ]
-                }'
-        >
-        </include>
-      </div>
-      <!-- end header-bottom__right--pic -->
-    </div>
-    <!-- end header-bottom__right -->
-  </div>
-  <!-- end header__bottom  -->
-
-  <!-- start icon arraw header  -->
-  <figure class="header-iconArraw">
-    <img src="../assets/icon/list-arrow-up__frame1.svg" alt="" />
-  </figure>
-  <!-- end icon arraw header  -->
-
-  <!-- start header-shadow-bottom -->
-  <div class="header-shadow-bottom"></div>
-  <!-- end header-shadow-bottom -->
 </header>
