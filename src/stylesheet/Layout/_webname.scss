@@ -1,7 +1,7 @@
 @use "../Abstract/" as *;
 @use "../Base/" as *;
-// start web-name-content__list
-.web-name-content__list {
+// start section-web-name__content
+.section-web-name__content {
   margin: px-to-vw-mobile(90) 0 0 0;
   @include set_size($width: px-to-vw-mobile(398));
   @include flex($display: flex, $justify: center, $wrap: wrap);
@@ -120,10 +120,7 @@
               $height: px-to-vw-desktop(32)
             );
           }
-    
       }
-
   }
-
 }
-// end web-name-content__list
+// end section-web-name__content
