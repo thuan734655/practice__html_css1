@@ -1,0 +1,155 @@
+@use "../Abstract/" as *;
+@use "../Base/" as *;
+
+.section-services {
+  @include flex($display: flex, $direction: column, $gap: px-to-vw-mobile(16));
+  position: relative;
+  z-index: 4;
+  margin-top: px-to-vw-mobile(128);
+  &__left {
+    padding: px-to-vw-mobile(32) 0 px-to-vw-mobile(32) 0;
+  }
+
+  &__right {
+    @include flex(
+      $display: flex,
+      $direction: column,
+      $gap: px-to-vw-mobile(16)
+    );
+    .services-card {
+      border: 1px solid $first-color-border-card;
+      border-radius: px-to-vw-mobile(32);
+      background: #fff;
+      padding: px-to-vw-mobile(32);
+      @include flex(
+        $display: flex,
+        $direction: column,
+        $align: center,
+        $gap: px-to-vw-mobile(32)
+      );
+      &.active {
+        border: 1px solid $second-color-border-card;
+        box-shadow: 0px 41px 89px 0px $third-color-boxshadow-card,
+          0px 0px 0px 0px $third-color-boxshadow-card;
+      }
+      &__title {
+        @include font(
+          $font-family: $primary-font,
+          $font-size: px-to-vw-mobile(24),
+          $font-weight: 700,
+          $line-height: 120%,
+          $color: $primary-color-text
+        );
+        text-align: center;
+      }
+      &__desc {
+        @include font(
+          $font-family: $second-font,
+          $font-size: px-to-vw-mobile(18),
+          $font-weight: 400,
+          $line-height: 160%,
+          $color: $second-color-text
+        );
+        text-align: center;
+      }
+      &__heading {
+        img {
+          @include set_size($width: px-to-vw-mobile(64), $height: px-to-vw-mobile(64));
+        }
+      }
+    }
+  }
+  @include tablet {
+    margin-top: px-to-vw-tablet(128);
+    &__right {
+      @include flex(
+        $direction: row,
+        $justify: center,
+        $gap: px-to-vw-tablet(16)
+      );
+      .services-card {
+        width: px-to-vw-tablet(288);
+        padding: px-to-vw-tablet(64);
+        border-radius: px-to-vw-tablet(32);
+        &__title {
+          @include font(
+            $font-family: $primary-font,
+            $font-size: px-to-vw-tablet(28),
+            $font-weight: 700,
+            $line-height: 120%,
+            $color: $primary-color-text
+          );
+          text-align: center;
+        }
+        &__desc {
+          @include font(
+            $font-family: $second-font,
+            $font-size: px-to-vw-tablet(18),
+            $font-weight: 400,
+            $line-height: 160%,
+            $color: $second-color-text
+          );
+          text-align: center;
+        }
+        &__heading {
+          img {
+            @include set_size($width: px-to-vw-tablet(64), $height: px-to-vw-tablet(64));
+          }
+        }
+      }
+    }
+    @include desktop {
+      margin: px-to-vw-desktop(128) 0 0 px-to-vw-desktop(205);
+      @include flex(
+        $direction: row,
+        $align: center,
+        $gap: px-to-vw-desktop(50)
+      );
+
+      &__left {
+        @include set_size($width: px-to-vw-desktop(444));
+        padding: unset;
+        margin-left: -60px;
+
+        p {
+          @include font($font-size: px-to-vw-desktop(44));
+        }
+      }
+      &__right {
+        @include set_size($width: calc(100% - px-to-vw-desktop(444)));
+        @include position($position: relative, $left: px-to-vw-desktop(100));
+        .services-card {
+          min-width: px-to-vw-desktop(350);
+          max-width: unset;
+          padding: px-to-vw-desktop(64);
+          border-radius: px-to-vw-desktop(32);
+          &__title {
+            @include font(
+              $font-family: $primary-font,
+              $font-size: px-to-vw-desktop(28),
+              $font-weight: 700,
+              $line-height: 120%,
+              $color: $primary-color-text
+            );
+            text-align: center;
+          }
+          &__desc {
+            @include font(
+              $font-family: $second-font,
+              $font-size: px-to-vw-desktop(18),
+              $font-weight: 400,
+              $line-height: 160%,
+              $color: $second-color-text
+            );
+            text-align: center;
+          }
+          &__heading {
+            img {
+              @include set_size($width: px-to-vw-desktop(64), $height: px-to-vw-desktop(64));
+            }
+          }
+        }
+      }
+    }
+  }
+}
