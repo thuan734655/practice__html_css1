@@ -1,0 +1,185 @@
+@use "../Abstract/" as *;
+@use "../Base/" as *;
+
+.section-travelPoint {
+  &__content {
+    @include flex(
+      $display: flex,
+      $direction: column,
+      $justify: center,
+      $gap: px-to-vw-mobile(64)
+    );
+    margin-top: px-to-vw-mobile(64);
+    &--left {
+      .left--img {
+        @include set-size($width: calc(px-to-vw-mobile(398) - 0.36px));
+        @include position($position: relative, $left: 50%);
+        transform: translateX(-50%);
+        img {
+          @include set-size($width: 100%, $height: 100%);
+          object-fit: cover;
+        }
+      }
+    }
+    &--right {
+      .right-content {
+        &--heading {
+          .heading--content {
+            letter-spacing: px-to-vw-mobile(3.2);
+          }
+        }
+
+        &--footer {
+          @include flex(
+            $display: flex,
+            $direction: column,
+            $gap: calc(px-to-vw-mobile(16) - 0.0149px)
+          );
+          margin-top: calc(px-to-vw-mobile(32) - 0.0298px);
+          .footer-content {
+            @include set-size($width: calc(px-to-vw-mobile(398) - 0.36px));
+            @include position($position: relative, $left: 50%);
+            transform: translateX(-50%);
+            border-radius: calc(px-to-vw-mobile(32) - 0.03px);
+            border: 1px solid var(--Grey-Scale-Black-10, rgba(25, 24, 37, 0.1));
+            background: #fff;
+            padding: calc(px-to-vw-mobile(32) - 0.03px);
+
+            .footer-content--quantity {
+              @include font(
+                $font-family: $primary-font,
+                $font-size: calc(px-to-vw-mobile(35) - 0.0326px),
+                $font-weight: 700,
+                $line-height: 120%,
+                $color: $fourth-color-text
+              );
+              text-align: center;
+            }
+            .footer-content--desc {
+              @include font(
+                $font-family: $second-font,
+                $font-size: calc(px-to-vw-mobile(18) - 0.0167px),
+                $font-weight: 400,
+                $line-height: 160%,
+                $color: $primary-color-text
+              );
+              text-align: center;
+            }
+          }
+        }
+      }
+      .right-iconBag--img {
+        display: none;
+      }
+    }
+  }
+  @include tablet {
+    &__content {
+      @include flex($gap: px-to-vw-tablet(64));
+      margin-top: px-to-vw-tablet(128);
+      &--left {
+        .left--img {
+          @include set-size($width: calc(px-to-vw-tablet(871) - 0.36px));
+        }
+      }
+      &--right {
+        .right-content {
+          &--heading {
+            .heading--content {
+              letter-spacing: px-to-vw-tablet(4.6);
+              font-size: px-to-vw-tablet(23);
+            }
+          }
+
+          &--footer {
+            @include flex(
+              $direction: row,
+              $wrap: wrap,
+              $gap: px-to-vw-tablet(32)
+            );
+            margin-top: px-to-vw-tablet(32);
+            .footer-content {
+              @include set-size($width: px-to-vw-tablet(398));
+              @include position($position: relative, $left: 30%);
+              border-radius: px-to-vw-tablet(32);
+              padding: px-to-vw-tablet(32);
+
+              .footer-content--quantity {
+                @include font(
+                  $font-size: px-to-vw-tablet(35),
+                );
+              }
+              .footer-content--desc {
+                @include font(
+                  $font-size: px-to-vw-tablet(18),
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include desktop {
+    &__content {
+      @include flex($direction: row, $gap: unset);
+      @include set-size($width: px-to-vw-desktop(1312));
+      @include position($position: relative, $left: 0);
+
+      margin-top: px-to-vw-desktop(128);
+      &--left {
+        .left--img {
+          @include set-size($width: px-to-vw-desktop(871));
+        }
+      }
+      &--right {
+        .right-content {
+          &--heading {
+            .heading--content {
+              letter-spacing: px-to-vw-desktop(4.6);
+              font-size: px-to-vw-desktop(23);
+              @include set-size($width: px-to-vw-desktop(441));
+            }
+          }
+
+          &--footer {
+            @include flex(
+              $gap: px-to-vw-desktop(32)
+            );
+            margin-top: px-to-vw-desktop(64);
+            .footer-content {
+              @include set-size($width: px-to-vw-desktop(204.5));
+              @include position($position: relative, $left: 24%);
+              padding: px-to-vw-desktop(32);
+
+              .footer-content--quantity {
+                @include font(
+                  $font-size: px-to-vw-desktop(35),
+                );
+              }
+              .footer-content--desc {
+                @include font(
+                  $font-size: px-to-vw-desktop(18),
+                );
+              }
+            }
+          }
+        }
+        .right-iconBag--img {
+          display: block;
+          @include position(
+            $position: absolute,
+            $top: px-to-vw-desktop(220),
+            $right: px-to-vw-desktop(-10)
+          );
+          @include set-size($width: px-to-vw-desktop(100));
+
+          img {
+            @include set-size($width: 100%, $height: 100%);
+            object-fit: 100%;
+          }
+        }
+      }
+    }
+  }
+}
