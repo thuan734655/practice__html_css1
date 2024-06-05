@@ -1,0 +1,245 @@
+@use "../Abstract/" as *;
+
+#section-newsletter {
+  .section-newsletter__content {
+    border-radius: px-to-vw-mobile(32);
+    background: $color-background-section-newsletter;
+    @include set-size($width: px-to-vw-mobile(398));
+    @include position($position: relative, $left: 50%);
+    transform: translateX(-50%);
+    margin-top: px-to-vw-mobile(96);
+    padding: px-to-vw-mobile(64) px-to-vw-mobile(32);
+    &--icon {
+      .icon-iconTop {
+        display: none;
+      }
+    }
+    &--body {
+      .body-desc {
+        @include set-size($width: px-to-vw-mobile(300));
+        @include position($position: relative, $left: 50%);
+        transform: translateX(-50%);
+        margin-top: px-to-vw-mobile(32);
+      }
+    }
+    &--footer {
+      .footer-content {
+        &--boxEmail {
+          margin-top: px-to-vw-mobile(64);
+          @include set-size(
+            $width: px-to-vw-mobile(334),
+            $height: px-to-vw-mobile(72)
+          );
+          @include flex(
+            $display: flex,
+            $direction: row-reverse,
+            $align: center,
+            $justify: start,
+            $gap: px-to-vw-mobile(16)
+          );
+          @include position($position: relative, $left: 50%);
+          transform: translateX(-50%);
+          border-radius: px-to-vw-mobile(16);
+          border: transparent;
+          background: $color-input-section-newsletter;
+          .boxEmail--text {
+            @include font(
+              $font-family: $primary-font,
+              $font-size: px-to-vw-mobile(14),
+              $font-weight: 700,
+              $line-height: 120%,
+              $color: $fifth-color-text
+            );
+            @include position($position: relative, $left: px-to-vw-mobile(20));
+          }
+          .boxEmail--icon {
+            @include set-size(
+              $width: px-to-vw-mobile(24),
+              $height: px-to-vw-mobile(24)
+            );
+            @include position(
+              $position: relative,
+              $left: px-to-vw-mobile(25),
+              $top: px-to-vw-mobile(0)
+            );
+            .icon {
+              @include set-size($width: 100%, $height: 100%);
+              object-fit: cover;
+            }
+          }
+        }
+
+        &--btn {
+          @include set-size($width: px-to-vw-mobile(334));
+          padding: px-to-vw-mobile(24) px-to-vw-mobile(64);
+          border-radius: px-to-vw-mobile(16);
+          border: transparent;
+          background: $first-color-button;
+          margin-top: px-to-vw-mobile(32);
+
+          .btn-content {
+            @include font(
+              $font-family: $primary-font,
+              $font-size: px-to-vw-mobile(16),
+              $font-weight: 700,
+              $line-height: 120%,
+              $color: $second-color-button
+            );
+          }
+        }
+      }
+    }
+    @include tablet {
+      border-radius: px-to-vw-tablet(32);
+      @include set-size($width: px-to-vw-tablet(897));
+      margin-top: px-to-vw-tablet(96);
+      padding: px-to-vw-tablet(64) px-to-vw-tablet(32);
+      &--icon {
+        .icon-iconTop {
+          display: block;
+          @include position($position: absolute, $top: px-to-vw-tablet(-80), $left: px-to-vw-tablet(-40));
+          @include set-size ($width: px-to-vw-tablet(183), $height: px-to-vw-tablet(176));
+
+          img {
+            @include set-size ($width: 100%, $height: 100%);
+            object-fit: cover;
+
+          }
+        }
+      }
+      &--body {
+        .body-desc {
+          @include set-size($width: px-to-vw-tablet(769));
+          margin-top: px-to-vw-tablet(32);
+        }
+      }
+      &--footer {
+        .footer-content {
+          @include flex(
+            $display: flex,
+            $justify: space-around,
+            $align: center,
+            $gap: px-to-vw-tablet(32)
+          );
+          margin-top: px-to-vw-tablet(64);
+          &--boxEmail {
+            @include set-size(
+              $width: px-to-vw-tablet(502),
+              $height: px-to-vw-tablet(96)
+            );
+            @include flex($gap: px-to-vw-tablet(16));
+            position: unset;
+            transform: unset;
+            border-radius: px-to-vw-tablet(32);
+            margin-top: 0;
+            .boxEmail--text {
+              @include font($font-size: px-to-vw-tablet(14));
+              @include position(
+                $position: relative,
+                $left: px-to-vw-tablet(20)
+              );
+            }
+            .boxEmail--icon {
+              @include set-size(
+                $width: px-to-vw-tablet(24),
+                $height: px-to-vw-tablet(24)
+              );
+              @include position(
+                $position: relative,
+                $left: px-to-vw-tablet(25),
+                $top: px-to-vw-tablet(0)
+              );
+            }
+          }
+
+          &--btn {
+            @include set-size(
+              $width: px-to-vw-tablet(235),
+              $height: px-to-vw-tablet(96)
+            );
+            padding: px-to-vw-tablet(32) px-to-vw-tablet(64);
+            border-radius: px-to-vw-tablet(32);
+            margin-top: 0;
+
+            .btn-content {
+              @include font($font-size: px-to-vw-tablet(23));
+            }
+          }
+        }
+      }
+     @include desktop {
+      border-radius: px-to-vw-desktop(32);
+      @include set-size($width: px-to-vw-desktop(1184));
+      margin-top: px-to-vw-desktop(96);
+      padding: px-to-vw-desktop(64) px-to-vw-desktop(32);
+      &--icon {
+        .icon-iconTop {
+          display: block;
+          @include position($position: absolute, $top: px-to-vw-desktop(-80), $left: px-to-vw-desktop(-40));
+          @include set-size ($width: px-to-vw-desktop(183), $height: px-to-vw-desktop(176));
+
+        }
+      }
+      &--heading {
+        .heading-content {
+          text-align: center;
+        }
+      }
+      &--body {
+        .body-desc {
+          @include set-size($width: px-to-vw-desktop(769));
+          margin-top: px-to-vw-desktop(32);
+          text-align: center;
+        }
+      }
+      &--footer {
+        .footer-content {
+          @include flex(
+            $gap: px-to-vw-desktop(32)
+          );
+          margin-top: px-to-vw-desktop(64);
+          &--boxEmail {
+            @include set-size(
+              $width: px-to-vw-desktop(787),
+              $height: px-to-vw-desktop(96)
+            );
+            @include flex($gap: px-to-vw-desktop(16));
+            border-radius: px-to-vw-desktop(32);
+            .boxEmail--text {
+              @include font($font-size: px-to-vw-desktop(14));
+              @include position(
+                $position: relative,
+                $left: px-to-vw-desktop(20)
+              );
+            }
+            .boxEmail--icon {
+              @include set-size(
+                $width: px-to-vw-desktop(24),
+                $height: px-to-vw-desktop(24)
+              );
+              @include position(
+                $position: relative,
+                $left: px-to-vw-desktop(25),
+                $top: px-to-vw-desktop(0)
+              );
+            }
+          }
+
+          &--btn {
+            @include set-size(
+              $width: px-to-vw-desktop(235),
+              $height: px-to-vw-desktop(96)
+            );
+            padding: px-to-vw-desktop(32) px-to-vw-desktop(64);
+            border-radius: px-to-vw-desktop(32);
+
+            .btn-content {
+              @include font($font-size: px-to-vw-desktop(23));
+            }
+          }
+        }
+     }
+    }
+  }
+}
+}
