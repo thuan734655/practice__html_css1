@@ -143,7 +143,6 @@
 )
  {
   display: flex;
-
   @if $direction {
     flex-direction: $direction;
   }
@@ -209,4 +208,4 @@
     @media screen and (min-width: $tablet-max) {
         @content;
     }
-}
+  }
