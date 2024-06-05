@@ -1,14 +1,17 @@
-<main>
   <!-- start section testimonials -->
   <section id="section-testimonials">
     <!-- start section-testimonials__content -->
     <div class="section-testimonials__content">
       <!-- start section-testimonials__content--top -->
       <div class="section-testimonials__content--top">
+        <!-- start top-heading -->
         <div class="top-heading">
           <p class="top-heading--title title">Testimonials</p>
           <p class="top-headign--desc desc">Trust our clients</p>
         </div>
+        <!--end top-heading -->
+
+        <!-- start top-body -->
         <div class="top-body">
           <include
             src="./components/boxImg.html"
@@ -19,6 +22,7 @@
           }'
           >
           </include>
+          <!-- start box-name-and-star -->
           <div class="box-name-and-star">
             <p class="box-name-and-star--name">
               <span>Mark Smith</span>/Travel Enthusiast
@@ -39,6 +43,7 @@
               </include>
             </div>
           </div>
+          <!-- end box-name-and-star -->
           <p class="top-body--desc body--desc">
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from 45 BC.
@@ -57,11 +62,11 @@
             </include>
           </div>
         </div>
+        <!-- end top-body -->
       </div>
-    </div>
-    <!-- end section-testimonials__content--top -->
+      <!-- end section-testimonials__content--top -->
 
-    <!-- start section-testimonials__content--bottom -->
+        <!-- start section-testimonials__content--bottom -->
     <div class="section-testimonials__content--bottom">
       <include
         src="./components/boxImg.html"
@@ -74,19 +79,22 @@
       >
       </include>
     </div>
+    <!-- end section-testimonials__content--bottom -->
+      </div>
+    <!-- end section-testimonials__content -->
+
     <!-- start background section testimonials  -->
-      <div class="section-testimonials-background">
-        <include src="./components/boxImg.html" locals='{
+    <div class="section-testimonials-background">
+      <include
+        src="./components/boxImg.html"
+        locals='{
           "list": [
            {"classNameFigure": "background--img", "classNameImg": "img-src", "srcImg": "../assets/img/Vector.png", "alts": "background"}
           ]
-        }'>
-        </include> 
-      </div>
+        }'
+      >
+      </include>
+    </div>
     <!-- end background section testimonials  -->
-
-    <!-- end section-testimonials__content--bottom -->
   </section>
-
   <!-- end section testimonials -->
-</main>
