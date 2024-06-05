@@ -202,7 +202,7 @@
         @include flex($justify: space-between);
         .top-content--left{
           @include flex($gap: px-to-vw-desktop(16));
-  
+          align-items: unset;
           .left-content--title  {
             letter-spacing: px-to-vw-desktop(4.6);
             font-size: px-to-vw-desktop(23);
