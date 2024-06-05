@@ -1,23 +1,30 @@
-<main>
-  <!-- start section Services -->
-  <div class="section-services">
-    <div class="section-services__left">
+<!-- start section Services -->
+<div class="section-services">
+  <!-- start section-services__contents -->
+  <div class="section-services__content">
+    <!-- start section-services__contents--left -->
+    <div class="section-services__content--left">
       <h5 class="title">Services</h5>
       <p class="desc">Our top value categories for you</p>
     </div>
-    <div class="section-services__right">
+    <!-- end section-services__contents--left -->
+
+    <!-- start section-services__contents--right -->
+    <div class="section-services__content--right">
       <include
         src="./components/services-card.html"
         locals='{
-        "list": [
-         {"classNameCard": "services-card", "linkImg": "../assets/icon/earth_frame1.svg", "alts": "earth","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." },
-         {"classNameCard": "services-card", "linkImg": "../assets/icon/booking_pane2_frame1.svg", "alts": "booking","title": "Easy Booking" , "desc": "Square, was moving across the sand in their direction." },
-         {"classNameCard": "services-card", "linkImg": "../assets/icon/cloudy.svg", "alts": "haft-icon","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." }
-        ]
-      }'
+      "list": [
+       {"classNameCard": "services-card","classFigure": "heading-icon", "linkImg": "../assets/icon/earth_frame1.svg", "alts": "earth","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." },
+       {"classNameCard": "services-card","classFigure": "heading-icon", "linkImg": "../assets/icon/booking_pane2_frame1.svg", "alts": "booking","title": "Easy Booking" , "desc": "Square, was moving across the sand in their direction." },
+       {"classNameCard": "services-card","classFigure": "heading-icon", "linkImg": "../assets/icon/cloudy.svg", "alts": "haft-icon","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." }
+      ]
+    }'
       >
       </include>
     </div>
+    <!-- end section-services__contents--right -->
   </div>
-  <!-- end section Services -->
-</main>
+  <!-- end section-services__contents -->
+</div>
+<!-- end section Services -->
