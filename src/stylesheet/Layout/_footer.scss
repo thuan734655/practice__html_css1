@@ -17,7 +17,7 @@ footer {
         &--heading {
           .heading-img {
             @include set-size(
-              $width: calc(px-to-vw-mobile(142) - $residual-142px),
+              $width: calc(px-to-vw-mobile(142) - $residual-142px ),
               $height: calc(px-to-vw-mobile(40) - $residual-40px)
             );
 

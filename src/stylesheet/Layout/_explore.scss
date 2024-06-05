@@ -719,7 +719,7 @@
         }
       }
 
-      .shadow-bottom {
+      .section-explore__content--shadow-bottom  {
         display: none;
         @include tablet {
           display: block;
@@ -731,12 +731,20 @@
             $right: px-to-vw-tablet(0)
           );
           @include set_size(
-            $width: px-to-vw-tablet(150),
-            $height: px-to-vw-tablet(150)
+            $width: px-to-vw-tablet(160),
+            $height: px-to-vw-tablet(160)
           );
-          filter: blur(px-to-vw-tablet(150));
+          filter: blur(px-to-vw-tablet(200));
           @include desktop {
-           display: none;
+            @include position(
+              $top: px-to-vw-desktop(950),
+              $right: px-to-vw-desktop(0)
+            );
+            @include set_size(
+              $width: px-to-vw-desktop(200),
+              $height: px-to-vw-desktop(200)
+            );
+            filter: blur(px-to-vw-desktop(220));
           }
         }
       }
