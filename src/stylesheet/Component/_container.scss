@@ -1,15 +1,8 @@
 @use "../Abstract/" as *;
 
 .container {
+  width: px-to-vw-desktop;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  @include set-size($width:calc( px-to-vw-mobile(430) - $residual-430px));
-
-  @include tablet {
-      @include set-size($width: px-to-vw-tablet(1024));
-  }
-  @include desktop {
-    @include set-size($width: px-to-vw-desktop(1440));
-  }
 }
