@@ -1,9 +1,9 @@
 @use "../Abstract/" as *;
 
 footer {
-  margin-top: px-to-vw-mobile(96);
+  margin-top: calc(px-to-vw-mobile(96) - $residual-96px);
   .footer__content {
-    @include set-size($width: px-to-vw-mobile(398));
+    @include set-size($width: calc(px-to-vw-mobile(398) - $residual-398px));
     @include position($position: relative, $left: 50%);
     transform: translateX(-50%);
     &--left {
@@ -11,14 +11,14 @@ footer {
         @include flex(
           $direction: column,
           $align: flex-start,
-          $gap: px-to-vw-mobile(32)
+          $gap: calc(px-to-vw-mobile(32) - $residual-32px)
         );
 
         &--heading {
           .heading-img {
             @include set-size(
-              $width: px-to-vw-mobile(142),
-              $height: px-to-vw-mobile(40)
+              $width: calc(px-to-vw-mobile(142) - $residual-142px),
+              $height: calc(px-to-vw-mobile(40) - $residual-40px)
             );
 
             img {
@@ -32,7 +32,7 @@ footer {
           .body-text {
             @include font(
               $font-family: $primary-font,
-              $font-size: px-to-vw-mobile(16),
+              $font-size: calc(px-to-vw-mobile(16) - $residual-16px),
               $font-weight: 450,
               $line-height: 160%,
               $color: $second-color-text
@@ -40,12 +40,12 @@ footer {
           }
         }
         &--footer {
-          @include flex($align: flex-start, $gap: px-to-vw-mobile(32));
+          @include flex($align: flex-start, $gap: calc(px-to-vw-mobile(32) - $residual-32px));
 
           .footer-icon {
             @include set-size(
-              $width: px-to-vw-mobile(32),
-              $height: px-to-vw-mobile(32)
+              $width: calc(px-to-vw-mobile(32) - $residual-32px),
+              $height: calc(px-to-vw-mobile(32) - $residual-32px)
             );
 
             img {
@@ -63,13 +63,13 @@ footer {
           @include flex(
             $align: flex-start,
             $justify: space-between,
-            $gap: px-to-vw-mobile(32)
+            $gap: calc(px-to-vw-mobile(32) - $residual-32px)
           );
-          margin-top: px-to-vw-mobile(64);
+          margin-top: calc( px-to-vw-mobile(64) - $residual-64px);
           .right-content--title {
             @include font(
               $font-family: $primary-font,
-              $font-size: px-to-vw-mobile(23),
+              $font-size: calc(px-to-vw-mobile(23) - $font-residual-23px),
               $font-weight: 700,
               $line-height: 120%,
               $color: $primary-color-text
@@ -78,19 +78,20 @@ footer {
 
           .right-content--iconArrow {
             @include set-size(
-              $width: px-to-vw-mobile(24),
-              $height: px-to-vw-mobile(24)
+              $width: calc(px-to-vw-mobile(24) - $residual-24px),
+              $height: calc(px-to-vw-mobile(24) - $residual-24px)
             );
-
+            position: relative;
             img {
               @include set-size($width: 100%, $height: 100%);
               object-fit: cover;
               cursor: pointer;
+              position: absolute;
             }
           }
         }
         .last-group {
-          padding-bottom: px-to-vw-mobile(32);
+          padding-bottom: calc(px-to-vw-mobile(32) - $residual-32px);
         }
 
         &--list {
