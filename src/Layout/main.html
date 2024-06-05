@@ -299,4 +299,95 @@
     <!-- end section-keyFeatures__container -->
   </section>
   <!-- end section keyFeatures -->
+
+  <!-- start section testimonials -->
+  <section id="section-testimonials">
+    <!-- start section-testimonials__content -->
+    <div class="section-testimonials__content">
+      <!-- start section-testimonials__content--top -->
+      <div class="section-testimonials__content--top">
+        <div class="top-heading">
+          <p class="top-heading--title title">Testimonials</p>
+          <p class="top-headign--desc desc">Trust our clients</p>
+        </div>
+        <div class="top-body">
+          <include
+            src="./components/boxImg.html"
+            locals='{
+              "list": [
+               {"classNameFigure": "top-body--avatar","classNameImg": "", "srcImg": "../assets/icon/section-testimonials-avt.png", "alts": "avatar"}
+              ]
+          }'
+          >
+          </include>
+          <div class="box-name-and-star">
+            <p class="box-name-and-star--name">
+              <span>Mark Smith</span>/Travel Enthusiast
+            </p>
+            <div class="box-name-and-star--star">
+              <include
+                src="./components/boxImg.html"
+                locals='{
+              "list": [
+              {"classNameFigure" : "star", "classNameImg": "starSrc","srcImg": "../assets/icon/section-testimonials-icon-star.png", "alts": "icon star"},
+              {"classNameFigure" : "star", "classNameImg": "starSrc","srcImg": "../assets/icon/section-testimonials-icon-star.png", "alts": "icon star"},
+              {"classNameFigure" : "star", "classNameImg": "starSrc","srcImg": "../assets/icon/section-testimonials-icon-star.png", "alts": "icon star"},
+              {"classNameFigure" : "star", "classNameImg": "starSrc","srcImg": "../assets/icon/section-testimonials-icon-star.png", "alts": "icon star"},
+              {"classNameFigure" : "star", "classNameImg": "starSrc","srcImg": "../assets/icon/section-testimonials-icon-star.png", "alts": "icon star"}
+              ]
+            }'
+              >
+              </include>
+            </div>
+          </div>
+          <p class="top-body--desc body--desc">
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC.
+          </p>
+          <div class="top-body--bottom">
+            <include
+              src="./components/boxImg.html"
+              locals='{
+              "list": [
+              {"classNameFigure" : "bottom-iconCircle", "classNameImg": "circleSrc","srcImg": "../assets/icon/icon-circle.png", "alts": "icon circle"},
+              {"classNameFigure" : "bottom-iconCircle ", "classNameImg": "circleSrc","srcImg": "../assets/icon/icon-circle-pink.png", "alts": "icon circle"},
+              {"classNameFigure" : "bottom-iconCircle", "classNameImg": "circleSrc","srcImg": "../assets/icon/icon-circle.png", "alts": "icon circle"}
+              ]
+            }'
+            >
+            </include>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end section-testimonials__content--top -->
+
+    <!-- start section-testimonials__content--bottom -->
+    <div class="section-testimonials__content--bottom">
+      <include
+        src="./components/boxImg.html"
+        locals='{
+          "list": [
+          {"classNameFigure" : "bottom-btn-left", "classNameImg": "bottom-btn-left--img","srcImg": "../assets/icon/arrow_bgc_white.svg", "alts": "btn left"},
+          {"classNameFigure" : "bottom-btn-right", "classNameImg": "bottom-btn-right--img","srcImg": "../assets/icon/section-testimonials-btn-bgc-blue.png", "alts": "btn right"}
+          ]
+        }'
+      >
+      </include>
+    </div>
+    <!-- start background section testimonials  -->
+      <div class="section-testimonials-background">
+        <include src="./components/boxImg.html" locals='{
+          "list": [
+           {"classNameFigure": "background--img", "classNameImg": "img-src", "srcImg": "../assets/img/Vector.png", "alts": "background"}
+          ]
+        }'>
+        </include> 
+      </div>
+    <!-- end background section testimonials  -->
+
+    <!-- end section-testimonials__content--bottom -->
+  </section>
+
+  <!-- end section testimonials -->
 </main>
