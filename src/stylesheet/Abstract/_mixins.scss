@@ -146,7 +146,6 @@
   @if $direction {
     flex-direction: $direction;
   }
-
   @if $align {
     align-items: $align;
   }
