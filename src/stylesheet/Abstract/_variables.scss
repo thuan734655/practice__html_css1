@@ -16,7 +16,9 @@ $viewport-width-tablet: 1024;
 $viewport-width-mobile: 430;
 
 //calc mobile
+$residual-7px: 0.00651px;
 $residual-8px: - 2.523px;
+$residual-12_33px: 0.005px;
 $residual-14px: 0.013px;
 $residual-16px:  0.0149px;
 $residual-18px:  0.0167px;
@@ -26,6 +28,7 @@ $font-residual-23px:  0.0214px;
 $residual-24px: 0.01px;
 $font-residual-24px: 0.0223px;
 $font-residual-28px: 0.026px;
+$residual-28px: 0.02px;
 $residual-32px: 0.02px;
 $font-residual-32px: 0.0298px;
 $residual-35px: 0.0326px;
@@ -38,6 +41,7 @@ $residual-67px: 0.05px;
 $residual-70px: 0.06px;
 $residual-72px: 0.06px;
 $residual-82px: 0.076px;
+$residual-85px: 0.079px;
 $residual-89px: 0.077px;
 $residual-96px: 0.089px;
 $residual-100px: 0.09px;
