@@ -1,8 +1,8 @@
 <each loop="item in {{ list }}">
     <button class="{{item.class}}">
-        <figure>
-            <img src="{{ item.linkimg }}" alt="{{ item.alts }}" class="{{item.classImg}}">
+        <figure  class="{{item.classImg}}"">
+            <img src="{{ item.linkimg}}" alt="{{ item.alts }}">
+            <figcaption class="{{item.classText}}"">{{ item.content }}</figcaption>
         </figure>
-        <a class="{{item.classLink}}" href="{{item.link}}">{{ item.content }}</a>
     </button>
 </each>
