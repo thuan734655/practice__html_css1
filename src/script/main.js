@@ -1,8 +1,8 @@
 //header
-var header__button__left = document.querySelector(".top__right--btnleft");
-var header__button__right = document.querySelector(".top__right--btnRight");
-var header__right__btnleft__link = document.querySelector(".top__right--btnleft--link");
-var header__right__btnRight__link = document.querySelector(".top__right--btnRight--link");
+var header__button__left = document.querySelector(".right-content--btnleft");
+var header__button__right = document.querySelector(".right-content--btnRight");
+var header__right__btnleft__link = document.querySelector(".btnleft--text");
+var header__right__btnRight__link = document.querySelector(".btnRight--text");
 
 
 header__button__left.addEventListener('mouseenter', function(event) {
@@ -27,7 +27,7 @@ header__button__left.addEventListener('mouseenter', function(event) {
 
 
 // @media screen and (max-width:431) 
-var header_bottom_left_first_text = document.querySelector(".left__text--first-text");
+var header_bottom_left_first_text = document.querySelector(".first-text");
 const mediaQueryMobile = window.matchMedia('(max-width: 431px)');
 function handleScreenChangeMobile(mediaQuery) {
     if (mediaQuery.matches) {
