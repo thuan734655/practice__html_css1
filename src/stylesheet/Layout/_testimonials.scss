@@ -1,0 +1,290 @@
+@use "../Abstract/" as *;
+
+#section-testimonials {
+  @include position($position: relative);
+  .section-testimonials__content {
+    @include set-size($width: calc(px-to-vw-mobile(398) - $residual-398px));
+    @include position($position: relative, $left: 50%);
+    transform: translateX(-50%);
+    margin-top:calc(px-to-vw-mobile(128) - $residual-128px);
+    &--top {
+      @include flex(
+        $direction: column,
+        $align: center,
+        $gap: px-to-vw-mobile(64)
+      );
+      .top-body {
+        @include flex(
+          $direction: column,
+          $align: center,
+          $gap: px-to-vw-mobile(64)
+        );
+        &--avatar {
+          @include set-size(
+            $width:calc(px-to-vw-mobile(128) - $residual-128px),
+            $height:calc(px-to-vw-mobile(128) - $residual-128px)
+          );
+          img {
+            @include set-size($width: 100%, $height: 100%);
+            object-fit: cover;
+          }
+        }
+        .box-name-and-star {
+          @include flex(
+            $direction: column,
+            $align: center,
+            $gap: calc(px-to-vw-mobile(32) - $residual-32px)
+          );
+          &--star {
+            @include flex( $gap: px-to-vw-mobile(16));
+            .star {
+              @include set-size(
+                $width: calc(px-to-vw-mobile(32) - $residual-32px),
+                $height: calc(px-to-vw-mobile(32) - $residual-32px)
+              );
+              img {
+                @include set-size($width: 100%, $height: 100%);
+                object-fit: cover;
+              }
+            }
+          }
+
+          &--name {
+            @include font(
+              $font-family: $primary-font,
+              $font-size: calc(px-to-vw-mobile(23) - $font-residual-23px),
+              $font-weight: 700,
+              $line-height: 120%,
+              $color: $fifth-color-text
+            );
+            span {
+              @include font(
+                $font-size: calc(px-to-vw-mobile(28) - $font-residual-28px),
+                $color: $fourth-color-text
+              );
+            }
+          }
+        }
+        &--desc {
+          color: $fifth-color-text;
+          margin: 0;
+          @include position($position: unset, $left: unset);
+          transform: unset;
+        }
+        &--bottom {
+          @include flex($justify:space-between,$gap: px-to-vw-mobile(24));
+          .bottom-iconCircle {
+            @include set-size(
+              $width: px-to-vw-mobile(24),
+              $height: px-to-vw-mobile(24)
+            );
+            img {
+              @include set-size($width: 100%, $height: 100%);
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+    &--bottom {
+      margin-top: px-to-vw-mobile(64);
+      @include set-size($width: calc(px-to-vw-mobile(398) - $residual-398px));
+      @include position($position: relative, $left: 50%);
+      transform: translateX(-50%);
+      @include flex(
+        $justify: space-between,
+        $gap: px-to-vw-mobile(16)
+      );
+      .bottom-btn-left {
+        @include set-size(
+          $width: px-to-vw-mobile(64),
+          $height: px-to-vw-mobile(64)
+        );
+      }
+      .bottom-btn-right {
+        @include set-size(
+          $width: px-to-vw-mobile(64),
+          $height: px-to-vw-mobile(64)
+        );
+      }
+      img {
+        @include set-size($width: 100%, $height: 100%);
+        object-fit: cover;
+      }
+    }
+  }
+
+  .section-testimonials-background {
+    display: none;
+  }
+  @include tablet {
+    .section-testimonials__content {
+      @include set-size($width: px-to-vw-tablet(896));
+      margin-top:calc(px-to-vw-tablet(128) - $residual-128px);
+      &--top {
+        @include flex($gap: px-to-vw-tablet(56));
+        @include set-size($width: px-to-vw-tablet(584));
+        @include position($position: relative, $left: 50%);
+        transform: translateX(-50%);
+        .top-body {
+          @include flex($gap: px-to-vw-tablet(56));
+          &--avatar {
+            @include set-size(
+              $width: px-to-vw-tablet(128),
+              $height: px-to-vw-tablet(128)
+            );
+            img {
+              @include set-size($width: 100%, $height: 100%);
+              object-fit: cover;
+            }
+          }
+          .box-name-and-star {
+            @include flex($gap: px-to-vw-tablet(32));
+            &--star {
+              .star {
+                @include set-size(
+                  $width: px-to-vw-tablet(32),
+                  $height: px-to-vw-tablet(32)
+                );
+              }
+            }
+
+            &--name {
+              @include font($font-size: px-to-vw-tablet(23));
+              span {
+                @include font($font-size: px-to-vw-tablet(28));
+              }
+            }
+          }
+          &--desc {
+            @include position($position: unset, $left: unset);
+            @include set-size($width: px-to-vw-tablet(584));
+            font-size: px-to-vw-tablet(23);
+          }
+          &--bottom {
+            @include flex( $gap: px-to-vw-tablet(24));
+            .bottom-iconCircle {
+              @include set-size(
+                $width: px-to-vw-tablet(24),
+                $height: px-to-vw-tablet(24)
+              );
+            }
+          }
+        }
+      }
+      &--bottom {
+        margin-top: px-to-vw-tablet(64);
+        @include set-size($width: px-to-vw-tablet(896));
+        @include flex($gap: px-to-vw-tablet(16));
+        @include position(
+          $top: px-to-vw-tablet(-450),
+        );
+        .bottom-btn-left {
+          @include set-size(
+            $width: px-to-vw-tablet(100),
+            $height: px-to-vw-tablet(100)
+          );
+        }
+        .bottom-btn-right {
+          @include set-size(
+            $width: px-to-vw-tablet(100),
+            $height: px-to-vw-tablet(100)
+          );
+        }
+      }
+    }
+
+    .section-testimonials-background {
+      display: block;
+      .background--img {
+        @include set-size($width: px-to-vw-tablet(1024));
+        @include position($position: absolute, $top: px-to-vw-tablet(-80));
+        img {
+          @include set-size($width: 100%, $height: 100%);
+          object-fit: cover;
+
+          opacity: 0.2;
+        }
+      }
+    }
+
+    @include desktop {
+      .section-testimonials__content {
+      @include set-size($width: px-to-vw-desktop(1184));
+        margin-top: px-to-vw-desktop(128);
+        &--top {
+          .title {
+            text-align: center;
+          }
+          @include flex($gap: px-to-vw-desktop(56));
+          @include set-size($width: px-to-vw-desktop(584));
+          .top-body {
+            @include flex($gap: px-to-vw-desktop(56));
+            &--avatar {
+              @include set-size(
+                $width: px-to-vw-desktop(128),
+                $height: px-to-vw-desktop(128)
+              );
+            }
+            .box-name-and-star {
+              @include flex($gap: px-to-vw-desktop(32));
+              &--star {
+                .star {
+                  @include set-size(
+                    $width: px-to-vw-desktop(32),
+                    $height: px-to-vw-desktop(32)
+                  );
+                }
+              }
+
+              &--name {
+                @include font($font-size: px-to-vw-desktop(23));
+                span {
+                  @include font($font-size: px-to-vw-desktop(28));
+                }
+              }
+            }
+            &--desc {
+              @include position($position: unset, $left: unset);
+              @include set-size($width: px-to-vw-desktop(584));
+              font-size: px-to-vw-desktop(23);
+            }
+            &--bottom {
+              @include flex( $gap: px-to-vw-desktop(24));
+              .bottom-iconCircle {
+                @include set-size(
+                  $width: px-to-vw-desktop(24),
+                  $height: px-to-vw-desktop(24)
+                );
+              }
+            }
+          }
+        }
+        &--bottom {
+          margin-top: px-to-vw-desktop(64);
+          @include set-size($width: px-to-vw-desktop(1184));
+          @include flex($gap: px-to-vw-desktop(16));
+          @include position($position: absolute, $top: px-to-vw-desktop(200));
+          .bottom-btn-left {
+            @include set-size(
+              $width: px-to-vw-desktop(100),
+              $height: px-to-vw-desktop(100)
+            );
+          }
+          .bottom-btn-right {
+            @include set-size(
+              $width: px-to-vw-desktop(100),
+              $height: px-to-vw-desktop(100)
+            );
+          }
+        }
+      }
+      .section-testimonials-background {
+        .background--img {
+          @include set-size($width: px-to-vw-desktop(1440));
+          top: px-to-vw-desktop(-170);
+        }
+      }
+    }
+  }
+}
