@@ -113,7 +113,7 @@
   </div>
 </section>
 <!-- end section-explore -->
-  
+
 <!-- start section-web-name -->
   <section class="web-name">
     <!-- start section-section-web-name__content -->
@@ -167,4 +167,54 @@
   <!-- end section-services__contents -->
 </div>
 <!-- end section Services -->
+  
+  <!-- start section destination  -->
+  <section class="section-destination">
+    <!-- start section-destination__content  -->
+    <div class="section-destination__content">
+      <!-- start section-destination__content--top  -->
+      <div class="section-destination__content--top">
+        <!-- start section-destination__top-content--top -->
+        <div class="top-content--left">
+          <p class="left-content--title title">Top Destination</p>
+          <p class="left-content--desc desc">Explore top destination</p>
+        </div>
+        <!-- start top-content--left -->
+
+        <!-- start top-content--right -->
+        <div class="top-content--right">
+          <include
+            src="./components/boxImg.html"
+            locals='{
+                "list": [
+                 {"classNameFigure": "right-content--btn bottom--btn-left", "srcImg": "../assets/icon/section-destination-btn-arrow-left.png", "alts": "btn left", "classNameImg": "btn-left"},
+                 {"classNameFigure": "right-content--btn bottom--btn-right", "srcImg": "../assets/icon/section-destination-btn-arrow-right.png", "alts": "btn right", "classNameImg": "btn-right"}
+                ]
+            }'
+          >
+          </include>
+        </div>
+        <!-- start top-content--bottom -->
+      </div>
+      <!-- end section-destination__content--top  -->
+
+      <!-- start section-destination__content--bottom-->
+      <div class="section-destination__content--bottom">
+        <include
+          src="./components/box-section-desetination.html"
+          locals='{
+            "list": [
+             {"classNameImg":"img-beach heading--img", "srcImg": "../assets/img/section-destination-beach.png", "alts" : "beach", "contentPrice": "$550.16", "contentDesc": "Paradise Beach, Bantayan Island", "contentCountry": "Rome, Italy", "contentEvaluate":"4.8"},
+             {"classNameImg":"img-fish heading--img", "srcImg": "../assets/img/section-destination-fish .png", "alts" : "fish", "contentPrice": "$20.99", "contentDesc": "Ocean with full of Colors", "contentCountry": "Maldives", "contentEvaluate":"4.5"},
+             {"classNameImg":"img-mountain heading--img", "srcImg": "../assets/img/section-destination-mountain.png", "alts" : "mountain", "contentPrice": "$150.99", "contentDesc": "Mountain View, Above the cloud", "contentCountry": "United Arab Emeries", "contentEvaluate":"5.0"}
+            ]
+        }'
+        >
+        </include>
+      </div>
+      <!-- end section-destination__content--bottom-->
+    </div>
+    <!-- end section-destination__content  -->
+  </section>
+  <!-- end section destination  -->
   </main>
