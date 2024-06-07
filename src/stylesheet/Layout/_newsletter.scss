@@ -1,0 +1,255 @@
+@use "../Abstract/" as *;
+
+#section-newsletter {
+  .section-newsletter__content {
+    border-radius: calc(px-to-vw-mobile(32) - $residual-32px);
+    background: $color-background-section-newsletter;
+    @include set-size($width: calc(px-to-vw-mobile(398) - $residual-398px));
+    @include position($position: relative, $left: 50%);
+    transform: translateX(-50%);
+    margin-top: calc(px-to-vw-mobile(96) - $residual-96px);
+    padding: calc(px-to-vw-mobile(64) - $residual-64px) calc(px-to-vw-mobile(32) - $residual-32px);
+    &--icon {
+      .icon-iconTop {
+        display: none;
+      }
+    }
+    &--body {
+      .body-desc {
+        @include set-size($width: calc( px-to-vw-mobile(300) - $residual-300px));
+        @include position($position: relative, $left: 50%);
+        transform: translateX(-50%);
+        margin-top: calc(px-to-vw-mobile(32) - $residual-32px);
+      }
+    }
+    &--footer {
+      .footer-content {
+        &--boxEmail {
+          margin-top: calc(px-to-vw-mobile(64) - $residual-64px);
+          @include set-size(
+            $width: calc(px-to-vw-mobile(334) - $residual-334px),
+            $height: calc(px-to-vw-mobile(72) - $residual-72px)
+          );
+          @include flex(
+            
+            $direction: row-reverse,
+            $align: center,
+            $justify: start,
+            $gap: calc(px-to-vw-mobile(16) - $residual-16px)
+          );
+          @include position($position: relative, $left: 50%);
+          transform: translateX(-50%);
+          border-radius: calc(px-to-vw-mobile(16) - $residual-16px);
+          border: transparent;
+          background: $color-input-section-newsletter;
+          .boxEmail--text {
+            @include font(
+              $font-family: $primary-font,
+              $font-size: px-to-vw-mobile(14),
+              $font-weight: 700,
+              $line-height: 120%,
+              $color: $fifth-color-text
+            );
+            @include position($position: relative, $left: px-to-vw-mobile(20));
+          }
+          .boxEmail--icon {
+            @include set-size(
+              $width: calc(px-to-vw-mobile(24) - $residual-24px),
+              $height: calc(px-to-vw-mobile(24) - $residual-24px)
+            );
+            @include position(
+              $position: relative,
+              $left: px-to-vw-mobile(12)
+            );
+            .icon {
+              @include set-size($width: 100%, $height: 100%);
+              object-fit: cover;
+              @include position(
+                $position: absolute,
+                $top:0,
+                $left: px-to-vw-mobile(12)
+              );
+            }
+          }
+        }
+
+        &--btn {
+          @include set-size($width: calc(px-to-vw-mobile(334) - $residual-334px), $height: calc(px-to-vw-mobile(67) - $residual-67px));
+          padding: calc(px-to-vw-mobile(24) - $residual-24px) calc(px-to-vw-mobile(64) - $residual-64px);
+          border-radius: calc(px-to-vw-mobile(16) - $residual-16px);
+          border: transparent;
+          background: $first-color-button;
+          margin-top: calc(px-to-vw-mobile(32) - $residual-32px);
+
+          .btn-content {
+            @include font(
+              $font-family: $primary-font,
+              $font-size: calc(px-to-vw-mobile(16) - $residual-16px),
+              $font-weight: 700,
+              $line-height: 120%,
+              $color: $second-color-button
+            );
+          }
+        }
+      }
+    }
+    @include tablet {
+      border-radius: px-to-vw-tablet(32);
+      @include set-size($width: px-to-vw-tablet(897));
+      margin-top: px-to-vw-tablet(96);
+      padding: px-to-vw-tablet(64) px-to-vw-tablet(32);
+      &--icon {
+        .icon-iconTop {
+          display: block;
+          @include position($position: absolute, $top: px-to-vw-tablet(-80), $left: px-to-vw-tablet(-40));
+          @include set-size ($width: px-to-vw-tablet(183), $height: px-to-vw-tablet(176));
+
+          img {
+            @include set-size ($width: 100%, $height: 100%);
+            object-fit: cover;
+
+          }
+        }
+      }
+      &--body {
+        .body-desc {
+          @include set-size($width: px-to-vw-tablet(769));
+          margin-top: px-to-vw-tablet(32);
+        }
+      }
+      &--footer {
+        .footer-content {
+          @include flex(
+            
+            $justify: space-around,
+            $align: center,
+            $gap: px-to-vw-tablet(32)
+          );
+          margin-top: px-to-vw-tablet(64);
+          &--boxEmail {
+            @include set-size(
+              $width: px-to-vw-tablet(502),
+              $height: px-to-vw-tablet(96)
+            );
+            @include flex($gap: px-to-vw-tablet(16));
+            position: unset;
+            transform: unset;
+            border-radius: px-to-vw-tablet(32);
+            margin-top: 0;
+            .boxEmail--text {
+              @include font($font-size: px-to-vw-tablet(14));
+              @include position(
+                $position: relative,
+                $left: px-to-vw-tablet(20)
+              );
+            }
+            .boxEmail--icon {
+              @include set-size(
+                $width: px-to-vw-tablet(24),
+                $height: px-to-vw-tablet(24)
+              );
+              @include position(
+                $left: px-to-vw-tablet(12)
+              );
+              .icon {
+                @include position(
+                  $left: px-to-vw-tablet(12)
+                );
+              }
+            }
+          }
+
+          &--btn {
+            @include set-size(
+              $width: px-to-vw-tablet(235),
+              $height: px-to-vw-tablet(96)
+            );
+            padding: px-to-vw-tablet(32) px-to-vw-tablet(64);
+            border-radius: px-to-vw-tablet(32);
+            margin-top: 0;
+
+            .btn-content {
+              @include font($font-size: px-to-vw-tablet(23));
+            }
+          }
+        }
+      }
+     @include desktop {
+      border-radius: px-to-vw-desktop(32);
+      @include set-size($width: px-to-vw-desktop(1184));
+      margin-top: px-to-vw-desktop(96);
+      padding: px-to-vw-desktop(64) px-to-vw-desktop(32);
+      &--icon {
+        .icon-iconTop {
+          display: block;
+          @include position($position: absolute, $top: px-to-vw-desktop(-80), $left: px-to-vw-desktop(-40));
+          @include set-size ($width: px-to-vw-desktop(183), $height: px-to-vw-desktop(176));
+
+        }
+      }
+      &--heading {
+        .heading-content {
+          text-align: center;
+        }
+      }
+      &--body {
+        .body-desc {
+          @include set-size($width: px-to-vw-desktop(769));
+          margin-top: px-to-vw-desktop(32);
+          text-align: center;
+        }
+      }
+      &--footer {
+        .footer-content {
+          @include flex(
+            $gap: px-to-vw-desktop(32)
+          );
+          margin-top: px-to-vw-desktop(64);
+          &--boxEmail {
+            @include set-size(
+              $width: px-to-vw-desktop(787),
+              $height: px-to-vw-desktop(96)
+            );
+            @include flex($gap: px-to-vw-desktop(16));
+            border-radius: px-to-vw-desktop(32);
+            .boxEmail--text {
+              @include font($font-size: px-to-vw-desktop(14));
+              @include position(
+                $position: relative,
+                $left: px-to-vw-desktop(20)
+              );
+            }
+            .boxEmail--icon {
+              @include set-size(
+                $width: px-to-vw-desktop(24),
+                $height: px-to-vw-desktop(24)
+              );
+              @include position(
+                $left: px-to-vw-desktop(12)
+              );
+              .icon {
+                @include position(
+                  $left: px-to-vw-desktop(12)
+                );
+              }
+            }
+          }
+
+          &--btn {
+            @include set-size(
+              $width: px-to-vw-desktop(235),
+              $height: px-to-vw-desktop(96)
+            );
+            padding: px-to-vw-desktop(32) px-to-vw-desktop(64);
+            border-radius: px-to-vw-desktop(32);
+
+            .btn-content {
+              @include font($font-size: px-to-vw-desktop(23));
+            }
+          }
+        }
+     }
+    }
+  }
+}
+}

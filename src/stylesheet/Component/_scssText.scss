@@ -3,13 +3,13 @@
 .body--title {
   @include font(
     $font-family: $primary-font,
-    $font-size: calc(px-to-vw-mobile(32) - 0.0298px),
+    $font-size: calc(px-to-vw-mobile(32) - $font-residual-32px),
     $font-weight: 700,
     $line-height: 120%,
     $color: $sixth-color-text
   );
   text-align: center;
-  margin-top: calc(px-to-vw-mobile(16) - 0.0149px);
+  margin-top: calc(px-to-vw-mobile(16) - $residual-16px);
 
   @include tablet {
     @include font($font-size: px-to-vw-tablet(40));
@@ -28,16 +28,14 @@
 .body--desc {
   @include font(
     $font-family: $second-font,
-    $font-size: calc(px-to-vw-mobile(16) - 0.0149px),
+    $font-size: calc(px-to-vw-mobile(16) - $residual-16px),
     $font-weight: 400,
     $line-height: 160%,
     $color: $second-color-text
   );
-  @include set-size($width: px-to-vw-mobile(398));
+  @include set-size($width: calc(px-to-vw-mobile(398) - $residual-398px));
   text-align: center;
-  margin-top: calc(px-to-vw-mobile(32) - 0.0298px);
-  @include position($position: relative, $left: 50%);
-  transform: translateX(-50%);
+  margin-top: calc(px-to-vw-mobile(32) - $residual-32px);
   @include tablet {
     @include font($font-size: px-to-vw-tablet(18));
     @include set-size($width: px-to-vw-tablet(832));
@@ -46,8 +44,6 @@
     @include desktop {
       font-size: px-to-vw-desktop(18);
       @include set-size($width: px-to-vw-desktop(441));
-      position: unset;
-      transform: unset;
       text-align: unset;
       margin-top: px-to-vw-desktop(32);
     }
@@ -57,7 +53,7 @@
 .title {
   @include font(
     $font-family: $primary-font,
-    $font-size: px-to-vw-mobile(16),
+    $font-size: calc(px-to-vw-mobile(16) - $residual-16px),
     $font-weight: 700,
     $line-height: 120%,
     $color: $third-color-text
@@ -79,7 +75,7 @@
 .desc {
   @include font(
     $font-family: $primary-font,
-    $font-size: px-to-vw-mobile(32),
+    $font-size: calc(px-to-vw-mobile(32) - $font-residual-32px),
     $font-weight: 700,
     $line-height: 120%,
     $color: $primary-color-text
@@ -87,9 +83,10 @@
   text-align: center;
 
   @include tablet {
-    font-size: 40px;
+    font-size: px-to-vw-tablet(40);
   }
   @include desktop {
+    font-size: px-to-vw-desktop(44);
     text-align: unset;
   }
 }
