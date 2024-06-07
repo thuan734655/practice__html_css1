@@ -116,7 +116,7 @@
     }
 }
 
-@mixin flex($display: flex, $direction: false, $align: false, $justify: false, $wrap: false, $gap: false) {
+@mixin flex( $direction: false, $align: false, $justify: false, $wrap: false, $gap: false) {
     display: flex;
 
     @if $direction {
