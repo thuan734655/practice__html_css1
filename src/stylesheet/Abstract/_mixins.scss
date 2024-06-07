@@ -133,36 +133,28 @@
     color: $color;
   }
 }
+@mixin flex( $direction: false, $align: false, $justify: false, $wrap: false, $gap: false) {
+    display: flex;
 
-@mixin flex(
-  $display: flex,
-  $direction: false,
-  $align: false,
-  $justify: false,
-  $wrap: false,
-  $gap: false
-) {
-  display: $display;
+    @if $direction {
+        flex-direction: $direction;
+    }
 
-  @if $direction {
-    flex-direction: $direction;
-  }
+    @if $align {
+        align-items: $align;
+    }
 
-  @if $align {
-    align-items: $align;
-  }
+    @if $justify {
+        justify-content: $justify;
+    }
 
-  @if $justify {
-    justify-content: $justify;
-  }
+    @if $wrap {
+        flex-wrap: $wrap;
+    }
 
-  @if $wrap {
-    flex-wrap: $wrap;
-  }
-
-  @if $gap {
-    gap: $gap;
-  }
+    @if $gap {
+        gap: $gap;
+    }
 }
 
 @mixin bg-color($color) {

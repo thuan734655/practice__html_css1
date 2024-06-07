@@ -1,3 +1,118 @@
+<!-- start section-explore  -->
+<section class="section-explore">
+  <div class="section-explore__content">
+    <!-- start section-explore__content--left -->
+    <div class="section-explore__content--left">
+      <include
+        src="./components/buttonIcon.html"
+        locals='{
+                 "list": [ 
+                 {"class":"left-content--btn-top","linkimg" : "../assets/icon/bag_frame1.svg","alts": "icon bag","classImg":"btn-top--img","classText":"btn-top--text","content":"Explore the world!"}
+                 ]
+                 }'
+      >
+      </include>
+
+      <div class="left-content--text">
+        <h1 class="first-text">
+          Travel <span>top destination</span> of the world
+        </h1>
+        <p class="second-text">
+          We always make our customer happy by providing <br />
+          as many choices as possible
+        </p>
+      </div>
+
+      <!-- start left-content--btnBottom  -->
+      <div class="left-content--btnBottom">
+        <include
+          src="./components/button.html"
+          locals='{
+                     "list":[
+                     {"classBtn":"btnBottom--left","classText":"btnBottom-left-text","content":"Get Started"}
+                     ]
+                 }'
+        >
+        </include>
+        <include
+          src="./components/buttonIcon.html"
+          locals='{
+                     "list": [ 
+                     {"class":"btnBottom--right","linkimg" : "../assets/icon/play_frame1.svg","alts": "icon play","classImg":"btnBottom-right-img","classText":"btnBottom-right-text","content":"Watch Demo"}
+                     ]
+                     }'
+        >
+        </include>
+      </div>
+      <!-- end  left-content--btnBottom   -->
+    </div>
+    <!-- end section-explore__content--left  -->
+
+    <!-- start section-explore__content--right-->
+    <div class="section-explore__content--right">
+      <!-- start right-content -->
+      <div class="right-content">
+        <!-- start right-content--layer -->
+        <div class="right-content--layer">
+          <include
+            src="./components/boxImg.html"
+            locals='{
+                     "list": [
+                      {"classNameFigure": "layer-img", "classNameImg": "pic--img", "srcImg": "../assets/img/layer_pane1.png","alts":"layer"}
+                     ]
+                 }'
+          >
+          </include>
+        </div>
+        <!-- end right-content--layer-->
+
+        <!-- start right__content--pic -->
+        <div class="right-content--pic">
+          <include
+            src="./components/buttonIcon.html"
+            locals='{
+                     "list": [ 
+                     {"class":"btn-right","linkimg" : "../assets/icon/location_frame1.svg","alts": "icon location","classImg":"btn-right--img","classText":"btn-right--text","content":"Top Places"}
+                     ]
+                 }'
+          >
+          </include>
+
+          <include
+            src="./components/boxImg.html"
+            locals='{
+                     "list": [
+                      {"classNameFigure": "pic-sea", "classNameImg": "pic--img pic-sea--img", "srcImg": "../assets/img/pic1_pane1.jpg","alts":"pic sea"},
+                      {"classNameFigure": "pic-arrow", "classNameImg": "pic-arrow--img pic--icon", "srcImg": "../assets/icon/icon_arrow_pic1.png","alts":"icon arrow"},
+                      {"classNameFigure": "pic-country", "classNameImg": "pic--img pic-country--img", "srcImg": "../assets/img/pic2_pane1.jpg","alts":"pic country"},
+                      {"classNameFigure": "pic-moutain", "classNameImg": "pic--img pic-moutain--img", "srcImg": "../assets/img/pic3_pane1.jpg","alts":"pic moutain"},
+                      {"classNameFigure": "pic-add", "classNameImg": "pic--icon pic-add--img", "srcImg": "../assets/icon/icon_add.png","alts":"icon add"}
+                     ]
+                 }'
+          >
+          </include>
+        </div>
+        <!-- end right__content--pic -->
+      </div>
+      <!-- end right-content -->
+    </div>
+    <!-- end section-explore__content--right-->
+    <!-- start section-explore__content--listIconArrow  -->
+    <include src="./components/boxImg.html" locals='{
+        "list": [
+        {"classNameFigure": "section-explore__content--listIconArrow", "classNameImg": "","srcImg": "../assets/icon/list-arrow-up__frame1.svg", "alts": "list icon arrow up"}
+        ]
+    }'>     
+    </include>
+  <!-- end section-explore__content--listIconArrow  -->
+  
+  <!-- start section-explore__content--shadow-bottom -->
+  <div class="section-explore__content--shadow-bottom"></div>
+  <!-- end section-explore__content--shadow-bottom -->
+  </div>
+</section>
+<!-- end section-explore -->
+
 <!-- start section Services -->
 <div class="section-services">
   <!-- start section-services__contents -->
