@@ -1,0 +1,11 @@
+<each loop="item in {{list}}">
+  <div class="footer-content {{item.classBox}}">
+    <figure class="footer-content--img">
+      <img src="{{item.srcImg}}" alt="{{item.alts}}" />
+    </figure>
+    <div class="footer-content--text">
+      <p class="text--top body--title">{{item.contentTextTop}}</p>
+      <p class="text--bottom body--desc">{{item.contentTextBottom}}</p>
+    </div>
+  </div>
+</each>

@@ -1,0 +1,204 @@
+@use "../Abstract/" as *;
+
+#section-keyFeatures {
+  .section-keyFeatures__container {
+    @include flex(
+      $direction: column-reverse,
+      $align: center,
+      $gap: calc(px-to-vw-mobile(64) - $residual-64px)
+    );
+    margin-top: calc(px-to-vw-mobile(64) - $residual-64px);
+    &--left {
+      .left-content {
+        &--body {
+          .body--desc {
+            @include set-size($width: calc(px-to-vw-mobile(334) - $residual-334px));
+          }
+        }
+      }
+      .left-content--footer {
+        .footer-content {
+          @include set-size($width: calc(px-to-vw-mobile(334) - $residual-334px));
+          padding: calc(px-to-vw-mobile(32) - $residual-32px);
+          &--img {
+            @include set-size(
+              $width: calc(px-to-vw-mobile(100) - $residual-100px),
+              $height: calc(px-to-vw-mobile(100) - $residual-100px)
+            );
+
+            img {
+              @include set-size($width: 100%, $height: 100%);
+              object-fit: cover;
+            }
+          }
+
+          .text--top {
+            font-size: calc(px-to-vw-mobile(23) - $font-residual-23px);
+            text-align: unset;
+            margin-top: calc(px-to-vw-mobile(32) - $residual-32px);
+          }
+          .text--bottom {
+            @include set-size($width: calc(px-to-vw-mobile(270) - $residual-270px));
+            font-size: calc(px-to-vw-mobile(18) - $residual-18px);
+            text-align: unset;
+            margin-top: calc(px-to-vw-mobile(8) - $residual-8px);
+          }
+        }
+        .box2 {
+          border-radius: calc(px-to-vw-mobile(32) - $residual-32px);
+          border: 1px solid $first-color-border-card;
+          background: $second-color-button;
+        }
+      }
+    }
+
+    &--right {
+      .right--img {
+        @include set-size(
+          $width: calc(px-to-vw-mobile(350) - $residual-350px),
+          $height: calc(px-to-vw-mobile(438) - $residual-438px)
+        );
+        @include position($position: relative, $left: 50%);
+        transform: translateX(-50%);
+        img {
+          @include set-size($width: 100%, $height: 100%);
+          object-fit: cover;
+        }
+      }
+    }
+    @include tablet {
+      @include flex($gap: px-to-vw-tablet(64));
+      margin-top: px-to-vw-tablet(64);
+      &--left {
+        .left-content {
+          &--body {
+            .body--desc {
+              @include set-size($width: px-to-vw-tablet(832));
+            }
+          }
+        }
+        .left-content--footer {
+          .footer-content {
+            @include set-size($width: px-to-vw-tablet(832));
+            @include flex( $gap: px-to-vw-tablet(32));
+            padding: px-to-vw-tablet(32);
+            &--img {
+              @include set-size(
+                $width: px-to-vw-tablet(100),
+                $height: px-to-vw-tablet(100)
+              );
+            }
+            &--text {
+              margin-top: px-to-vw-tablet(-10);
+              .text--top {
+                @include set-size($width: px-to-vw-tablet(636));
+                font-size: px-to-vw-tablet(23);
+                text-align: unset;
+                margin-top: px-to-vw-tablet(32);
+              }
+              .text--bottom {
+                @include set-size($width: px-to-vw-tablet(636));
+                font-size: px-to-vw-tablet(18);
+                text-align: unset;
+                margin-top: px-to-vw-tablet(8);
+              }
+            }
+          }
+          .box2 {
+            border-radius: px-to-vw-tablet(32);
+          }
+        }
+      }
+
+      &--right {
+        .right--img {
+          @include set-size(
+            $width: px-to-vw-tablet(693),
+            $height: px-to-vw-tablet(869)
+          );
+        }
+      }
+      @include desktop {
+        @include flex(
+        
+          $direction: row,
+          $align: center,
+          $gap: px-to-vw-desktop(70)
+        );
+        @include set-size($width: px-to-vw-desktop(1312));
+        @include position($position: relative, $left: 50%);
+        transform: translateX(-50%);
+        margin-top: px-to-vw-desktop(70);
+
+        &--left {
+          .left-content {
+            &--body {
+              .body--desc {
+                @include set-size($width: px-to-vw-desktop(549));
+              }
+            }
+          }
+          .left-content--footer {
+            .footer-content {
+              @include set-size($width: px-to-vw-desktop(549));
+              @include flex( $gap: px-to-vw-desktop(32));
+              padding: px-to-vw-desktop(32);
+              &--img {
+                @include set-size(
+                  $width: px-to-vw-desktop(100),
+                  $height: px-to-vw-desktop(100)
+                );
+                float: left;
+
+                img {
+                  @include set-size(
+                    $width: px-to-vw-desktop(100),
+                    $height: px-to-vw-desktop(100)
+                  );
+                  object-fit: cover;
+                }
+              }
+              &--text {
+                margin-top: px-to-vw-desktop(-10);
+                @include set-size($width: px-to-vw-desktop(353));
+                .text--top {
+                  @include set-size($width: 100%);
+                  font-size: px-to-vw-desktop(23);
+                  text-align: unset;
+                  margin-top: px-to-vw-desktop(32);
+                }
+                .text--bottom {
+                  @include set-size($width: 100%);
+                  font-size: px-to-vw-desktop(18);
+                  text-align: unset;
+                  margin-top: px-to-vw-desktop(8);
+                }
+              }
+            }
+            .box2 {
+              border-radius: 32px;
+              border: 1px solid
+                var(--Grey-Scale-Black-10, rgba(25, 24, 37, 0.1));
+              background: var(--white, #fff);
+            }
+          }
+        }
+
+        &--right {
+          .right--img {
+            @include set-size(
+              $width: px-to-vw-desktop(693),
+              $height: px-to-vw-desktop(869)
+            );
+            @include position($position: relative, $left: 50%);
+            transform: translateX(-50%);
+            img {
+              @include set-size($width: 100%, $height: 100%);
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
