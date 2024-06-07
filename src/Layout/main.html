@@ -1,3 +1,4 @@
+<main>
 <!-- start section-explore  -->
 <section class="section-explore">
   <div class="section-explore__content">
@@ -113,6 +114,60 @@
 </section>
 <!-- end section-explore -->
 
+<!-- start section-web-name -->
+  <section class="web-name">
+    <!-- start section-section-web-name__content -->
+    <div class="section-web-name__content">
+      <include
+        src="./components/boxImg.html"
+        locals='{
+        "list": [
+         {"classNameFigure": "section-web-name__content--tripadvisor web-name-img", "classNameImg": "", "srcImg": "../assets/icon/tripadvisor_frame1.svg", "alts": "tripadvisor"},
+         {"classNameFigure": "section-web-name__content--expedia web-name-img", "classNameImg": "", "srcImg": "../assets/icon/expedia_frame1.svg", "alts": "expedia"},
+         {"classNameFigure": "section-web-name__content--booking web-name-img", "classNameImg": "", "srcImg": "../assets/icon/booking_frame1.svg", "alts": "booking"},
+         {"classNameFigure": "section-web-name__content--airbnb web-name-img", "classNameImg": "", "srcImg": "../assets/icon/airbnb_frame1.svg", "alts": "airbnb"},
+         {"classNameFigure": "section-web-name__content--gabitz web-name-img", "classNameImg": "", "srcImg": "../assets/icon/gabitz_frame1.svg", "alts": "gabitz"}
+        ]
+      }'
+      >
+      </include>
+    </div>
+    <!-- end section-web-name__content -->
+  </section>
+  <!-- end section-web-name -->
+  
+  
+<!-- start section Services -->
+<div class="section-services">
+  <!-- start section-services__contents -->
+  <div class="section-services__content">
+    <!-- start section-services__contents--left -->
+    <div class="section-services__content--left">
+      <h5 class="title">Services</h5>
+      <p class="desc">Our top value categories for you</p>
+    </div>
+    <!-- end section-services__contents--left -->
+
+    <!-- start section-services__contents--right -->
+    <div class="section-services__content--right">
+      <include
+        src="./components/services-card.html"
+        locals='{
+      "list": [
+       {"classNameCard": "services-card","classFigure": "heading-icon", "linkImg": "../assets/icon/earth_frame1.svg", "alts": "earth","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." },
+       {"classNameCard": "services-card","classFigure": "heading-icon", "linkImg": "../assets/icon/booking_pane2_frame1.svg", "alts": "booking","title": "Easy Booking" , "desc": "Square, was moving across the sand in their direction." },
+       {"classNameCard": "services-card","classFigure": "heading-icon", "linkImg": "../assets/icon/cloudy.svg", "alts": "haft-icon","title": "Best Tour Guide" , "desc": "What looked like a small patch of purple grass, above five feet." }
+      ]
+    }'
+      >
+      </include>
+    </div>
+    <!-- end section-services__contents--right -->
+  </div>
+  <!-- end section-services__contents -->
+</div>
+<!-- end section Services -->
+  
   <!-- start section destination  -->
   <section class="section-destination">
     <!-- start section-destination__content  -->
@@ -162,3 +217,4 @@
     <!-- end section-destination__content  -->
   </section>
   <!-- end section destination  -->
+  </main>
