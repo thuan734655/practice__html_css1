@@ -72,6 +72,10 @@
             $color: $sixth-color-text
           );
           text-align: center;
+          @include set-size($width: 80%);
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
           margin-top: calc(px-to-vw-mobile(16) - $residual-16px);
         }
 
@@ -137,7 +141,9 @@
               $gap: calc(px-to-vw-mobile(16) - $residual-16px)
             );
             img {
-              @include set_size($width: calc( px-to-vw-mobile(24) - $residual-24px)); 
+              @include set_size(
+                $width: calc(px-to-vw-mobile(24) - $residual-24px)
+              );
             }
             figcaption {
               @include font(
@@ -162,26 +168,23 @@
           border-radius: px-to-vw-tablet(100);
           gap: px-to-vw-tablet(16);
           .btn-top--img {
-            @include flex(
-              $gap: px-to-vw-tablet(16)
-            );
-  
+            @include flex($gap: px-to-vw-tablet(16));
+
             img {
               @include set-size(
                 $width: px-to-vw-tablet(24),
-                $height: px-to-vw-tablet(24) 
+                $height: px-to-vw-tablet(24)
               );
             }
             figcaption {
-              @include font(
-                $font-size: px-to-vw-tablet(14)
-              );
+              @include font($font-size: px-to-vw-tablet(14));
             }
           }
         }
         .left-content--text {
           .first-text {
             @include font($font-size: calc(px-to-vw-tablet(56)));
+            @include set-size($width: 60%)
           }
           .second-text {
             @include font($font-size: px-to-vw-tablet(18));
@@ -215,18 +218,14 @@
               $height: px-to-vw-tablet(56)
             );
             .btnBottom-right-img {
-              @include position($position: relative, $top : 50%);
+              @include position($position: relative, $top: 50%);
               transform: translateY(-50%);
-              @include flex(
-                $gap: px-to-vw-tablet(16)
-              );
+              @include flex($gap: px-to-vw-tablet(16));
               img {
                 @include set_size($width: px-to-vw-tablet(24));
               }
               figcaption {
-                @include font(
-                  $font-size: px-to-vw-tablet(14)
-                );
+                @include font($font-size: px-to-vw-tablet(14));
               }
             }
           }
@@ -252,22 +251,18 @@
               $second-color-boxshadow-button;
             gap: px-to-vw-desktop(16);
             .btn-top--img {
-              @include flex(
-                $gap: px-to-vw-desktop(16)
-              );
-    
+              @include flex($gap: px-to-vw-desktop(16));
+
               img {
                 @include set-size(
                   $width: px-to-vw-desktop(24),
-                  $height: px-to-vw-desktop(24) 
+                  $height: px-to-vw-desktop(24)
                 );
               }
               figcaption {
-                @include font(
-                  $font-size: px-to-vw-desktop(14)
-                );
+                @include font($font-size: px-to-vw-desktop(14));
               }
-            
+
               @include font($font-size: px-to-vw-desktop(14));
             }
           }
@@ -276,8 +271,8 @@
             .first-text {
               top: 0;
               text-align: unset;
-
-              @include set-size($width: px-to-vw-desktop(412));
+              margin-top: unset;
+              @include set-size($width: 100%);
               @include font($font-size: calc(px-to-vw-desktop(69)));
             }
 
@@ -321,18 +316,14 @@
               );
               @include flex($gap: px-to-vw-desktop(8));
               .btnBottom-right-img {
-                @include position($position: relative, $top : 50%);
+                @include position($position: relative, $top: 50%);
                 transform: translateY(-50%);
-                @include flex(
-                  $gap: px-to-vw-desktop(16)
-                );
+                @include flex($gap: px-to-vw-desktop(16));
                 img {
                   @include set_size($width: px-to-vw-desktop(24));
                 }
                 figcaption {
-                  @include font(
-                    $font-size: px-to-vw-desktop(14)
-                  );
+                  @include font($font-size: px-to-vw-desktop(14));
                 }
               }
             }
@@ -437,13 +428,15 @@
             @include flex($justify: center, $align: center);
             @include set_size(
               $width: calc(px-to-vw-mobile(85) - $residual-85px),
-              $height: calc( px-to-vw-mobile(28) - $residual-28px)
+              $height: calc(px-to-vw-mobile(28) - $residual-28px)
             );
 
             &--img {
-              @include flex ($align: center, $gap: px-to-vw-mobile(3));
+              @include flex($align: center, $gap: px-to-vw-mobile(3));
               img {
-                @include set_size($width: calc(px-to-vw-mobile(12.33) - $residual-12_33px));
+                @include set_size(
+                  $width: calc(px-to-vw-mobile(12.33) - $residual-12_33px)
+                );
               }
               figcaption {
                 @include font(
@@ -541,14 +534,12 @@
               );
 
               &--img {
-                @include flex ($align: center, $gap: px-to-vw-tablet(8));
+                @include flex($align: center, $gap: px-to-vw-tablet(8));
                 img {
                   @include set_size($width: px-to-vw-tablet(24));
                 }
                 figcaption {
-                  @include font(  
-                    $font-size: px-to-vw-tablet(14),
-                  );
+                  @include font($font-size: px-to-vw-tablet(14));
                 }
               }
             }
@@ -648,14 +639,12 @@
                 );
 
                 &--img {
-                  @include flex ($align: center, $gap: px-to-vw-desktop(8));
+                  @include flex($align: center, $gap: px-to-vw-desktop(8));
                   img {
                     @include set_size($width: px-to-vw-desktop(24));
                   }
                   figcaption {
-                    @include font(  
-                      $font-size: px-to-vw-desktop(14),
-                    );
+                    @include font($font-size: px-to-vw-desktop(14));
                   }
                 }
               }
