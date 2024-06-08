@@ -3,6 +3,7 @@
 
 .section-destination {
    &__content {
+    display: none;  
     margin-top: calc(px-to-vw-mobile(64) - $residual-64px);
     @include flex($direction: column, $gap: calc(px-to-vw-mobile(32) - $residual-32px));
     &--top {
