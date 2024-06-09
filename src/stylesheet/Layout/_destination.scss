@@ -2,11 +2,15 @@
 @use "../Base/" as *;
 
 .section-destination {
-   &__content {
-    display: none;  
+  &__content {
+    display: none;
     margin-top: calc(px-to-vw-mobile(64) - $residual-64px);
-    @include flex($direction: column, $gap: calc(px-to-vw-mobile(32) - $residual-32px));
+    @include flex(
+      $direction: column,
+      $gap: calc(px-to-vw-mobile(32) - $residual-32px)
+    );
     &--top {
+      opacity: 0;
       .top-content--left {
         @include flex(
           $direction: column,
@@ -14,24 +18,29 @@
           $justify: center,
           $gap: calc(px-to-vw-mobile(16) - $residual-16px)
         );
-       .left-content--title {
+
+        .left-content--title {
           letter-spacing: px-to-vw-mobile(3.2);
           font-size: calc(px-to-vw-mobile(16) - $residual-16px);
         }
-  
+
         .left-content--desc {
           font-size: calc(px-to-vw-mobile(32) - $font-residual-32px);
         }
       }
-      .top-content--right{
+      .top-content--right {
         margin-top: calc(px-to-vw-mobile(32) - $residual-32px);
         padding: 0 calc(px-to-vw-mobile(16) - $residual-16px);
         @include flex($align: center, $justify: space-between);
+        opacity: 0;
+        cursor: pointer;
         .right-content--btn {
           @include set-size($width: calc(px-to-vw-mobile(64) - $residual-64px));
-  
+          &:hover {
+            transform: scale(1.05);
+          }
           img {
-            @include set-size($width: 100%,$height: 100%);
+            @include set-size($width: 100%, $height: 100%);
             object-fit: cover;
           }
         }
@@ -43,17 +52,29 @@
         $align: center,
         $gap: calc(px-to-vw-mobile(32) - $residual-32px)
       );
+      opacity: 0;
+
       .bottom-content {
         @include set-size($width: calc(px-to-vw-mobile(398) - $residual-398px));
         border-radius: calc(px-to-vw-mobile(32) - $residual-32px);
         background: $first-color-boxshadow-box;
-        box-shadow: 0px px-to-vw-mobile(801) px-to-vw-mobile(224) 0px $second-color-boxshadow-box,
-          0px px-to-vw-mobile(513) px-to-vw-mobile(205) 0px $third-color-boxshadow-box,
-          0px px-to-vw-mobile(288) px-to-vw-mobile(173) 0px $fourth-color-boxshadow-box,
-          0px px-to-vw-mobile(218) px-to-vw-mobile(218) 0px $sixth-color-boxshadow-box,
-          0px px-to-vw-mobile(32) px-to-vw-mobile(71) 0px $seventh-color-boxshadow-box,
+        box-shadow: 0px px-to-vw-mobile(801) px-to-vw-mobile(224) 0px
+            $second-color-boxshadow-box,
+          0px px-to-vw-mobile(513) px-to-vw-mobile(205) 0px
+            $third-color-boxshadow-box,
+          0px px-to-vw-mobile(288) px-to-vw-mobile(173) 0px
+            $fourth-color-boxshadow-box,
+          0px px-to-vw-mobile(218) px-to-vw-mobile(218) 0px
+            $sixth-color-boxshadow-box,
+          0px px-to-vw-mobile(32) px-to-vw-mobile(71) 0px
+            $seventh-color-boxshadow-box,
           0px 0px 0px 0px $third-color-boxshadow-box;
-  
+
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.02);
+        }
+
         &--text {
           @include font(
             $font-family: $primary-font,
@@ -72,20 +93,23 @@
             img {
               @include set-size($width: 100%, $height: 100%);
               object-fit: cover;
-              border-radius: calc(px-to-vw-mobile(32) - $residual-32px) calc(px-to-vw-mobile(32) - $residual-32px) 0 0;
+              border-radius: calc(px-to-vw-mobile(32) - $residual-32px)
+                calc(px-to-vw-mobile(32) - $residual-32px) 0 0;
             }
           }
         }
         &--body {
           @include set-size($width: 100%);
-          padding: calc(px-to-vw-mobile(32) - $residual-32px) calc(px-to-vw-mobile(32) - $residual-32px) 0 calc(px-to-vw-mobile(32) - $residual-32px);
+          padding: calc(px-to-vw-mobile(32) - $residual-32px)
+            calc(px-to-vw-mobile(32) - $residual-32px) 0
+            calc(px-to-vw-mobile(32) - $residual-32px);
           .body-top {
             &--desc {
               margin-top: calc(px-to-vw-mobile(8) - $residual-8px);
               color: $sixth-color-text;
             }
           }
-  
+
           .body--country {
             margin-top: calc(px-to-vw-mobile(16) - $residual-16px);
             @include font(
@@ -97,17 +121,25 @@
             );
           }
         }
-  
+
         &--footer {
-          @include flex($align: center, $gap: calc(px-to-vw-mobile(8) - $residual-8px));
-          padding: 0 calc(px-to-vw-mobile(32) - $residual-32px) calc(px-to-vw-mobile(32) - $residual-32px) calc(px-to-vw-mobile(32) - $residual-32px);
+          @include flex(
+            $align: center,
+            $gap: calc(px-to-vw-mobile(8) - $residual-8px)
+          );
+          padding: 0 calc(px-to-vw-mobile(32) - $residual-32px)
+            calc(px-to-vw-mobile(32) - $residual-32px)
+            calc(px-to-vw-mobile(32) - $residual-32px);
           margin-top: calc(px-to-vw-mobile(32) - $residual-32px);
-  
+
           .footer--evaluate {
             color: $fourth-color-text;
           }
           .footer--iconStar {
-            @include set-size($width: calc(px-to-vw-mobile(24) - $residual-24px), $height: calc(px-to-vw-mobile(24) - $residual-24px));
+            @include set-size(
+              $width: calc(px-to-vw-mobile(24) - $residual-24px),
+              $height: calc(px-to-vw-mobile(24) - $residual-24px)
+            );
             position: relative;
             img {
               @include set-size($width: 100%, $height: 100%);
@@ -128,16 +160,16 @@
             letter-spacing: px-to-vw-tablet(4.6);
             font-size: px-to-vw-tablet(23);
           }
-  
+
           .left-content--desc {
             font-size: px-to-vw-tablet(40);
           }
         }
-        .top-content--right{
+        .top-content--right {
           margin-top: px-to-vw-tablet(64);
           padding: 0 px-to-vw-tablet(16);
-          @include flex($gap: px-to-vw-tablet(32),$justify: center);
-          .right-content--btn{
+          @include flex($gap: px-to-vw-tablet(32), $justify: center);
+          .right-content--btn {
             @include set-size($width: px-to-vw-tablet(100));
           }
         }
@@ -163,7 +195,8 @@
             }
           }
           &--body {
-            padding: px-to-vw-tablet(32) px-to-vw-tablet(32) 0 px-to-vw-tablet(32);
+            padding: px-to-vw-tablet(32) px-to-vw-tablet(32) 0
+              px-to-vw-tablet(32);
             .body-top {
               &--desc {
                 margin-top: px-to-vw-tablet(8);
@@ -171,19 +204,21 @@
             }
             .body--country {
               margin-top: px-to-vw-tablet(16);
-              @include font(
-                $font-size: px-to-vw-tablet(18),
-              );
+              @include font($font-size: px-to-vw-tablet(18));
             }
           }
-  
+
           &--footer {
             @include flex($gap: px-to-vw-tablet(8));
-            padding: 0 px-to-vw-tablet(32) px-to-vw-tablet(32) px-to-vw-tablet(32);
+            padding: 0 px-to-vw-tablet(32) px-to-vw-tablet(32)
+              px-to-vw-tablet(32);
             margin-top: px-to-vw-tablet(32);
-  
+
             .footer--iconStar {
-              @include set-size($width: px-to-vw-tablet(24),$height: px-to-vw-tablet(24));
+              @include set-size(
+                $width: px-to-vw-tablet(24),
+                $height: px-to-vw-tablet(24)
+              );
 
               img {
                 top: px-to-vw-tablet(-1);
@@ -201,21 +236,21 @@
       margin-top: px-to-vw-desktop(128);
       &--top {
         @include flex($justify: space-between);
-        .top-content--left{
+        .top-content--left {
           @include flex($gap: px-to-vw-desktop(16));
           align-items: unset;
-          .left-content--title  {
+          .left-content--title {
             letter-spacing: px-to-vw-desktop(4.6);
             font-size: px-to-vw-desktop(23);
           }
-  
-          .left-content--desc{
+
+          .left-content--desc {
             font-size: px-to-vw-desktop(40);
           }
         }
         .top-content--right {
-          margin-top:unset;
-          padding:unset;
+          margin-top: unset;
+          padding: unset;
           @include flex($gap: px-to-vw-desktop(32));
           .right-content--btn {
             @include set-size($width: px-to-vw-desktop(100));
@@ -227,7 +262,7 @@
         .bottom-content {
           @include set-size($width: px-to-vw-desktop(373));
           border-radius: px-to-vw-desktop(32);
-  
+
           &--text {
             @include font($font-size: px-to-vw-desktop(23));
           }
@@ -246,7 +281,7 @@
             padding: px-to-vw-desktop(32) px-to-vw-desktop(32) 0
               px-to-vw-desktop(32);
           }
-  
+
           .body-top {
             @include flex(
               $direction: row-reverse,
@@ -258,24 +293,27 @@
               width: px-to-vw-desktop(214);
             }
           }
-  
+
           .body--country {
             margin-top: px-to-vw-desktop(16);
             @include font($font-size: px-to-vw-desktop(18));
           }
-  
+
           &--footer {
             @include flex($gap: px-to-vw-desktop(8));
             padding: 0 px-to-vw-desktop(32) px-to-vw-desktop(32)
               px-to-vw-desktop(32);
             margin-top: px-to-vw-desktop(32);
-  
+
             .footer--iconStar {
-              @include set-size($width: px-to-vw-desktop(24), $height: px-to-vw-desktop(24));
+              @include set-size(
+                $width: px-to-vw-desktop(24),
+                $height: px-to-vw-desktop(24)
+              );
             }
           }
         }
       }
     }
-   }
+  }
 }
