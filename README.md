@@ -1,5 +1,5 @@
 
-### Practice_HTML_CSS
+### Practice__HTML_CSS1
 
 # OVERVIEW
 
@@ -38,7 +38,7 @@
 
 
 ```sh
-cd Practice_HTML_CSS
+cd Practice__HTML_CSS1
 npm install
 npm run dev
 Open on web: http://localhost:1234
