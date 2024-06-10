@@ -130,20 +130,19 @@ header {
     }
 
     &--right {
-      display: none;
-
+      display: none;    
       @include tablet {
         @include flex($gap: 2px);
         @include set-size($width: px-to-vw-tablet(220));
         button {
           @include button($border-radius: px-to-vw-tablet(30), $border: 0);
           @include transition(
-            $transition: 0.4s,
+            $transition: 0.3s,
             $transition-timing-function: ease-in-out
           );
 
           p {
-            transition: 0.7s;
+            transition: 0.1s;
             line-height: 120%;
             color: $Nav-hover-text;
             @include font($font-size: px-to-vw-tablet(14), $font-weight: 700);
