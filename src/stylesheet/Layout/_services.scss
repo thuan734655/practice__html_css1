@@ -12,10 +12,11 @@
       margin: 0 auto;
       padding: calc(px-to-vw-mobile(32) - $residual-32px) 0
         calc(px-to-vw-mobile(32) - $residual-32px) 0;
-
+      opacity: 0;
     }
 
     &--right {
+       opacity: 0;
       @include flex(
         $direction: column,
         $gap: calc(px-to-vw-mobile(16) - $residual-16px)
@@ -26,11 +27,17 @@
         background: #fff;
         padding: calc(px-to-vw-mobile(32) - $residual-32px);
         margin: 0 auto;
+        cursor: pointer;
+       
         @include flex(
           $direction: column,
           $align: center,
           $gap: calc(px-to-vw-mobile(32) - $residual-32px)
         );
+        &:hover {
+          transform: translateY(-1%);
+        }
+
         &:nth-of-type(2) {
           box-shadow: 0px calc(px-to-vw-mobile(41) - $residual-41px) calc(px-to-vw-mobile(89) - $residual-89px) 0px $third-color-boxshadow-card,
             0px 0px 0px 0px $third-color-boxshadow-card;

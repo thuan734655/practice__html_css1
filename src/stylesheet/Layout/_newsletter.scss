@@ -80,7 +80,10 @@
           border: transparent;
           background: $first-color-button;
           margin-top: calc(px-to-vw-mobile(32) - $residual-32px);
-
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.02);
+          }
           .btn-content {
             @include font(
               $font-family: $primary-font,

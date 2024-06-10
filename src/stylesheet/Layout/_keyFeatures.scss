@@ -9,6 +9,7 @@
     );
     margin-top: calc(px-to-vw-mobile(64) - $residual-64px);
     &--left {
+      opacity: 0;
       .left-content {
         &--body {
           .body--desc {
@@ -20,6 +21,11 @@
         .footer-content {
           @include set-size($width: calc(px-to-vw-mobile(334) - $residual-334px));
           padding: calc(px-to-vw-mobile(32) - $residual-32px);
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.02);
+          }
+    
           &--img {
             @include set-size(
               $width: calc(px-to-vw-mobile(100) - $residual-100px),
@@ -53,6 +59,7 @@
     }
 
     &--right {
+      opacity: 0;
       .right--img {
         @include set-size(
           $width: calc(px-to-vw-mobile(350) - $residual-350px),

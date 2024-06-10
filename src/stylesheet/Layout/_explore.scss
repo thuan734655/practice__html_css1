@@ -30,10 +30,15 @@
         border: transparent;
         background-color: $second-color-button;
         box-shadow: 0 px-to-vw-mobile(15) 40px $second-color-boxshadow-button;
+        cursor: pointer;
         @include set-size(
           $width: calc(px-to-vw-mobile(224) - $residual-224px),
           $height: calc(px-to-vw-mobile(56) - $residual-56px)
         );
+        &:hover {
+          transform: scale(1.02);
+        }
+
         .btn-top--img {
           @include flex(
             $direction: row-reverse,
@@ -104,13 +109,16 @@
           @include set_size(
             $width: calc(px-to-vw-mobile(398) - $residual-398px)
           );
-          padding: calc(px-to-vw-mobile(24) - $residual-24px)
-            calc(px-to-vw-mobile(32) - $residual-32px);
+          padding: calc(px-to-vw-mobile(24) - $residual-24px) calc(px-to-vw-mobile(32) - $residual-32px);
           background-color: $first-color-button;
-          box-shadow: 0 px-to-vw-mobile(13) px-to-vw-mobile(30)
-            $first-color-boxshadow-button;
+          box-shadow: 0 px-to-vw-mobile(13) px-to-vw-mobile(30) $first-color-boxshadow-button;
           border-radius: px-to-vw-mobile(100);
           border: transparent;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.02);
+          }
+
           .btnBottom-left-text {
             @include font(
               $font-family: $primary-font,
@@ -134,6 +142,11 @@
           @include set_size(
             $width: calc(px-to-vw-mobile(398) - $residual-398px)
           );
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.02);
+          }
+
 
           .btnBottom-right-img {
             @include flex(
@@ -184,7 +197,7 @@
         .left-content--text {
           .first-text {
             @include font($font-size: calc(px-to-vw-tablet(56)));
-            @include set-size($width: 60%)
+            @include set-size($width: 60%);
           }
           .second-text {
             @include font($font-size: px-to-vw-tablet(18));

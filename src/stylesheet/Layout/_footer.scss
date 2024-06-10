@@ -47,10 +47,14 @@ footer {
               $width: calc(px-to-vw-mobile(32) - $residual-32px),
               $height: calc(px-to-vw-mobile(32) - $residual-32px)
             );
-
+        
             img {
               @include set-size($width: 100%, $height: 100%);
               object-fit: cover;
+            }
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.02);
             }
           }
         }
