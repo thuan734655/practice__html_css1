@@ -692,29 +692,29 @@
       display: block;
       @include set_size(
         $width: px-to-vw-tablet(65),
-        $height: calc(px-to-vw-tablet(169.95) - 0.05px)
+        $height:px-to-vw-tablet(169.95)
       );
       @include position(
         $position: absolute,
-        $top: px-to-vw-tablet(1250),
+        $top: px-to-vw-tablet(1080),
         $left: px-to-vw-tablet(38)
       );
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
       @include desktop {
         @include set_size(
           $width: px-to-vw-desktop(65),
-          $height: calc(px-to-vw-desktop(169.95) - 0.05px)
+          $height:px-to-vw-desktop(169.95)
         );
         @include position(
-          $top: px-to-vw-desktop(750),
+          $top: px-to-vw-desktop(695),
           $left: px-to-vw-desktop(38)
         );
       }
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
   }
 

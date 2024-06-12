@@ -7,8 +7,8 @@
     @include set-size($width: calc(px-to-vw-mobile(398) - $residual-398px));
     @include position($position: relative, $left: 50%);
     transform: translateX(-50%);
-    margin-top: calc(px-to-vw-mobile(96) - $residual-96px);
     padding: calc(px-to-vw-mobile(64) - $residual-64px) calc(px-to-vw-mobile(32) - $residual-32px);
+    margin-top: calc(px-to-vw-mobile(32) - $residual-32px);
     &--icon {
       .icon-iconTop {
         display: none;
@@ -98,9 +98,9 @@
     }
     @include tablet {
       border-radius: px-to-vw-tablet(32);
-      @include set-size($width: px-to-vw-tablet(897));
-      margin-top: px-to-vw-tablet(96);
+      @include set-size($width: px-to-vw-tablet(897));  
       padding: px-to-vw-tablet(64) px-to-vw-tablet(32);
+      margin-top: unset;
       &--icon {
         .icon-iconTop {
           display: block;

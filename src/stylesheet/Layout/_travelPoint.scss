@@ -7,7 +7,7 @@
       $direction: column,
       $gap: calc(px-to-vw-mobile(64) - $residual-64px)
     );
-    margin-top: calc(px-to-vw-mobile(64) - $residual-64px);
+    padding-top: calc(px-to-vw-mobile(64) - $residual-64px);
     &--left {
       opacity: 0;
       .left--img {
@@ -79,7 +79,7 @@
   @include tablet {
     &__content {
       @include flex($gap: px-to-vw-tablet(64));
-      margin-top: px-to-vw-tablet(128);
+      padding-top: px-to-vw-tablet(128);
       &--left {
         .left--img {
           @include set-size($width: px-to-vw-tablet(871));
@@ -92,6 +92,13 @@
               letter-spacing: px-to-vw-tablet(4.6);
               font-size: px-to-vw-tablet(23);
             }
+          }
+
+          &--body {
+            .body--desc{
+              padding-top: px-to-vw-tablet(32);
+              margin: 0 auto;
+             }
           }
 
           &--footer {
@@ -131,7 +138,7 @@
       @include set-size($width: px-to-vw-desktop(1312));
       @include position($position: relative, $left: 0);
 
-      margin-top: px-to-vw-desktop(128);
+      padding-top: px-to-vw-desktop(128);
       &--left {
         .left--img {
           @include set-size($width: px-to-vw-desktop(871));

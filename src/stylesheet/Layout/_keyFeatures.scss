@@ -7,7 +7,7 @@
       $align: center,
       $gap: calc(px-to-vw-mobile(64) - $residual-64px)
     );
-    margin-top: calc(px-to-vw-mobile(64) - $residual-64px);
+    padding-top: calc(px-to-vw-mobile(64) - $residual-64px);
     &--left {
       opacity: 0;
       .left-content {
@@ -75,7 +75,7 @@
     }
     @include tablet {
       @include flex($gap: px-to-vw-tablet(64));
-      margin-top: px-to-vw-tablet(64);
+      padding-top: px-to-vw-tablet(64);
       &--left {
         .left-content {
           &--body {
@@ -127,7 +127,6 @@
       }
       @include desktop {
         @include flex(
-        
           $direction: row,
           $align: center,
           $gap: px-to-vw-desktop(70)
@@ -135,7 +134,7 @@
         @include set-size($width: px-to-vw-desktop(1312));
         @include position($position: relative, $left: 50%);
         transform: translateX(-50%);
-        margin-top: px-to-vw-desktop(70);
+        padding-top: px-to-vw-desktop(70);
 
         &--left {
           .left-content {

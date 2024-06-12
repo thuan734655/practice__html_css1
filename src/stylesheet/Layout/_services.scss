@@ -4,19 +4,17 @@
 .section-services {
   &__content {
     @include flex($direction: column);
-    position: relative;
-    z-index: 4;
-    margin-top: calc(px-to-vw-mobile(64) - $residual-64px);
+    padding-top: calc(px-to-vw-mobile(64) - $residual-64px);
+    @include set-size($width: calc(px-to-vw-mobile(398) - $residual-398px));
+    margin: 0 auto;
     &--left {
-      @include set-size($width: calc(px-to-vw-mobile(398) - $residual-398px));
-      margin: 0 auto;
       padding: calc(px-to-vw-mobile(32) - $residual-32px) 0
         calc(px-to-vw-mobile(32) - $residual-32px) 0;
       opacity: 0;
     }
 
     &--right {
-       opacity: 0;
+      opacity: 0;
       @include flex(
         $direction: column,
         $gap: calc(px-to-vw-mobile(16) - $residual-16px)
@@ -26,9 +24,8 @@
         border-radius: calc(px-to-vw-mobile(32) - $residual-32px);
         background: #fff;
         padding: calc(px-to-vw-mobile(32) - $residual-32px);
-        margin: 0 auto;
         cursor: pointer;
-       
+
         @include flex(
           $direction: column,
           $align: center,
@@ -39,7 +36,9 @@
         }
 
         &:nth-of-type(2) {
-          box-shadow: 0px calc(px-to-vw-mobile(41) - $residual-41px) calc(px-to-vw-mobile(89) - $residual-89px) 0px $third-color-boxshadow-card,
+          box-shadow: 0px calc(px-to-vw-mobile(41) - $residual-41px)
+              calc(px-to-vw-mobile(89) - $residual-89px) 0px
+              $third-color-boxshadow-card,
             0px 0px 0px 0px $third-color-boxshadow-card;
         }
         @include set-size($width: calc(px-to-vw-mobile(398) - $residual-398px));
@@ -68,7 +67,7 @@
         .body-desc {
           @include font(
             $font-family: $second-font,
-            $font-size: calc( px-to-vw-mobile(18) - $residual-18px),
+            $font-size: calc(px-to-vw-mobile(18) - $residual-18px),
             $font-weight: 400,
             $line-height: 160%,
             $color: $second-color-text
@@ -78,78 +77,62 @@
       }
     }
     @include tablet {
-      margin-top: px-to-vw-tablet(64);
+      padding-top: px-to-vw-tablet(64);
+      @include set-size($width: px-to-vw-tablet(896));
       &--right {
-        @include flex(
-          $direction: row,
-          $gap: px-to-vw-tablet(16)
-        );
+        @include flex($direction: row, $gap: px-to-vw-tablet(16));
         .services-card {
           width: px-to-vw-tablet(288);
           padding: px-to-vw-tablet(64);
           border-radius: px-to-vw-tablet(32);
+        @include flex(
+          $gap: calc(px-to-vw-tablet(64))
+        );
           &--heading {
-        .heading-icon {
-            @include set_size(
-              $width: px-to-vw-tablet(64),
-              $height: px-to-vw-tablet(64)
-            );
-          }
+            .heading-icon {
+              @include set_size(
+                $width: px-to-vw-tablet(64),
+                $height: px-to-vw-tablet(64)
+              );
+            }
           }
           .body-title {
-            @include font(
-              $font-size: px-to-vw-tablet(28),
-            );
+            @include font($font-size: px-to-vw-tablet(28));
           }
           .body-desc {
-            @include font(
-              $font-size: px-to-vw-tablet(18)
-            );
+            padding-top: px-to-vw-tablet(16);
+            @include font($font-size: px-to-vw-tablet(18));
           }
         }
       }
       @include desktop {
-        margin: px-to-vw-desktop(128) 0 0 px-to-vw-desktop(205);
-        @include flex(
-          $direction: row,
-          $justify: center,
-          $align: center
-        );
-  
+        padding-top: px-to-vw-desktop(128);
+        @include set-size($width: px-to-vw-desktop(1114));
+        @include flex($direction: row, $align: center);
+        @include position($position: relative, $left: px-to-vw-desktop(-20));
         &--left {
           @include set_size($width: px-to-vw-desktop(444));
           padding: unset;
-          margin-left: px-to-vw-desktop(-60);
-  
-          p {
-            @include font($font-size: px-to-vw-desktop(44));
-          }
         }
         &--right {
           @include set_size($width: calc(100% - px-to-vw-desktop(444)));
-          @include position($position: relative, $left: px-to-vw-desktop(-100));
           .services-card {
             min-width: px-to-vw-desktop(350);
-            max-width: unset;
             padding: px-to-vw-desktop(64);
             border-radius: px-to-vw-desktop(32);
             &--heading {
               .heading-icon {
-                  @include set_size(
-                    $width: px-to-vw-desktop(64),
-                    $height: px-to-vw-desktop(64)
-                  );
-                }
-                }
+                @include set_size(
+                  $width: px-to-vw-desktop(64),
+                  $height: px-to-vw-desktop(64)
+                );
+              }
+            }
             .body-title {
-              @include font(
-                $font-size: px-to-vw-desktop(28),
-              );
+              @include font($font-size: px-to-vw-desktop(28));
             }
             .body-desc {
-              @include font(
-                $font-size: px-to-vw-desktop(18),
-              );
+              @include font($font-size: px-to-vw-desktop(18));
             }
           }
         }
