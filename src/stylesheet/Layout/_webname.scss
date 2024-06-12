@@ -2,15 +2,11 @@
 @use "../Base/" as *;
 
 .section-web-name__content {
-  margin-top: px-to-vw-mobile(90);
+  padding-top: px-to-vw-mobile(90);
   @include set_size($width: px-to-vw-mobile(398));
-  @include flex($justify: center, $wrap: wrap, $gap: px-to-vw-mobile(31));
+  @include flex($justify: center, $wrap: wrap, $gap: calc(px-to-vw-mobile(28) - $residual-28px));
   @include position($position: relative, $left: 50%);
   transform: translateX(-50%);
-    &:hover {
-      transform: translateY(-5%);
-    
-  }
   &--tripadvisor {
     @include set_size($width: calc(px-to-vw-mobile(132) - $residual-132px));
   }
@@ -28,6 +24,10 @@
   }
   .web-name-img {
     height: calc(px-to-vw-mobile(20) - $residual-20px);
+        cursor: pointer;
+    &:hover {
+      transform: translateY(-5%);
+  }
   }
   img {
     width: 100%;
@@ -37,10 +37,9 @@
 
   @include tablet {
     @include set_size($width: px-to-vw-tablet(896));
-    margin-top: px-to-vw-tablet(128);
     align-items: center;
-    row-gap: px-to-vw-tablet(32);
-    padding: 0 42px 0 42px;
+    padding: 0 px-to-vw-tablet(42) 0 px-to-vw-tablet(42);
+    padding-top: px-to-vw-tablet(128);
     &--tripadvisor {
       @include set_size($width: px-to-vw-tablet(211));
     }
@@ -63,7 +62,6 @@
     @include desktop {
       @include set_size($width: px-to-vw-desktop(1184));
       align-items: center;
-      row-gap: px-to-vw-desktop(32);
       column-gap: unset;
       padding: 0;
       justify-content: space-between;

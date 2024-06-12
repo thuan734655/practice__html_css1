@@ -1,7 +1,8 @@
 @use "../Abstract/" as *;
 
 footer {
-  margin-top: calc(px-to-vw-mobile(96) - $residual-96px);
+  @include position($position: relative);
+  padding-top: calc( px-to-vw-mobile(32) - $residual-32px);
   .footer__content {
     @include set-size($width: calc(px-to-vw-mobile(398) - $residual-398px));
     @include position($position: relative, $left: 50%);
@@ -106,7 +107,7 @@ footer {
   }
 
   @include tablet {
-    margin-top: px-to-vw-tablet(96);
+    padding-top: px-to-vw-tablet(64);
     .footer__content {
       @include set-size($width: px-to-vw-tablet(897));
       padding: px-to-vw-tablet(64) 0 px-to-vw-tablet(64) 0 ;
@@ -179,7 +180,7 @@ footer {
   }
 
   @include desktop {
-    margin-top: px-to-vw-desktop(96);
+    padding-top: px-to-vw-desktop(64);
     .footer__content {
       @include set-size($width: px-to-vw-desktop(1184));
       @include flex($gap: px-to-vw-desktop(57));
@@ -243,5 +244,18 @@ footer {
         }
       }
     }
+  }
+  .icon-object{
+     display: none;
+      @include tablet {
+        display: block;
+        @include position($position: absolute, $top: px-to-vw-tablet(-10),$right:px-to-vw-tablet(-266));
+        @include set-size($width: px-to-vw-tablet(332), $height: px-to-vw-tablet(352));
+
+        @include desktop {
+          @include position($position: absolute, $top: px-to-vw-desktop(-130),$right:px-to-vw-desktop(-220));
+          @include set-size($width: px-to-vw-desktop(332), $height: px-to-vw-desktop(352));  
+        }
+      }
   }
 }

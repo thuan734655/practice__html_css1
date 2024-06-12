@@ -4,7 +4,7 @@
 .section-destination {
   &__content {
     display: none;
-    margin-top: calc(px-to-vw-mobile(64) - $residual-64px);
+    padding-top: calc(px-to-vw-mobile(64) - $residual-64px);
     @include flex(
       $direction: column,
       $gap: calc(px-to-vw-mobile(32) - $residual-32px)
@@ -153,6 +153,9 @@
     }
     @include tablet {
       @include flex($gap: px-to-vw-tablet(67));
+      @include set-size($width: px-to-vw-tablet(896));
+      padding-top: px-to-vw-tablet(128);
+      margin: 0 auto;
       &--top {
         .top-content--left {
           @include flex($gap: px-to-vw-tablet(16));
@@ -175,8 +178,7 @@
         }
       }
       &--bottom {
-        @include flex($direction: row, $gap: px-to-vw-tablet(31));
-        margin: 0 auto;
+        @include flex($direction: row, $justify: space-between, $gap: unset);
         .bottom-content {
           @include set-size($width: px-to-vw-tablet(278));
           border-radius: px-to-vw-tablet(32);
@@ -231,9 +233,7 @@
     @include desktop {
       @include flex($gap: px-to-vw-desktop(67));
       @include set-size($width: px-to-vw-desktop(1184));
-      @include position($position: relative, $left: 50%);
-      transform: translateX(-50%);
-      margin-top: px-to-vw-desktop(128);
+      padding-top: px-to-vw-desktop(128);
       &--top {
         @include flex($justify: space-between);
         .top-content--left {
@@ -258,7 +258,6 @@
         }
       }
       &--bottom {
-        @include flex($direction: row, $gap: px-to-vw-desktop(31));
         .bottom-content {
           @include set-size($width: px-to-vw-desktop(373));
           border-radius: px-to-vw-desktop(32);
