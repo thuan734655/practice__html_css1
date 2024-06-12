@@ -116,6 +116,7 @@
         }
         &--right {
           @include set_size($width: calc(100% - px-to-vw-desktop(444)));
+          z-index: 5;
           .services-card {
             min-width: px-to-vw-desktop(350);
             padding: px-to-vw-desktop(64);
