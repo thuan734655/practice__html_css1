@@ -154,7 +154,7 @@
             margin-top: px-to-vw-desktop(64);
             .footer-content {
               @include set-size($width: px-to-vw-desktop(204.5));
-              padding: px-to-vw-desktop(32);
+              padding: px-to-vw-desktop(32) 0;
               .footer-content--quantity {
                 @include font(
                   $font-size: px-to-vw-desktop(35),
@@ -164,6 +164,7 @@
                 @include font(
                   $font-size: px-to-vw-desktop(18),
                 );
+                padding-top: px-to-vw-desktop(16);
               }
             }
           }
@@ -172,7 +173,7 @@
           display: block;
           @include position(
             $position: absolute,
-            $top: px-to-vw-desktop(220),
+            $top: px-to-vw-desktop(240),
             $right: px-to-vw-desktop(-10)
           );
           @include set-size($width: px-to-vw-desktop(100));

@@ -171,6 +171,12 @@ footer {
                 $color: $fifth-color-text
               );
               @include flex($direction: column, $gap: px-to-vw-tablet(32));
+              a {
+                cursor: pointer;
+                &:hover { 
+                  text-decoration: underline;
+                }
+              }
             }
           }
         }

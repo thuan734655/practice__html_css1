@@ -155,9 +155,6 @@ header {
             $height: px-to-vw-tablet(49)
           );
           background-color: $second-color-button;
-          &:hover {
-            box-shadow: 0 2px 3px 1px $color-button-hover;
-          }
         }
 
         .right-content--btnRight {
@@ -168,10 +165,6 @@ header {
           background-color: $first-color-button;
           .btnRight--text {
             color: $second-color-button;
-          }
-
-          &:hover {
-            box-shadow: 0 2px 3px 1px $color-button-hover;
           }
         }
 
